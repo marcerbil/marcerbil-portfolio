@@ -21,6 +21,7 @@ Use it to make something cool, have fun, and share what you've learned with othe
 .content-container {
     padding-left: 10%;
     padding-right: 10%;
+    margin-top: 20%;
 }
 
 /*  navbar
@@ -32,7 +33,7 @@ Use it to make something cool, have fun, and share what you've learned with othe
 }
 
 .navbar-brand-container {
-    margin-left: 8.5rem;
+    padding-left: 10%;
 }
 
 .navbar-right {
@@ -40,16 +41,42 @@ Use it to make something cool, have fun, and share what you've learned with othe
     margin-top: 1rem;
 }
 
+.navbar-default .navbar-nav>li>a {
+    color: #fff;
+}
+
 /*  hero
 /*======*/
 
 .hero {
-    max-width: 1920px;
+    position: absolute;
 }
 
 .hero-image {
     width: 100%;
     height: auto;
+}
+
+.hero-container {
+    padding: 12.5% 2%;
+}
+
+.hero-content {
+    position: relative;
+    color: #ffffff;
+}
+
+.hero-title {
+    font-family: 'Nunito', sans-serif;
+    font-size: 4rem;
+    font-weight: 300;
+}
+
+.hero-text {
+    margin-top: 1rem;
+    font-family: 'Nunito', sans-serif;
+    font-weight: 100;
+    line-height: 2.5;
 }
 
 /*  skills
@@ -96,9 +123,9 @@ Use it to make something cool, have fun, and share what you've learned with othe
 }
 
 .about-text {
-    line-height: 2.2;
+    line-height: 2.5;
     font-family: 'Nunito', sans-serif;
-    font-size: 24px;
+    font-size: 20px;
     font-weight: 300;
     color: #222222;
 }
@@ -123,6 +150,154 @@ Use it to make something cool, have fun, and share what you've learned with othe
     font-weight: 400;
 }
 
+/*  recent
+/*========*/
+
+.recent-projects-title {
+    margin: 2rem 0;
+    text-align: center;
+}
+
+.recent-projects-title-text {
+    font-family: 'Nunito', sans-serif;
+    font-weight: 300;
+    font-size: 2rem;
+}
+
+
+/*  work
+/*======*/
+
+.portfolio-row {
+    margin: 1.5rem 0;
+}
+
+.portfolio-tile {
+    max-width: 500px;
+    margin: 2rem 0;
+    border-radius: 4px;
+    box-shadow: 2px 2px 5px 0 #F5F5F5;
+    border: 1px solid #fff;
+}
+
+.portfolio-post-tile-1 {
+    background-color: #BE3624;
+    border-color: #BE3624;
+}
+
+.portfolio-post-tile-2 {
+    background-color: #4A4A4A;
+    border-color: #4A4A4A;
+}
+
+.portfolio-post-tile-3 {
+    background-color: #50B848;
+    border-color: #50B848;
+}
+
+.portfolio-post-tile-4 {
+    background-color: #F0569B;
+    border-color: #F0569B;
+}
+
+.portfolio-post-tile-5 {
+    background-color: #12A9AA;
+    border-color: #12A9AA;
+}
+
+.portfolio-post-tile-6 {
+    background-color: #660000;
+    border-color: #660000;
+}
+
+.portfolio-post-tile-logo {
+    display: block;
+    height: 75px;
+    width: 75px;
+    margin: 200px auto;
+}
+
+/*  project pages
+/*=================*/
+.project-hero {
+    position: absolute;
+}
+
+.project-hero-image {
+    width: 100%;
+    height: auto;
+}
+
+.project-hero-hr {
+    border-width: 4px;
+    border-color: #ffffff;
+    width: 5rem;
+    margin: 3rem 0;
+}
+
+.section-project-intro {
+    margin: 4rem 0;
+}
+
+.project-intro {
+    padding: 1rem;
+}
+
+.project-intro-text {
+    text-align: center;
+    font-size: 2rem;
+    font-family: 'Nunito', sans-serif;
+    font-weight: 100;
+    color: #222222;
+}
+
+.project-pics-panel {
+    background-color: #F5F5F5;
+    border: none;
+}
+
+.section-project-writeup {
+    margin: 2rem 0;
+}
+
+.project-writeup {
+    margin: 1rem 0;
+    padding: 1rem 0;
+}
+
+.project-writeup-title {
+    margin: 1rem 0;
+}
+
+.project-writeup-title-text {
+    font-family: 'Nunito', sans-serif;
+    font-weight: 400;
+}
+
+.project-writeup-content {
+    margin: 1rem 0;
+}
+
+.project-writeup-content-text {
+    font-family: 'Nunito', sans-serif;
+    font-size: 1.75rem;
+    font-weight: 100;
+    line-height: 2.5;
+}
+
+.project-writeup-link {
+    margin: 2rem 0 4rem 0;
+    font-family: 'Nunito', sans-serif;
+    font-size: 1.75rem;
+    font-weight: 100;
+    color: #4A90E2;
+}
+
+.project-writeup-link:hover {
+    text-decoration: none;
+    color: #3977BE;
+}
+
 /*  footer
 /*==============*/
 
@@ -142,6 +317,10 @@ Use it to make something cool, have fun, and share what you've learned with othe
     color: #A2A2A2;
 }
 
+.backtotop a {
+    color: #A2A2A2;
+}
+
 .footer-nav {
     list-style-type: none;
     text-align: center;
@@ -150,4 +329,10 @@ Use it to make something cool, have fun, and share what you've learned with othe
 .footer-nav-item {
     display: inline;
     margin: 0 0.3rem;
+    color: #A2A2A2;
+}
+
+.footer-nav-item:hover {
+    text-decoration: none;
+    color: #A2A2A2;
 }

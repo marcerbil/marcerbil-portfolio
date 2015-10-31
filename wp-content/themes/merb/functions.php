@@ -258,7 +258,7 @@ function merb_scripts() {
 
     wp_enqueue_script( 'knobs', get_template_directory_uri() . '/js/jquery.knob.min.js' );
 
-    wp_enqueue_script( 'knobsinit', get_template_directory_uri() . '/js/knobs.js' );
+    wp_enqueue_script( 'customjs', get_template_directory_uri() . '/js/custom.js' );
 }
 add_action( 'wp_enqueue_scripts', 'merb_scripts' );
 
@@ -367,3 +367,19 @@ require get_template_directory() . '/inc/customizer.php';
 
 // Remove admin bar
 add_filter('show_admin_bar', '__return_false');
+
+
+// Register portfolio post type
+add_action( 'init', 'create_post_type' );
+
+function create_post_type() {
+    register_post_type( 'portfolio_post', array(
+        'labels' => array(
+            'name' => __( 'Project' ),
+            'singular_name' => __( 'Project' )
+        ),
+        'public' => true,
+        'has_archive' => true,
+        )
+    );
+}

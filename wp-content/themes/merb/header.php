@@ -53,12 +53,14 @@
 	    </div>
 	    <div class="collapse navbar-collapse" id="navbar">
 	      <ul class="nav navbar-nav navbar-right">
-	        <li><a href="#">work</a></li>
-	        <li><a href="#">contact</a></li>
+	        <li><a href="<?php bloginfo( 'url' ); ?>/work/">work</a></li>
+	        <li><a href="<?php bloginfo( 'url' ); ?>/contact/">contact</a></li>
 	      </ul>
 	    </div><!-- /.navbar-collapse -->
 	  </div><!-- /.container-fluid -->
 	</nav>
 </header>
+
+<span id="top"></span>
 
 <body <?php body_class(); ?>>

@@ -1,6 +1,6 @@
 <?php
 /**
- * The template used for displaying page content
+ * The home page template
  *
  * @package WordPress
  * @subpackage merb
@@ -10,7 +10,22 @@
 
 <section class="section-hero">
     <div class="hero">
-        <img src="<?php bloginfo('template_directory'); ?>/img/hero.png" class="hero-image" alt="Hero image" />
+        <img src="<?php bloginfo('template_directory'); ?>/img/hero1.png" class="hero-image" alt="Hero image" />
+    </div>
+    <div class="hero-container">
+        <div class="row">
+            <div class="col-md-1">
+            </div>
+            <div class="col-md-4">
+                <div class="hero-content">
+                    <h1 class="hero-title">UI/UX Designer</h1>
+                    <h1 class="hero-title">Front end developer</h1>
+                    <p class="hero-text">I'm Marc, a London-based developer and coffee lover.</p>
+                </div>
+            </div>
+            <div class="col-md-7">
+            </div>
+        </div>
     </div>
 </section>
 
@@ -80,7 +95,30 @@
     <hr class="separator-hr" />
 
     <section class="section-recent">
-        <!-- TODO: Add recent work here -->
+
+        <div class="recent-projects-title">
+            <h3 class="recent-projects-title-text">Some of my recent work</h3>
+        </div>
+
+        <div class="row portfolio-row">
+
+            <div class="col-md-6">
+                <div class="portfolio-tile portfolio-post-tile-1">
+                    <a href="../project_one/">
+                        <img src="<?php bloginfo('template_directory'); ?>/img/project-tiles/loft.png" class="portfolio-post-tile-logo" alt="Loft Digital" />
+                    </a>
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <div class="portfolio-tile portfolio-post-tile-2">
+                    <a href="../project_two/">
+                        <img src="<?php bloginfo('template_directory'); ?>/img/project-tiles/panacea.png" class="portfolio-post-tile-logo" alt="Panacea Publishing" />
+                    </a>
+                </div>
+            </div>
+
+        </div>
     </section>
 
 </div> <!-- ./page-container -->

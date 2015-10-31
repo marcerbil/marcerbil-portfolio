@@ -20,14 +20,14 @@
                 </div>
                 <div class="col-xs-4">
                     <div class="backtotop">
-                        <i class="glyphicon glyphicon-chevron-up"></i>
+                        <a href="#top"><i class="glyphicon glyphicon-chevron-up"></i></a>
                     </div>
                 </div>
                 <div class="col-xs-4">
                     <ul class="footer-nav">
-                        <li class="footer-nav-item">home</li>
-                        <li class="footer-nav-item">work</li>
-                        <li class="footer-nav-item">contact</li>
+                        <a href="<?php bloginfo( 'url' ); ?>"><li class="footer-nav-item">home</li></a>
+                        <a href="<?php bloginfo( 'url' ); ?>/work/"><li class="footer-nav-item">work</li></a>
+                        <a href="<?php bloginfo( 'url' ); ?>/contact/"><li class="footer-nav-item">contact</li></a>
                     </ul>
                 </div>
             </div>
