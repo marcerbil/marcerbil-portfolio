@@ -1,7 +1,7 @@
 /*
-Theme Name: Twenty Fifteen
+Theme Name: Merb
 Theme URI: https://wordpress.org/themes/twentyfifteen/
-Author: the WordPress team
+Author: ME
 Author URI: https://wordpress.org/
 Description: Our 2015 default theme is clean, blog-focused, and designed for clarity. Twenty Fifteen's simple, straightforward typography is readable on a wide variety of screen sizes, and suitable for multiple languages. We designed it using a mobile-first approach, meaning your content takes center-stage, regardless of whether your visitors arrive by smartphone, tablet, laptop, or desktop computer.
 Version: 1.3
@@ -164,7 +164,6 @@ Use it to make something cool, have fun, and share what you've learned with othe
     font-size: 2rem;
 }
 
-
 /*  work
 /*======*/
 
@@ -191,23 +190,23 @@ Use it to make something cool, have fun, and share what you've learned with othe
 }
 
 .portfolio-post-tile-3 {
-    background-color: #50B848;
-    border-color: #50B848;
+    background-color: #2DC32D;
+    border-color: #2DC32D;
 }
 
 .portfolio-post-tile-4 {
-    background-color: #F0569B;
-    border-color: #F0569B;
+    background-color: #F481B5;
+    border-color: #F481B5;
 }
 
 .portfolio-post-tile-5 {
-    background-color: #12A9AA;
-    border-color: #12A9AA;
+    background-color: #6EB8EA;
+    border-color: #6EB8EA;
 }
 
 .portfolio-post-tile-6 {
-    background-color: #660000;
-    border-color: #660000;
+    background-color: #5DCACA;
+    border-color: #5DCACA;
 }
 
 .portfolio-post-tile-logo {
@@ -219,6 +218,7 @@ Use it to make something cool, have fun, and share what you've learned with othe
 
 /*  project pages
 /*=================*/
+
 .project-hero {
     position: absolute;
 }
@@ -252,7 +252,7 @@ Use it to make something cool, have fun, and share what you've learned with othe
 }
 
 .project-pics-panel {
-    background-color: #F5F5F5;
+    background-color: #D8D8D8;
     border: none;
 }
 
@@ -283,6 +283,10 @@ Use it to make something cool, have fun, and share what you've learned with othe
     font-size: 1.75rem;
     font-weight: 100;
     line-height: 2.5;
+}
+
+.project-writeup-content-list {
+    line-height: 2.7;
 }
 
 .project-writeup-link {

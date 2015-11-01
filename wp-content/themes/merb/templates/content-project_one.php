@@ -68,21 +68,17 @@ get_header(); ?>
                         </div>
                         <div class="project-writeup-content">
                             <p class="project-writeup-content-text">
-                                Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. Suspendisse urna nibh, viverra non, semper suscipit, posuere a, pede.
-                                Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. Suspendisse urna nibh, viverra non, semper suscipit, posuere a, pede.
+                                Loft Digital is a creative digital agency with a focus on innovation and unique solutions. I was contracted to work on two projects, one of which was the complete re-design of the agency website.
+                                The website was in need of a refresh as the design was several years old and did not reflect the company's identity. I was asked to create several sets of designs based on the following:
                             </p>
-                        </div>
-                    </div>
-
-                    <div class="project-writeup">
-                        <div class="project-writeup-title">
-                            <h2 class="project-writeup-title-text">The solution</h2>
-                        </div>
-                        <div class="project-writeup-content">
-                            <p class="project-writeup-content-text">
-                                Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. Suspendisse urna nibh, viverra non, semper suscipit, posuere a, pede.
-                                Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. Suspendisse urna nibh, viverra non, semper suscipit, posuere a, pede.
-                            </p>
+                            <ul class="project-writeup-content-list">
+                                <li>Innovation - a key aspect of Loft</li>
+                                <li>Surfacing of statistics</li>
+                                <li>Mobile-first</li>
+                                <li>Modern design elements</li>
+                                <li>Minimalist, but with character</li>
+                                <li>Overall generally more in line with the corporate identity and branding of Loft</li>
+                            </ul>
                         </div>
                     </div>
                 </section>
@@ -115,8 +111,7 @@ get_header(); ?>
                         </div>
                         <div class="project-writeup-content">
                             <p class="project-writeup-content-text">
-                                Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. Suspendisse urna nibh, viverra non, semper suscipit, posuere a, pede.
-                                Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. Suspendisse urna nibh, viverra non, semper suscipit, posuere a, pede.
+                                I thouroughly enjoyed this project as it gave me an opportunity to fully excercise my creativity and come up with a warm &amp; characterful, yet modern &amp; minimalist design.
                             </p>
                         </div>
                     </div>

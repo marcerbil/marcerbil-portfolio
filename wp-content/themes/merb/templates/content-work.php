@@ -78,7 +78,7 @@
             <div class="col-md-6">
                 <div class="portfolio-tile portfolio-post-tile-5">
                     <a href="../project_five/">
-                        <img src="<?php bloginfo('template_directory'); ?>/img/project-tiles/bpsi.png" class="portfolio-post-tile-logo" alt="BPSI Apps" />
+                        <img src="<?php bloginfo('template_directory'); ?>/img/project-tiles/bigidea.png" class="portfolio-post-tile-logo" alt="Big Idea Marketing" />
                     </a>
                 </div>
             </div>
@@ -86,7 +86,7 @@
             <div class="col-md-6">
                 <div class="portfolio-tile portfolio-post-tile-6">
                     <a href="../project_six/">
-                        <img src="<?php bloginfo('template_directory'); ?>/img/project-tiles/fstop.png" class="portfolio-post-tile-logo" alt="Fstop Photography" />
+                        <img src="<?php bloginfo('template_directory'); ?>/img/project-tiles/bpsi.png" class="portfolio-post-tile-logo" alt="BPSI Apps" />
                     </a>
                 </div>
             </div>

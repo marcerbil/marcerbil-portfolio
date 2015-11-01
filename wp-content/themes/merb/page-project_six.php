@@ -16,7 +16,7 @@ get_header(); ?>
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
 
-		<?php get_template_part( 'templates/content', 'project_one' ); ?>
+		<?php get_template_part( 'templates/content', 'project_six' ); ?>
 
 		</main><!-- .site-main -->
 	</div><!-- .content-area -->
