@@ -17,7 +17,7 @@
             <div class="col-md-1">
             </div>
             <div class="col-md-4">
-                <div class="hero-content">
+                <div class="hero-content animated fadeIn">
                     <h1 class="hero-title">UI/UX Designer</h1>
                     <h1 class="hero-title">Front end developer</h1>
                     <p class="hero-text">I'm Marc, a London-based developer and coffee lover.</p>
@@ -31,7 +31,7 @@
 
 <div class="content-container">
 
-    <section class="section-skills">
+    <section class="section-skills animated-slower fadeIn">
         <div class="skills">
             <div class="row">
                 <div class="col-md-3">
@@ -72,29 +72,28 @@
 
     <hr class="separator-hr" />
 
-    <section class="section-about">
+    <section class="section-about animated-slower fadeIn">
         <div class="about">
             <div class="row">
-                <div class="col-md-5">
+                <div class="col-md-5 col-sm-12 col-xs-12">
                     <div class="circular-image">
                         <img src="<?php bloginfo('template_directory'); ?>/img/me.jpg" class="image-me" alt="Marc Erbil" />
                     </div>
                 </div>
-                <div class="col-md-7">
+                <div class="col-md-7 col-sm-12 col-xs-12">
                     <h2 class="about-title">A bit of $this, a bit of &lt;that&gt;</h2>
                     <p class="about-text">
-                        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. Suspendisse urna nibh, viverra non, semper suscipit, posuere a, pede.
+                        I'm Marc, a 21-year old designer and developer. I love creating, whatever the medium. In my spare time I like to draw and design, play guitar and read (a lot). I also love
+                        to try new things, whether that be learning a language or picking up an interesting hobby.
                     </p>
                 </div>
-                <!-- <div class="col-md-1">
-                </div> -->
             </div>
         </div>
     </section>
 
     <hr class="separator-hr" />
 
-    <section class="section-recent">
+    <section class="section-recent animated-slower fadeIn">
 
         <div class="recent-projects-title">
             <h3 class="recent-projects-title-text">Some of my recent work</h3>

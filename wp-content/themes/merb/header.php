@@ -61,6 +61,4 @@
 	</nav>
 </header>
 
-<span id="top"></span>
-
 <body <?php body_class(); ?>>

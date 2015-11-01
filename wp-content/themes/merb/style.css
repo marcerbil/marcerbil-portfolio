@@ -55,6 +55,7 @@ Use it to make something cool, have fun, and share what you've learned with othe
 .hero-image {
     width: 100%;
     height: auto;
+    pointer-events: none;
 }
 
 .hero-container {
@@ -302,6 +303,86 @@ Use it to make something cool, have fun, and share what you've learned with othe
     color: #3977BE;
 }
 
+/*  contact
+/*==============*/
+
+.section-contact-form {
+    margin: 4rem 0;
+}
+
+.contact-form {
+    padding: 2rem 0;
+}
+
+.contact-form-field-header {
+    margin: 1rem 0;
+    font-family: 'Nunito', sans-serif;
+    font-size: 2rem;
+}
+
+.contact-form-field {
+    width: 100%;
+    padding: 1rem 0.5rem;
+    margin: 2rem 0;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 1px solid #A5A5A5;
+}
+
+.contact-form-field:focus {
+    outline: none;
+}
+
+.contact-submit {
+    margin: 1rem 0;
+    padding: 0.5rem 2rem;
+    background: #9DB7B8;
+    border-radius: 3px;
+    border: 1px solid transparent;
+    font-family: 'Nunito', sans-serif;
+    font-weight: 100;
+    font-size: 1.5rem;
+    color: #FFFFFF;
+    box-shadow: 2px 2px 5px #A2A2A2;
+}
+
+.contact-submit:focus {
+    outline: none;
+}
+
+.contact-submit:hover {
+    background: #7D9293;
+}
+
+.done {
+    display:none
+}
+
+.error input,input.error,.error textarea,textarea.error {
+    background-color:#ffffff;
+    border:1px solid #D64F4F !Important;
+    border-radius: 3px;
+    -webkit-transition:border linear 0.2s,box-shadow linear 0.2s;
+    -moz-transition:border linear 0.2s,box-shadow linear 0.2s;
+    -o-transition:border linear 0.2s,box-shadow linear 0.2s;
+    transition:border linear 0.2s,box-shadow linear 0.2s;
+}
+
+.content-404 {
+    margin-top: 5rem;
+}
+
+.spacer-404 {
+    height: 100px;
+    background-color: #fff;
+}
+
+.text-404 {
+    margin: 2rem 0;
+    font-size: 1.5rem;
+}
+
 /*  footer
 /*==============*/
 
@@ -339,4 +420,47 @@ Use it to make something cool, have fun, and share what you've learned with othe
 .footer-nav-item:hover {
     text-decoration: none;
     color: #A2A2A2;
+}
+
+/*  animations
+/*==============*/
+
+.animated {
+  -webkit-animation-duration: 2s;
+  animation-duration: 2s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+.animated-slower {
+  -webkit-animation-duration: 3.5s;
+  animation-duration: 3.5s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.fadeIn {
+  -webkit-animation-name: fadeIn;
+  animation-name: fadeIn;
 }

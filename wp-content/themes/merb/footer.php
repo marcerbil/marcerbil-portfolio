@@ -20,7 +20,7 @@
                 </div>
                 <div class="col-xs-4">
                     <div class="backtotop">
-                        <a href="#top"><i class="glyphicon glyphicon-chevron-up"></i></a>
+                        <a href="#" id="backtotop"><i class="glyphicon glyphicon-chevron-up"></i></a>
                     </div>
                 </div>
                 <div class="col-xs-4">

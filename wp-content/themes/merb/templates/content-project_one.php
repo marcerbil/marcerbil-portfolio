@@ -21,7 +21,7 @@ get_header(); ?>
                         <div class="col-md-1">
                         </div>
                         <div class="col-md-4">
-                            <div class="hero-content">
+                            <div class="hero-content animated fadeIn">
                                 <h1 class="hero-title">weareloft.com</h1>
                                 <p class="hero-text">Company website re-design</p>
                                 <hr class="project-hero-hr" />
@@ -33,7 +33,7 @@ get_header(); ?>
                 </div>
             </section>
 
-            <div class="content-container">
+            <div class="content-container animated-slower fadeIn">
 
                 <section class="section-project-intro">
                     <div class="project-intro">

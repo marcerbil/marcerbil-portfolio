@@ -17,7 +17,7 @@
             <div class="col-md-1">
             </div>
             <div class="col-md-4">
-                <div class="hero-content">
+                <div class="hero-content animated fadeIn">
                     <h1 class="hero-title">The place where design</h1>
                     <h1 class="hero-title">meets development</h1>
                     <p class="hero-text">User-oriented design &amp; development. It's all about you.</p>
@@ -31,7 +31,7 @@
 
 <div class="content-container">
 
-    <section class="section-projects">
+    <section class="section-projects animated fadeIn">
 
         <div class="row portfolio-row">
 
