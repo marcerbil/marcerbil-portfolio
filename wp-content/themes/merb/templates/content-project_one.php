@@ -48,13 +48,13 @@ get_header(); ?>
                         <div class="panel-body">
                             <div class="row">
                                 <div class="col-md-4">
-                                    <img src="<?php bloginfo('template_directory'); ?>/img/project-pages/loft1.png" alt="Loft Home" />
+                                    <img src="<?php bloginfo('template_directory'); ?>/img/project-pages/loft1.png" class="project-panel-image" alt="Loft Home" />
                                 </div>
                                 <div class="col-md-4">
-                                    <img src="<?php bloginfo('template_directory'); ?>/img/project-pages/loft2.png" alt="Loft About" />
+                                    <img src="<?php bloginfo('template_directory'); ?>/img/project-pages/loft2.png" class="project-panel-image" alt="Loft About" />
                                 </div>
                                 <div class="col-md-4">
-                                    <img src="<?php bloginfo('template_directory'); ?>/img/project-pages/loft3.png" alt="Loft Blog" />
+                                    <img src="<?php bloginfo('template_directory'); ?>/img/project-pages/loft3.png" class="project-panel-image" alt="Loft Blog" />
                                 </div>
                             </div>
                         </div>
@@ -88,16 +88,16 @@ get_header(); ?>
                         <div class="panel-body">
                             <div class="row">
                                 <div class="col-md-3">
-                                    <img src="<?php bloginfo('template_directory'); ?>/img/project-pages/loft1-mob.png" alt="Loft Home" />
+                                    <img src="<?php bloginfo('template_directory'); ?>/img/project-pages/loft1-mob.png" class="project-panel-image" alt="Loft Home" />
                                 </div>
                                 <div class="col-md-3">
-                                    <img src="<?php bloginfo('template_directory'); ?>/img/project-pages/loft2-mob.png" alt="Loft About" />
+                                    <img src="<?php bloginfo('template_directory'); ?>/img/project-pages/loft2-mob.png" class="project-panel-image" alt="Loft About" />
                                 </div>
                                 <div class="col-md-3">
-                                    <img src="<?php bloginfo('template_directory'); ?>/img/project-pages/loft3-mob.png" alt="Loft Blog" />
+                                    <img src="<?php bloginfo('template_directory'); ?>/img/project-pages/loft3-mob.png" class="project-panel-image" alt="Loft Blog" />
                                 </div>
                                 <div class="col-md-3">
-                                    <img src="<?php bloginfo('template_directory'); ?>/img/project-pages/loft4-mob.png" alt="Loft Menu" />
+                                    <img src="<?php bloginfo('template_directory'); ?>/img/project-pages/loft4-mob.png" class="project-panel-image" alt="Loft Menu" />
                                 </div>
                             </div>
                         </div>

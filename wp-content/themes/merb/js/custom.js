@@ -1,5 +1,16 @@
 var $ = jQuery || {};
 
+window.onload = function() {
+    var nav = document.getElementById( "navley" );
+    window.addEventListener("scroll", function(){
+        if( window.scrollY != 0 ) {
+            nav.classList.add( 'navbar-bg' );
+        } else {
+            nav.classList.remove( 'navbar-bg' );
+        }
+    });
+};
+
 $(function() {
     $(".knob").knob();
 });

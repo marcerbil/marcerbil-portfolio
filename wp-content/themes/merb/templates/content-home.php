@@ -34,7 +34,7 @@
     <section class="section-skills animated-slower fadeIn">
         <div class="skills">
             <div class="row">
-                <div class="col-md-3">
+                <div class="col-md-3 col-sm-3 col-xs-6">
                     <div class="knob-container">
                         <input class="knob" data-width="70%" data-readOnly=true data-rotation=anticlockwise data-fgColor="#C2954C" data-bgColor="#ffffff" data-min="0" data-max="100" data-thickness="0.2" data-displayPrevious=true value="88">
                     </div>
@@ -42,7 +42,7 @@
                         HTML5
                     </div>
                 </div>
-                <div class="col-md-3">
+                <div class="col-md-3 col-sm-3 col-xs-6">
                     <div class="knob-container">
                         <input class="knob" data-width="70%" data-readOnly=true data-rotation=anticlockwise data-fgColor="#72C8E0" data-bgColor="#ffffff" data-min="0" data-max="100" data-thickness="0.2" data-displayPrevious=true value="76">
                     </div>
@@ -50,7 +50,7 @@
                         CSS &amp; SCSS
                     </div>
                 </div>
-                <div class="col-md-3">
+                <div class="col-md-3 col-sm-3 col-xs-6">
                     <div class="knob-container">
                         <input class="knob" data-width="70%" data-readOnly=true data-rotation=anticlockwise data-fgColor="#22B98C" data-bgColor="#ffffff" data-min="0" data-max="100" data-thickness="0.2" data-displayPrevious=true value="82">
                     </div>
@@ -58,7 +58,7 @@
                         JavaScript
                     </div>
                 </div>
-                <div class="col-md-3">
+                <div class="col-md-3 col-sm-3 col-xs-6">
                     <div class="knob-container">
                         <input class="knob" data-width="70%" data-readOnly=true data-rotation=anticlockwise data-fgColor="#43518B" data-bgColor="#ffffff" data-min="0" data-max="100" data-thickness="0.2" data-displayPrevious=true value="80">
                     </div>
@@ -101,7 +101,7 @@
 
         <div class="row portfolio-row">
 
-            <div class="col-md-6">
+            <div class="col-md-6 col-sm-12 col-xs-12">
                 <div class="portfolio-tile portfolio-post-tile-1">
                     <a href="../project_one/">
                         <img src="<?php bloginfo('template_directory'); ?>/img/project-tiles/loft.png" class="portfolio-post-tile-logo" alt="Loft Digital" />
@@ -109,7 +109,7 @@
                 </div>
             </div>
 
-            <div class="col-md-6">
+            <div class="col-md-6 col-sm-12 col-xs-12">
                 <div class="portfolio-tile portfolio-post-tile-2">
                     <a href="../project_two/">
                         <img src="<?php bloginfo('template_directory'); ?>/img/project-tiles/panacea.png" class="portfolio-post-tile-logo" alt="Panacea Publishing" />

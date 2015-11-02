@@ -14,7 +14,7 @@ get_header(); ?>
 
             <section class="section-hero">
                 <div class="hero">
-                    <img src="<?php bloginfo('template_directory'); ?>/img/hero3.png" class="hero-image" alt="Hero image" />
+                    <img src="<?php bloginfo('template_directory'); ?>/img/hero4.png" class="hero-image" alt="Hero image" />
                 </div>
                 <div class="hero-container">
                     <div class="row">
@@ -33,7 +33,6 @@ get_header(); ?>
             </section>
             <div class="content-container">
                 <div class="content-404 animated fadeIn">
-                    <div class="spacer-404"></div>
                     <p class="text-404">
                         Here, try <a href="<?php bloginfo( 'url' ); ?>">this</a>.
                     </p>

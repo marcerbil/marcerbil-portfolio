@@ -37,7 +37,7 @@
 </head>
 
 <header>
-	<nav class="navbar navbar-default navbar-fixed-top">
+	<nav id="navley" class="navbar navbar-default navbar-fixed-top">
 	  <div class="container-fluid">
 	    <!-- Brand and toggle get grouped for better mobile display -->
 	    <div class="navbar-header">
@@ -48,7 +48,7 @@
 	        <span class="icon-bar"></span>
 	      </button>
 		  <div class="navbar-brand-container">
-			  <a class="navbar-brand" href="/"><img src="<?php bloginfo('template_directory'); ?>/img/logo.png" alt="MDE Logo"></a>
+			  <a class="navbar-brand" href="/"><img src="<?php bloginfo('template_directory'); ?>/img/logo.png" class="navbar-brand-image" alt="MDE Logo"></a>
 		  </div>
 	    </div>
 	    <div class="collapse navbar-collapse" id="navbar">
