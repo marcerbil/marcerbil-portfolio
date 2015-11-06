@@ -3,46 +3,56 @@
 // Date created: 28/10/2015
 // ========================
 
-// Navbar JS
-// Turns navbar bg black while scrolling
-// =====================================
 
 window.onload = function() {
 
-    var nav = document.getElementById( 'navley' );
+    // Variable declarations
+    var $ = jQuery || {};
+    var nav = document.getElementById( 'navley' ),
+        navBrand = document.getElementById( 'navBrand' ),
+        menuRight = document.getElementById( 'cbp-spmenu-s2' ),
+        showRight = document.getElementById( 'showRight' ),
+        pushBody = document.getElementById( 'push-body' ),
+        menuClose = document.getElementById( 'menuClose' ),
+        burger = document.getElementById( 'burger' ),
+        bodyElement = document.getElementById("body"),
+        backtotop = document.getElementById("backtotop"),
+        currentScrollPosition,
+        iteration,
+        start = false;
+
+    // Navbar JS
+    // Turns navbar bg black while scrolling
+    // =====================================
+
     window.addEventListener('scroll', function() {
         if( window.scrollY != 0 ) {
             nav.classList.add( 'navbar-bg' );
+            navBrand.classList.add( 'flipInX' );
         } else {
             nav.classList.remove( 'navbar-bg' );
+            navBrand.classList.remove( 'flipInX' );
         }
     });
 
 
     // Menu JS
-    // Uses Classie.js
-    // =================
-
-    var menuRight = document.getElementById( 'cbp-spmenu-s2' ),
-        showRight = document.getElementById( 'showRight' ),
-        body = document.getElementById( 'body' );
+    // Push menu adapted from codrops
+    // ==============================
 
     showRight.onclick = function() {
-        classie.toggle( this, 'menu-active' );
-        classie.toggle( body, 'cbp-spmenu-push-toleft' );
-        classie.toggle( menuRight, 'cbp-spmenu-open' );
+        nav.classList.toggle( 'cbp-spmenu-push-toleft' );
+        burger.classList.toggle( 'js-hide-icon' );
+        this.classList.toggle( 'js-push-left' );
+        this.classList.toggle( 'menu-active' );
+        menuClose.classList.toggle( 'js-show-icon' );
+        pushBody.classList.toggle( 'cbp-spmenu-push-toleft' );
+        menuRight.classList.toggle( 'cbp-spmenu-open' );
     };
 
 
     // Back to top
     // ============
-
-    var bodyElement = document.getElementById("body");
-    var backtotop = document.getElementById("backtotop");
-    var currentScrollPosition;
-    var iteration;
-    var start = false;
-
     function setup() {
         // do something when the up arrow is clicked
         backtotop.addEventListener("click", animateToTopOfPage, false);
@@ -119,98 +129,8 @@ window.onload = function() {
     // jQuery Knobs Init
     // =================
 
-    var $ = jQuery || {};
-
     $(function() {
         $('.knob').knob();
     });
 
 };
-
-
-// // Form validation and Ajax call
-// // =============================
-//
-// $(document).ready(function() {
-//
-//   $('#submit').click(function () {
-//
-//       //Get the data from all the fields
-//       var name = $('input[name=name]');
-//       var email = $('input[name=email]');
-//       var regx = /^([a-z0-9_\-\.])+\@([a-z0-9_\-\.])+\.([a-z]{2,4})$/i;
-//       var comment = $('textarea[name=comment]');
-//       var returnError = false;
-//
-//       //Simple validation to make sure user entered something
-//       //Add your own error checking here with JS, but also do some error checking with PHP.
-//       //If error found, add hightlight class to the text field
-//       if (name.val()=='') {
-//           name.addClass('error');
-//           returnError = true;
-//       } else name.removeClass('error');
-//
-//       if (email.val()=='') {
-//           email.addClass('error');
-//           returnError = true;
-//       } else email.removeClass('error');
-//
-//       if(!regx.test(email.val())){
-//         email.addClass('error');
-//         returnError = true;
-//       } else email.removeClass('error');
-//
-//
-//       if (comment.val()=='') {
-//           comment.addClass('error');
-//           returnError = true;
-//       } else comment.removeClass('error');
-//
-//       // Highlight all error fields, then quit.
-//       if(returnError == true){
-//           return false;
-//       }
-//
-//       //organize the data
-//
-//       var data = 'name=' + name.val() + '&email=' + email.val() + '&comment='  + encodeURIComponent(comment.val());
-//
-//       //disabled all the text fields
-//       $('.text').attr('disabled','true');
-//
-//       //show the loading sign
-//       $('.loading').show();
-//
-//       //start the ajax
-//       $.ajax({
-//           //this is the php file that processes the data and sends email
-//           url: "../contact.php",
-//
-//           //GET method is used
-//           type: "GET",
-//
-//           //pass the data
-//           data: data,
-//
-//           //Do not cache the page
-//           cache: false,
-//
-//           //success
-//           success: function (html) {
-//               //if contact.php returned 1/true (send mail success)
-//               if (html==1) {
-//
-//                   //show the success message
-//                   $('.done').fadeIn('slow');
-//
-//                   $(".form").find('input[type=text], textarea').val("");
-//
-//               //if contact.php returned 0/false (send mail failed)
-//               } else alert('Sorry, unexpected error. Please try again later.');
-//           }
-//       });
-//
-//       //cancel the submit button default behaviours
-//       return false;
-//   });
-// });

@@ -44,24 +44,40 @@
       <div class="container-fluid">
         <div class="navbar-header">
           <button id="showRight" type="button" class="navbar-toggle collapsed">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
+            <div id="burger" class="js-hide">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="burger-tooltip">MENU</span>
+            </div>
+            <div id="menuClose" class="menu-close">
+                <i class="glyphicon glyphicon-remove"></i>
+            </div>
           </button>
           <div class="navbar-brand-container">
-              <a class="navbar-brand" href="/"><img src="<?php bloginfo('template_directory'); ?>/img/logo.png" class="navbar-brand-image" alt="MDE Logo"></a>
+              <a id="navBrand" class="animated navbar-brand" href="/"><img src="<?php bloginfo('template_directory'); ?>/img/logo.png" class="navbar-brand-image" alt="MDE Logo"></a>
           </div>
         </div>
     </div> <!-- /.container-fluid -->
     </nav>
 
     <div class="cbp-spmenu cbp-spmenu-vertical cbp-spmenu-right" id="cbp-spmenu-s2">
-        <a class="cbp-link-top" href="<?php bloginfo( 'url' ); ?>/work/">work</a>
+        <h3>&nbsp;</h3>
+        <a class="cbp-link-top" href="<?php bloginfo( 'url' ); ?>/">home</a>
+        <a class="cbp-link" href="<?php bloginfo( 'url' ); ?>/work/">projects</a>
+        <ul class="cbp-dropdown">
+            <li class="cbp-dropdown-item"><a class="sub-dropdown-item" href="<?php bloginfo( 'url' ); ?>/work/project_one">Loft Digital</a></li>
+            <li class="cbp-dropdown-item"><a class="sub-dropdown-item" href="<?php bloginfo( 'url' ); ?>/work/project_two">Business Traveller</a></li>
+            <li class="cbp-dropdown-item"><a class="sub-dropdown-item" href="<?php bloginfo( 'url' ); ?>/work/project_three">Olam</a></li>
+            <li class="cbp-dropdown-item"><a class="sub-dropdown-item" href="<?php bloginfo( 'url' ); ?>/work/project_four">MD Marketing</a></li>
+            <li class="cbp-dropdown-item"><a class="sub-dropdown-item" href="<?php bloginfo( 'url' ); ?>/work/project_five">Big Idea</a></li>
+            <li class="cbp-dropdown-item"><a class="sub-dropdown-item" href="<?php bloginfo( 'url' ); ?>/work/project_six">BPSI</a></li>
+        </ul>
+
         <a class="cbp-link" href="<?php bloginfo( 'url' ); ?>/contact/">contact</a>
         <a class="cbp-link" href="#">blog - coming soon</a>
     </div>
 </header>
 
 <body id="body" <?php body_class(); ?>>
-<div class="cbp-spmenu-push">
+<div id="push-body" class="cbp-spmenu-push">

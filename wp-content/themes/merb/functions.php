@@ -259,6 +259,8 @@ function merb_scripts() {
     wp_enqueue_script( 'knobs', get_template_directory_uri() . '/js/jquery.knob.min.js' );
 
     wp_enqueue_script( 'customjs', get_template_directory_uri() . '/js/custom.js' );
+
+    wp_enqueue_script( 'customjs', get_template_directory_uri() . '/js/contact.js' );
 }
 add_action( 'wp_enqueue_scripts', 'merb_scripts' );
 

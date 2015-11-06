@@ -36,7 +36,7 @@
                     </div>
                 </div>
 
-                <form method="post" action="<?php bloginfo( 'url' ); ?>/contact.php">
+                <form method="post" action="<?php bloginfo( 'url' ); ?>/contactform">
                     <div class="form">
                         <h3 class="contact-form-field-header">Name</h3>
                         <input class="contact-form-field" type="text" name="name" placeholder="Name">
