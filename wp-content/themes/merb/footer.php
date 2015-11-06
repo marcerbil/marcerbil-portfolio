@@ -35,7 +35,9 @@
     </footer><!-- .site-footer -->
 
 
-<?php wp_footer(); ?>
+    <?php wp_footer(); ?>
 
+
+</div> <!-- /.cbp-spmenu-push-->
 </body>
 </html>

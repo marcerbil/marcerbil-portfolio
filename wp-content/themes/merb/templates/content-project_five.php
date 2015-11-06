@@ -17,18 +17,10 @@ get_header(); ?>
                     <img src="<?php bloginfo('template_directory'); ?>/img/project-pages/bigidea-overlay.png" class="project-hero-image" alt="Hero image" />
                 </div>
                 <div class="hero-container">
-                    <div class="row">
-                        <div class="col-md-1">
-                        </div>
-                        <div class="col-md-4">
-                            <div class="hero-content animated fadeIn">
-                                <h1 class="hero-title">Big Idea Marketing</h1>
-                                <p class="hero-text">Marketing agency responsive site</p>
-                                <hr class="project-hero-hr" />
-                            </div>
-                        </div>
-                        <div class="col-md-7">
-                        </div>
+                    <div class="hero-content animated fadeIn">
+                        <h1 class="hero-title">Big Idea Marketing</h1>
+                        <p class="hero-text">Marketing agency responsive site</p>
+                        <hr class="project-hero-hr" />
                     </div>
                 </div>
             </section>
@@ -42,25 +34,27 @@ get_header(); ?>
                         </p>
                     </div>
                 </section>
+            </div>
 
-                <section class="section-project-pics">
-                    <div class="project-pics-panel panel panel-default">
-                        <div class="panel-body">
-                            <div class="row">
-                                <div class="col-md-4">
-                                    <img src="<?php bloginfo('template_directory'); ?>/img/project-pages/big1.png" class="project-panel-image" alt="Big Idea Home" />
-                                </div>
-                                <div class="col-md-4">
-                                    <img src="<?php bloginfo('template_directory'); ?>/img/project-pages/big2.png" class="project-panel-image" alt="Big Idea Studies" />
-                                </div>
-                                <div class="col-md-4">
-                                    <img src="<?php bloginfo('template_directory'); ?>/img/project-pages/big3.png" class="project-panel-image" alt="Big Idea Services" />
-                                </div>
+            <section class="section-project-pics">
+                <div class="project-pics-panel panel panel-default">
+                    <div class="panel-body">
+                        <div class="row">
+                            <div class="col-md-4 col-sm-4 col-xs-4">
+                                <img src="<?php bloginfo('template_directory'); ?>/img/project-pages/big1.png" class="project-panel-image" alt="Big Idea Home" />
+                            </div>
+                            <div class="col-md-4 col-sm-4 col-xs-4">
+                                <img src="<?php bloginfo('template_directory'); ?>/img/project-pages/big2.png" class="project-panel-image" alt="Big Idea Studies" />
+                            </div>
+                            <div class="col-md-4 col-sm-4 col-xs-4">
+                                <img src="<?php bloginfo('template_directory'); ?>/img/project-pages/big3.png" class="project-panel-image" alt="Big Idea Services" />
                             </div>
                         </div>
                     </div>
-                </section>
+                </div>
+            </section>
 
+            <div class="content-container animated-slower fadeIn">
                 <section class="section-project-writeup">
                     <div class="project-writeup">
                         <div class="project-writeup-content">
@@ -82,32 +76,35 @@ get_header(); ?>
                         </div>
                     </div>
                 </section>
+            </div>
 
-                <section class="section-project-pics">
-                    <div class="project-pics-panel panel panel-default">
-                        <div class="panel-body">
-                            <div class="row">
-                                <div class="col-md-3">
-                                    <img src="<?php bloginfo('template_directory'); ?>/img/project-pages/big1-mob.png" class="project-panel-image" alt="Big Idea About" />
-                                </div>
-                                <div class="col-md-3">
-                                    <img src="<?php bloginfo('template_directory'); ?>/img/project-pages/big2-mob.png" class="project-panel-image" alt="Big Idea Home" />
-                                </div>
-                                <div class="col-md-3">
-                                    <img src="<?php bloginfo('template_directory'); ?>/img/project-pages/big3-mob.png" class="project-panel-image" alt="Big Idea Study" />
-                                </div>
-                                <div class="col-md-3">
-                                    <img src="<?php bloginfo('template_directory'); ?>/img/project-pages/big4-mob.png" class="project-panel-image" alt="Big Idea Footer" />
-                                </div>
+            <section class="section-project-pics">
+                <div class="project-pics-panel panel panel-default">
+                    <div class="panel-body">
+                        <div class="row">
+                            <div class="col-md-3 col-sm-3 col-xs-3">
+                                <img src="<?php bloginfo('template_directory'); ?>/img/project-pages/big1-mob.png" class="project-panel-image" alt="Big Idea About" />
+                            </div>
+                            <div class="col-md-3 col-sm-3 col-xs-3">
+                                <img src="<?php bloginfo('template_directory'); ?>/img/project-pages/big2-mob.png" class="project-panel-image" alt="Big Idea Home" />
+                            </div>
+                            <div class="col-md-3 col-sm-3 col-xs-3">
+                                <img src="<?php bloginfo('template_directory'); ?>/img/project-pages/big3-mob.png" class="project-panel-image" alt="Big Idea Study" />
+                            </div>
+                            <div class="col-md-3 col-sm-3 col-xs-3">
+                                <img src="<?php bloginfo('template_directory'); ?>/img/project-pages/big4-mob.png" class="project-panel-image" alt="Big Idea Footer" />
                             </div>
                         </div>
                     </div>
-                </section>
+                </div>
+            </section>
 
+            <div class="content-container animated-slower fadeIn">
+                <section class="section-project-writeup">
                     <div class="project-writeup-link">
                         <a href="http://www.bigideamarketing.co.uk/" alt="Big Idea Marketing">bigideamarketing.co.uk</a>
                     </div>
-
+                </section>
             </div>
 
         </main><!-- .site-main -->

@@ -17,18 +17,10 @@ get_header(); ?>
                     <img src="<?php bloginfo('template_directory'); ?>/img/project-pages/olam-overlay.png" class="project-hero-image" alt="Hero image" />
                 </div>
                 <div class="hero-container">
-                    <div class="row">
-                        <div class="col-md-1">
-                        </div>
-                        <div class="col-md-4">
-                            <div class="hero-content animated fadeIn">
-                                <h1 class="hero-title">Olam International</h1>
-                                <p class="hero-text">Olam Farmer Information System (OFIS)</p>
-                                <hr class="project-hero-hr" />
-                            </div>
-                        </div>
-                        <div class="col-md-7">
-                        </div>
+                    <div class="hero-content animated fadeIn">
+                        <h1 class="hero-title">Olam International</h1>
+                        <p class="hero-text">Olam Farmer Information System (OFIS)</p>
+                        <hr class="project-hero-hr" />
                     </div>
                 </div>
             </section>

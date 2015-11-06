@@ -17,25 +17,17 @@ get_header(); ?>
                     <img src="<?php bloginfo('template_directory'); ?>/img/hero4.png" class="hero-image" alt="Hero image" />
                 </div>
                 <div class="hero-container">
-                    <div class="row">
-                        <div class="col-md-1">
-                        </div>
-                        <div class="col-md-4">
-                            <div class="hero-content animated fadeIn">
-                                <h1 class="hero-title">Whoops</h1>
-                                <p class="hero-text">You dun goofed. Nuttin ere.</p>
-                            </div>
-                        </div>
-                        <div class="col-md-7">
-                        </div>
+                    <div class="hero-content animated fadeIn">
+                        <h1 class="hero-title">Whoops</h1>
+                        <p class="hero-text">You dun goofed. Nuttin ere.</p>
                     </div>
                 </div>
             </section>
             <div class="content-container">
-                <div class="content-404 animated fadeIn">
-                    <p class="text-404">
-                        Here, try <a href="<?php bloginfo( 'url' ); ?>">this</a>.
-                    </p>
+                <div class="content-container-width">
+                    <div class="content-404 animated fadeIn">
+                        <blockquote class="text-404">Here, try <a href="<?php bloginfo( 'url' ); ?>">this</a>.</blockquote>
+                    </div>
                 </div>
             </div>
 

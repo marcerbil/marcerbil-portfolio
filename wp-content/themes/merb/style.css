@@ -18,6 +18,13 @@ Use it to make something cool, have fun, and share what you've learned with othe
 /*  page
 /*========*/
 
+/**
+* To fix white bar on right of screen - mobile
+**/
+html, body {
+    overflow-x: hidden;
+}
+
 .content-container {
     padding-left: 10%;
     padding-right: 10%;
@@ -32,30 +39,120 @@ Use it to make something cool, have fun, and share what you've learned with othe
     }
 }
 
+.content-container-width {
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+.content-container-width-work {
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+@media (min-width: 1280px) and (max-width: 1399px) {
+    .content-container-width-work {
+        padding-left: 10%;
+        padding-right: 10%;
+    }
+}
+
+@media (min-width: 1400px) {
+    .content-container-width-work {
+        padding-left: 15%;
+        padding-right: 15%;
+        padding-top: 5%;
+    }
+}
+
 /*  navbar
 /*========*/
 
 .navbar-default {
     background-color: transparent;
     border: none;
+    -webkit-transition: all 200ms cubic-bezier(0.47, 0, 0.745, 0.715);
+    transition: all 200ms cubic-bezier(0.47, 0, 0.745, 0.715);
 }
 
 .navbar-toggle {
     border: none;
+    border-radius: 0;
+    margin-top: 0.7rem;
+    margin-right: 1rem;
+    height: 5rem;
+    text-align: center;
+    display: block;
+    float: right;
+}
+
+@media (min-width: 768px) {
+    .navbar-toggle {
+        margin-right: 10.5rem;
+    }
+}
+
+.navbar-header {
+    float: none;
 }
 
 .navbar-default .navbar-toggle .icon-bar {
     background-color: #fff;
+    font-size: 2rem;
+}
+
+@media (min-width: 768px) {
+    .navbar-default .navbar-toggle .icon-bar {
+        background-color: #fff;
+        height: 2px;
+        width: 25px;
+        margin: 0.6rem 0;
+    }
 }
 
 .navbar-brand-container {
-    padding-left: 10%;
+    padding: 0;
+    margin-left: 17.5rem;
 }
 
-@media (max-width: 500px) {
+@media (max-width: 768px) {
     .navbar-brand-container {
         padding: 0;
         margin-left: -5px;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1023px) {
+    .navbar-brand-container {
+        padding: 0;
+        margin-left: 6.25rem;
+    }
+}
+
+@media (min-width: 1024px) and (max-width: 1149px) {
+    .navbar-brand-container {
+        padding: 0;
+        margin-left: 9rem;
+    }
+}
+
+@media (min-width: 1150px) and (max-width: 1365px) {
+    .navbar-brand-container {
+        padding: 0;
+        margin-left: 10.5rem;
+    }
+}
+
+@media (min-width: 1366px) and (max-width: 1599px) {
+    .navbar-brand-container {
+        padding: 0;
+        margin-left: 12rem;
+    }
+}
+
+@media (min-width: 1600px) and (max-width: 1919px) {
+    .navbar-brand-container {
+        padding: 0;
+        margin-left: 15rem;
     }
 }
 
@@ -71,7 +168,7 @@ Use it to make something cool, have fun, and share what you've learned with othe
     width: auto;
 }
 
-@media (max-width: 500px) {
+@media (max-width: 768px) {
     .navbar-brand-image {
         width: 32px;
     }
@@ -80,6 +177,7 @@ Use it to make something cool, have fun, and share what you've learned with othe
 .navbar-right {
     margin-right: 4.5rem;
     margin-top: 1rem;
+    font-family: 'Raleway', sans-serif;
 }
 
 .navbar-default .navbar-nav>li>a {
@@ -91,7 +189,19 @@ Use it to make something cool, have fun, and share what you've learned with othe
 }
 
 .navbar-default .navbar-toggle:hover {
-    background-color: #444444;
+    background-color: #222222;
+}
+
+.navbar-default .navbar-toggle:focus, .navbar-default .navbar-toggle:hover {
+    background-color: #222222;
+    background-color: #222222;
+}
+
+.menu-active {
+    -webkit-transition: all 300ms cubic-bezier(0.47, 0, 0.745, 0.715);
+    transition: all 300ms cubic-bezier(0.47, 0, 0.745, 0.715);
+    background-color: #222222;
+    background-color: #222222;
 }
 
 .navbar-bg {
@@ -99,6 +209,109 @@ Use it to make something cool, have fun, and share what you've learned with othe
     -webkit-transition: all 300ms cubic-bezier(0.47, 0, 0.745, 0.715);
     transition: all 300ms cubic-bezier(0.47, 0, 0.745, 0.715);
 }
+
+/**
+* Codrops slide menu
+*
+**/
+/* General styles for all menus */
+
+.cbp-spmenu {
+	background: #222222;
+	position: fixed;
+}
+
+.cbp-spmenu a {
+	display: block;
+    font-family: 'Raleway', sans-serif;
+	color: #fff;
+	font-size: 1.75rem;
+	font-weight: 300;
+}
+
+.cbp-spmenu a:hover {
+    color: #4A90E2;
+    text-decoration: none;
+}
+
+.cbp-spmenu a:active {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+/* Orientation-dependent styles for the content of the menu */
+
+.cbp-spmenu-vertical {
+	width: 240px;
+	height: 100%;
+	top: 50px;
+	z-index: 1000;
+}
+
+.cbp-spmenu-vertical a {
+	padding: 1rem 2rem;
+}
+
+.cbp-spmenu-horizontal {
+	width: 100%;
+	height: 150px;
+	left: 0;
+	z-index: 1000;
+	overflow: hidden;
+}
+
+.cbp-spmenu-horizontal h3 {
+	height: 100%;
+	width: 20%;
+	float: left;
+}
+
+.cbp-spmenu-horizontal a {
+	float: left;
+	width: 20%;
+	padding: 0.8em;
+	border-left: 1px dashed #258ecd;
+}
+
+/* Vertical menu that slides from the left or right */
+
+.cbp-spmenu-right {
+	right: -240px;
+}
+
+.cbp-spmenu-right.cbp-spmenu-open {
+	right: 0px;
+}
+
+/* Push classes applied to the body */
+
+.cbp-spmenu-push {
+	overflow-x: hidden;
+	position: relative;
+	left: 0;
+}
+
+.cbp-spmenu-push-toleft {
+	left: -240px;
+}
+
+/* Transitions */
+
+.cbp-spmenu,
+.cbp-spmenu-push {
+	-webkit-transition: all 0.3s ease;
+	-moz-transition: all 0.3s ease;
+	transition: all 0.3s ease;
+}
+
+.cbp-link {
+    margin: 0.5rem 0;
+}
+
+.cbp-link-top {
+    margin: 0.5rem 0;
+}
+
 
 /*  hero
 /*======*/
@@ -114,10 +327,10 @@ Use it to make something cool, have fun, and share what you've learned with othe
 }
 
 .hero-container {
-    padding: 12.5% 2%;
+    padding: 12.5% 10%;
 }
 
-@media (max-width: 500px) {
+@media (max-width: 768px) {
     .hero-container {
         padding: 45px 12px;
     }
@@ -140,13 +353,13 @@ Use it to make something cool, have fun, and share what you've learned with othe
     font-weight: 300;
 }
 
-@media (max-width: 500px) {
+@media (max-width: 768px) {
     .hero-title {
-        font-size: 2rem;
+        font-size: 2.5rem;
     }
 }
 
-@media (min-width: 768px) and (max-width: 1024px) {
+@media (min-width: 769px) and (max-width: 1024px) {
     .hero-title {
         font-size: 3rem;
     }
@@ -161,7 +374,7 @@ Use it to make something cool, have fun, and share what you've learned with othe
 
 @media (max-width: 500px) {
     .hero-text {
-        font-size: 1rem;
+        font-size: 1.2rem;
     }
 }
 
@@ -170,6 +383,13 @@ Use it to make something cool, have fun, and share what you've learned with othe
 
 .section-skills {
     margin: 1.5rem 0;
+}
+
+
+@media (max-width: 500px) {
+    .section-skills {
+        margin: 0;
+    }
 }
 
 @media (min-width: 768px) and (max-width: 1024px) {
@@ -183,36 +403,25 @@ Use it to make something cool, have fun, and share what you've learned with othe
     padding: 4rem;
 }
 
-@media (min-width: 768px) and (max-width: 1024px) {
-    .skills {
-        padding-top: 10rem;
-    }
-}
-
-@media (min-width: 1025px) and (max-width: 1920px) {
-    .skills {
-        padding-top: 20%;
-    }
-}
-
-@media (min-width: 1920px) {
-    .skills {
-        padding-top: 25%;
-    }
-}
-
-@media (max-width: 500px) {
-    .section-skills {
-        margin: 0;
-    }
-}
-
 @media (max-width: 500px) {
     .skills {
         margin: 0;
         padding: 0;
     }
 }
+
+@media (min-width: 500px) {
+    .skills {
+        padding-top: 30%;
+    }
+}
+
+@media (min-width: 1280px) {
+    .skills {
+        padding-top: 25%;
+    }
+}
+
 
 /*  about
 /*========*/
@@ -263,7 +472,7 @@ Use it to make something cool, have fun, and share what you've learned with othe
     box-shadow: 0 0 5px #F5F5F5;
 }
 
-@media (max-width: 500px) {
+@media (max-width: 768px) {
     .circular-image {
         width: 100%;
         border-radius: 1px;
@@ -272,7 +481,16 @@ Use it to make something cool, have fun, and share what you've learned with othe
     }
 }
 
-@media (min-width: 768px) and (max-width: 1024px) {
+@media (min-width: 769px) and (max-width: 1024px) {
+    .circular-image {
+        width: 100%;
+        border-radius: 1px;
+        box-shadow: 1px 1px 2px #A2A2A2;
+        margin: 4rem 0;
+    }
+}
+
+@media (min-width: 1025px) and (max-width: 1366px) {
     .circular-image {
         width: 100%;
         border-radius: 1px;
@@ -281,12 +499,18 @@ Use it to make something cool, have fun, and share what you've learned with othe
     }
 }
 
-@media (min-width: 1025px) and (max-width: 1920px) {
+@media (min-width: 1367px) and (max-width: 1920px) {
     .circular-image {
         width: 500px;
         border-radius: 1px;
         box-shadow: 1px 1px 2px #A2A2A2;
         margin: 1rem 0;
+    }
+}
+
+@media (min-width: 1200px) {
+    .about-text-container {
+        margin-left: 20%;
     }
 }
 
@@ -305,7 +529,7 @@ Use it to make something cool, have fun, and share what you've learned with othe
     }
 }
 
-@media (min-width: 500px) and (max-width: 768px) {
+@media (min-width: 501px) {
     .about-title {
         margin: 3rem 0;
         font-size: 3rem;
@@ -315,7 +539,7 @@ Use it to make something cool, have fun, and share what you've learned with othe
 
 .about-text {
     line-height: 2.5;
-    font-family: 'Raleway', sans-serif;
+    font-family: 'Merriweather', serif;
     font-size: 20px;
     font-weight: 300;
     color: #222222;
@@ -324,15 +548,15 @@ Use it to make something cool, have fun, and share what you've learned with othe
 @media (max-width: 500px) {
     .about-text {
         font-size: 1.5rem;
-        font-weight: 100;
+        font-weight: 300;
         text-align: center;
     }
 }
 
-@media (min-width: 500px) and (max-width: 768px) {
+@media (min-width: 501px) {
     .about-text {
-        font-size: 2rem;
-        font-weight: 100;
+        font-size: 1.75rem;
+        font-weight: 300;
         text-align: center;
     }
 }
@@ -367,15 +591,33 @@ Use it to make something cool, have fun, and share what you've learned with othe
 /*  recent
 /*========*/
 
-@media (min-width: 768px) and (max-width: 1024px) {
+@media (max-width: 400px) {
+    .section-projects {
+        margin-top: -30%;
+    }
+}
+
+@media (min-width: 401px) and (max-width: 768px) {
+    .section-projects {
+        padding-top: 20%;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 840px) {
     .section-projects {
         padding-top: 10rem;
     }
 }
 
-@media (min-width: 1025px) and (max-width: 1920px) {
+@media (min-width: 841px) and (max-width: 1600px) {
     .section-projects {
-        padding-top: 25%;
+        padding-top: 20%;
+    }
+}
+
+@media (min-width: 1600px) and (max-width: 1920px) {
+    .section-projects {
+        padding-top: 30%;
     }
 }
 
@@ -392,8 +634,8 @@ Use it to make something cool, have fun, and share what you've learned with othe
 
 @media (max-width: 500px) {
     .recent-projects-title-text {
-        font-weight: 200;
-        font-size: 1.5rem;
+        font-weight: 300;
+        font-size: 1.75rem;
     }
 }
 
@@ -413,7 +655,8 @@ Use it to make something cool, have fun, and share what you've learned with othe
 
 .portfolio-tile {
     max-width: 500px;
-    margin: 2rem 0;
+    margin: 1rem auto;
+    margin-bottom: 1rem;
     border-radius: 4px;
     box-shadow: 2px 2px 5px 0 #F5F5F5;
     border: 1px solid #fff;
@@ -517,29 +760,35 @@ Use it to make something cool, have fun, and share what you've learned with othe
     margin: 4rem 0;
 }
 
-@media (max-width: 500px) {
+@media (max-width: 400px) {
     .section-project-intro {
-        margin: 0;
+        margin-top: -25%;
+        margin-bottom: -10%;
     }
 }
 
-@media (min-width: 500px) and (max-width: 768px) {
+@media (min-width: 400px) and (max-width: 500px) {
     .section-project-intro {
-        margin-top: 14rem;
+        margin-top: -15%;
+        margin-bottom: -10%;
     }
 }
 
-@media (min-width: 769px) and (max-width: 1024px) {
+@media (min-width: 500px) and (max-width: 1025px) {
     .section-project-intro {
-        padding-top: 25rem;
-        margin-bottom: 0;
+        margin-top: 25%;
     }
 }
 
-@media (min-width: 1025px) and (max-width: 1920px) {
+@media (min-width: 1025px) and (max-width: 1399px) {
     .section-project-intro {
-        padding-top: 25%;
-        margin-bottom: 2rem;
+        margin-top: 20%;
+    }
+}
+
+@media (min-width: 1400px) and (max-width: 1920px) {
+    .section-project-intro {
+        margin-top: 25%;
     }
 }
 
@@ -551,7 +800,8 @@ Use it to make something cool, have fun, and share what you've learned with othe
     text-align: center;
     font-size: 2rem;
     font-family: 'Raleway', sans-serif;
-    font-weight: 100;
+    font-weight: 300;
+    font-style: italic;
     color: #222222;
 }
 
@@ -562,19 +812,20 @@ Use it to make something cool, have fun, and share what you've learned with othe
 }
 
 .project-pics-panel {
-    background-color: #D8D8D8;
+    width: 100%;
+    background-color: #F5F5F5;
     border: none;
-}
-
-@media (max-width: 500px) {
-    .project-pics-panel {
-        width: 100%;
-    }
 }
 
 .project-panel-image {
     width: 100%;
     margin: 0.5rem 0;
+}
+
+@media (max-width: 1000px) {
+.project-panel-image {
+        margin: 0.5rem;
+    }
 }
 
 .section-project-writeup {
@@ -599,7 +850,7 @@ Use it to make something cool, have fun, and share what you've learned with othe
 }
 
 .project-writeup-title {
-    margin: 1rem 0;
+    margin: 2.5rem 0;
 }
 
 .project-writeup-title-text {
@@ -623,13 +874,14 @@ Use it to make something cool, have fun, and share what you've learned with othe
 }
 
 .project-writeup-content {
-    margin: 1rem 0;
+    margin: 1.5rem 0;
 }
 
 .project-writeup-content-text {
-    font-family: 'Raleway', sans-serif;
+    font-family: 'Merriweather', serif;
+    color: #000000;
     font-size: 1.75rem;
-    font-weight: 100;
+    font-weight: 300;
     line-height: 2.5;
 }
 
@@ -652,8 +904,9 @@ Use it to make something cool, have fun, and share what you've learned with othe
 }
 
 .project-writeup-content-list {
-    font-family: 'Raleway', sans-serif;
-    font-weight: 100;
+    font-family: 'Merriweather', sans-serif;
+    font-weight: 300;
+    font-size: 1.75rem;
     line-height: 2.7;
 }
 
@@ -666,9 +919,9 @@ Use it to make something cool, have fun, and share what you've learned with othe
 
 .project-writeup-link {
     margin: 2rem 0 4rem 0;
-    font-family: 'Raleway', sans-serif;
+    font-family: 'Merriweather', sans-serif;
     font-size: 1.75rem;
-    font-weight: 100;
+    font-weight: 300;
     color: #4A90E2;
 }
 
@@ -696,7 +949,6 @@ Use it to make something cool, have fun, and share what you've learned with othe
 @media (min-width: 1025px) and (max-width: 1920px) {
     .project-writeup-link {
         font-size: 2rem;
-        padding: 0 10%;
     }
 }
 
@@ -708,17 +960,8 @@ Use it to make something cool, have fun, and share what you've learned with othe
 /*  contact
 /*==============*/
 
-@media (min-width: 768px) and (max-width: 1024px) {
-    .section-contact-form {
-        margin: 4rem 0;
-        padding: 1rem 8rem;
-    }
-}
-
-@media (min-width: 1025px) and (max-width: 1920px) {
-    .section-contact-form {
-        padding: 25% 10% 0 10%;
-    }
+.section-contact-form {
+    margin-top: 25%;
 }
 
 @media (min-width: 500px) and (max-width: 768px) {
@@ -796,19 +1039,18 @@ Use it to make something cool, have fun, and share what you've learned with othe
 /*==============*/
 
 .content-404 {
-    padding-top: 15rem;
-    padding-bottom: 2rem;
+    padding: 15rem 0 2rem;
 }
 
-@media (min-width: 1025px) and (max-width: 1920px) {
+@media (min-width: 600px) and (max-width: 1920px) {
     .content-404 {
-        padding-top: 25%;
+        padding-top: 30%;
     }
 }
 
 .text-404 {
-    padding: 0 1rem;
     font-size: 1.5rem;
+    font-family: 'Raleway', sans-serif;
 }
 
 /*  footer
@@ -853,12 +1095,12 @@ Use it to make something cool, have fun, and share what you've learned with othe
 .footer-nav {
     list-style-type: none;
     text-align: center;
+    padding: 0;
 }
 
 @media (max-width: 500px) {
     .footer-nav {
         margin: 1rem 0;
-        padding: 0;
     }
 }
 
@@ -920,4 +1162,12 @@ Use it to make something cool, have fun, and share what you've learned with othe
 .fadeIn {
   -webkit-animation-name: fadeIn;
   animation-name: fadeIn;
+}
+
+/*  helpers
+/*============*/
+
+.scrolling-up {
+    -webkit-transition: all 1000ms cubic-bezier(0.47, 0, 0.745, 0.715);
+    transition: all 1000ms cubic-bezier(0.47, 0, 0.745, 0.715);
 }

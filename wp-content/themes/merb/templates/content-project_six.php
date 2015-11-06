@@ -17,18 +17,10 @@ get_header(); ?>
                     <img src="<?php bloginfo('template_directory'); ?>/img/project-pages/bpsi-overlay.png" class="project-hero-image" alt="Hero image" />
                 </div>
                 <div class="hero-container">
-                    <div class="row">
-                        <div class="col-md-1">
-                        </div>
-                        <div class="col-md-4">
-                            <div class="hero-content animated fadeIn">
-                                <h1 class="hero-title">BPSI iCourse</h1>
-                                <p class="hero-text">Android &amp; iOS course-booking application</p>
-                                <hr class="project-hero-hr" />
-                            </div>
-                        </div>
-                        <div class="col-md-7">
-                        </div>
+                    <div class="hero-content animated fadeIn">
+                        <h1 class="hero-title">BPSI iCourse</h1>
+                        <p class="hero-text">Android &amp; iOS course-booking application</p>
+                        <hr class="project-hero-hr" />
                     </div>
                 </div>
             </section>
@@ -70,11 +62,13 @@ get_header(); ?>
                     </div>
                 </section>
 
-                <div class="project-writeup-content">
-                    <p class="project-writeup-content-text">
-                        The app is on both the Google Play store and the iOS app store
-                    </p>
-                </div>
+                <section class="section-project-writeup">
+                    <div class="project-writeup-content">
+                        <p class="project-writeup-content-text">
+                            The app is on both the Google Play store and the iOS app store
+                        </p>
+                    </div>
+                </section>
 
             </div>
 
