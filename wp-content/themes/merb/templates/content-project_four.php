@@ -9,11 +9,13 @@
 
 get_header(); ?>
 
+<div class="page-id" id="projectFour"></div>
+
         <main id="main" class="" role="main">
 
-            <section class="section-hero">
+            <section id="heroBg" data-colour="#F481B5" class="section-hero">
                 <div class="project-hero">
-                    <img src="<?php bloginfo('template_directory'); ?>/img/project-pages/md-overlay.png" class="project-hero-image" alt="Hero image" />
+                    <img src="<?php bloginfo('template_directory'); ?>/img/project-pages/md-bg.png" class="project-hero-image" alt="Hero image" />
                 </div>
                 <div class="hero-container">
                     <div class="hero-content animated fadeIn">
@@ -24,35 +26,35 @@ get_header(); ?>
                 </div>
             </section>
 
-            <div class="content-container animated-slower fadeIn">
-                <section class="section-project-intro">
+            <div class="content-container-project animated-slower fadeIn">
+                <section class="section-project-intro section-project-intro-small">
                     <div class="project-intro">
                         <p class="project-intro-text">
-                            A mobile-first, responsive single-page website for a marketing agency which reflects the corporate identity, yet is warm and welcoming.
+                            A responsive single-page website for a marketing agency which reflects the corporate identity, yet is warm and welcoming
                         </p>
                     </div>
                 </section>
             </div>
 
-            <div class="content-container animated-slower fadeIn">
-                <section class="section-project-pics">
-                    <div class="project-pics-panel panel panel-default">
-                        <div class="panel-body">
-                            <div class="row">
-                                <div class="col-md-4 col-sm-4 col-xs-4">
-                                    <img src="<?php bloginfo('template_directory'); ?>/img/project-pages/md1.png" class="project-panel-image" alt="Loft Home" />
-                                </div>
-                                <div class="col-md-4 col-sm-4 col-xs-4">
-                                    <img src="<?php bloginfo('template_directory'); ?>/img/project-pages/md2.png" class="project-panel-image" alt="Loft About" />
-                                </div>
-                                <div class="col-md-4 col-sm-4 col-xs-4">
-                                    <img src="<?php bloginfo('template_directory'); ?>/img/project-pages/md3.png" class="project-panel-image" alt="Loft Blog" />
-                                </div>
+            <section class="section-project-pics">
+                <div class="project-pics-panel panel panel-default">
+                    <div class="panel-body">
+                        <div class="row">
+                            <div class="col-md-4 col-sm-4 col-xs-4">
+                                <img src="<?php bloginfo('template_directory'); ?>/img/project-pages/md1.png" class="project-panel-image" alt="Loft Home" />
+                            </div>
+                            <div class="col-md-4 col-sm-4 col-xs-4">
+                                <img src="<?php bloginfo('template_directory'); ?>/img/project-pages/md2.png" class="project-panel-image" alt="Loft About" />
+                            </div>
+                            <div class="col-md-4 col-sm-4 col-xs-4">
+                                <img src="<?php bloginfo('template_directory'); ?>/img/project-pages/md3.png" class="project-panel-image" alt="Loft Blog" />
                             </div>
                         </div>
                     </div>
-                </section>
+                </div>
+            </section>
 
+            <div class="content-container-project animated-slower fadeIn">
                 <section class="section-project-writeup">
                     <div class="project-writeup">
                         <div class="project-writeup-content">
@@ -86,7 +88,7 @@ get_header(); ?>
                 </div>
             </section>
 
-            <div class="content-container animated-slower fadeIn">
+            <div class="content-container-project animated-slower fadeIn">
                 <section class="section-project-writeup">
                     <div class="project-writeup-link">
                         <a href="http://www.mdmarketing.co.uk/" alt="MD Marketing">mdmarketing.co.uk</a>

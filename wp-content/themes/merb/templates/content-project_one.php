@@ -9,12 +9,15 @@
 
 get_header(); ?>
 
+
+<div class="page-id" id="projectOne"></div>
+
         <main id="main" class="" role="main">
 
-            <section class="section-hero">
+            <section id="heroBg" data-colour="#BE3624" class="section-hero">
 
                 <div class="project-hero">
-                    <img src="<?php bloginfo('template_directory'); ?>/img/project-pages/loft-overlay.png" class="project-hero-image" alt="Hero image" />
+                    <img src="<?php bloginfo('template_directory'); ?>/img/project-pages/loft-bg.png" class="project-hero-image" alt="Hero image" />
                 </div>
                 <div class="hero-container">
                     <div class="hero-content animated fadeIn">
@@ -25,11 +28,11 @@ get_header(); ?>
                 </div>
             </section>
 
-            <div class="content-container animated-slower fadeIn">
-                <section class="section-project-intro">
+            <div class="content-container-project animated-slower fadeIn">
+                <section class="section-project-intro section-project-intro-small">
                     <div class="project-intro">
                         <p class="project-intro-text">
-                            A rethink of the Loft Digital company website - a responsive mobile-first set of designs which showcases Loft's key values and beliefs - minimalistic yet characterful and distinctive.
+                            A rethink of the Loft Digital company website - a set of responsive, minimalist designs which showcase Loft's key values
                         </p>
                     </div>
                 </section>
@@ -41,20 +44,26 @@ get_header(); ?>
                         <div class="panel-body">
                             <div class="row">
                                 <div class="col-md-4 col-sm-4 col-xs-4">
-                                    <img src="<?php bloginfo('template_directory'); ?>/img/project-pages/loft1.png" class="project-panel-image" alt="Loft Home" />
+                                    <a href="<?php bloginfo('template_directory'); ?>/img/project-pages/loft1.png" data-lightbox="loftDesktop">
+                                        <img src="<?php bloginfo('template_directory'); ?>/img/project-pages/loft1.png" data-lightbox="loftDesktop" class="project-panel-image" alt="Loft Home" />
+                                    </a>
                                 </div>
                                 <div class="col-md-4 col-sm-4 col-xs-4">
-                                    <img src="<?php bloginfo('template_directory'); ?>/img/project-pages/loft2.png" class="project-panel-image" alt="Loft About" />
+                                    <a href="<?php bloginfo('template_directory'); ?>/img/project-pages/loft2.png" data-lightbox="loftDesktop">
+                                        <img src="<?php bloginfo('template_directory'); ?>/img/project-pages/loft2.png" data-lightbox="loftDesktop" class="project-panel-image" alt="Loft About" />
+                                    </a>
                                 </div>
                                 <div class="col-md-4 col-sm-4 col-xs-4">
-                                    <img src="<?php bloginfo('template_directory'); ?>/img/project-pages/loft3.png" class="project-panel-image" alt="Loft Blog" />
+                                    <a href="<?php bloginfo('template_directory'); ?>/img/project-pages/loft3.png" data-lightbox="loftDesktop">
+                                        <img src="<?php bloginfo('template_directory'); ?>/img/project-pages/loft3.png" data-lightbox="loftDesktop" class="project-panel-image" alt="Loft Blog" />
+                                    </a>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </section>
 
-                <div class="content-container animated-slower fadeIn">
+                <div class="content-container-project animated-slower fadeIn">
                     <section class="section-project-writeup">
                         <div class="project-writeup">
                             <div class="project-writeup-title">
@@ -83,23 +92,23 @@ get_header(); ?>
                         <div class="panel-body">
                             <div class="row">
                                 <div class="col-md-3 col-sm-3 col-xs-3">
-                                    <img src="<?php bloginfo('template_directory'); ?>/img/project-pages/loft1-mob.png" class="project-panel-image" alt="Loft Home" />
+                                    <img src="<?php bloginfo('template_directory'); ?>/img/project-pages/loft1-mob.png" data-lightbox="loftMobile" class="project-panel-image" alt="Loft Home" />
                                 </div>
                                 <div class="col-md-3 col-sm-3 col-xs-3">
-                                    <img src="<?php bloginfo('template_directory'); ?>/img/project-pages/loft2-mob.png" class="project-panel-image" alt="Loft About" />
+                                    <img src="<?php bloginfo('template_directory'); ?>/img/project-pages/loft2-mob.png" data-lightbox="loftMobile" class="project-panel-image" alt="Loft About" />
                                 </div>
                                 <div class="col-md-3 col-sm-3 col-xs-3">
-                                    <img src="<?php bloginfo('template_directory'); ?>/img/project-pages/loft3-mob.png" class="project-panel-image" alt="Loft Blog" />
+                                    <img src="<?php bloginfo('template_directory'); ?>/img/project-pages/loft3-mob.png" data-lightbox="loftMobile" class="project-panel-image" alt="Loft Blog" />
                                 </div>
                                 <div class="col-md-3 col-sm-3 col-xs-3">
-                                    <img src="<?php bloginfo('template_directory'); ?>/img/project-pages/loft4-mob.png" class="project-panel-image" alt="Loft Menu" />
+                                    <img src="<?php bloginfo('template_directory'); ?>/img/project-pages/loft4-mob.png" data-lightbox="loftMobile" class="project-panel-image" alt="Loft Menu" />
                                 </div>
                             </div>
                         </div>
                     </div>
                 </section>
 
-                <div class="content-container animated-slower fadeIn">
+                <div class="content-container-project animated-slower fadeIn">
 
                     <section class="section-project-writeup">
                         <div class="project-writeup">

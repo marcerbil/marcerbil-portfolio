@@ -8,7 +8,9 @@
  */
 ?>
 
-<section class="section-hero">
+<div class="page-id" id="workPage"></div>
+
+<section id="heroBg" data-colour="#B4AE99" class="section-hero">
     <div class="hero">
         <img src="<?php bloginfo('template_directory'); ?>/img/hero2.png" class="hero-image" alt="Hero image" />
     </div>

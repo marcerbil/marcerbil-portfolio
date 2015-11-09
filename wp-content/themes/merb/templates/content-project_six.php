@@ -9,28 +9,30 @@
 
 get_header(); ?>
 
+<div class="page-id" id="projectSix"></div>
+
         <main id="main" class="" role="main">
 
-            <section class="section-hero">
+            <section id="heroBg" data-colour="#5DCACA" class="section-hero">
 
                 <div class="project-hero">
-                    <img src="<?php bloginfo('template_directory'); ?>/img/project-pages/bpsi-overlay.png" class="project-hero-image" alt="Hero image" />
+                    <img src="<?php bloginfo('template_directory'); ?>/img/project-pages/bpsi-bg.png" class="project-hero-image" alt="Hero image" />
                 </div>
                 <div class="hero-container">
                     <div class="hero-content animated fadeIn">
                         <h1 class="hero-title">BPSI iCourse</h1>
-                        <p class="hero-text">Android &amp; iOS course-booking application</p>
+                        <p class="hero-text">Native mobile app</p>
                         <hr class="project-hero-hr" />
                     </div>
                 </div>
             </section>
 
-            <div class="content-container animated-slower fadeIn">
+            <div class="content-container-project animated-slower fadeIn">
 
-                <section class="section-project-intro">
+                <section class="section-project-intro section-project-intro-small">
                     <div class="project-intro">
                         <p class="project-intro-text">
-                            An Android and an iOS application for Barnet council staff to view news courses and book places for themselves or others.
+                            Native mobile application for Barnet council staff to view &amp; book courses
                         </p>
                     </div>
                 </section>

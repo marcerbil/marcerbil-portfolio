@@ -17,6 +17,17 @@ window.onload = function() {
         burger = document.getElementById( 'burger' ),
         bodyElement = document.getElementById("body"),
         backtotop = document.getElementById("backtotop"),
+        heroBg = document.getElementById("heroBg"),
+        menuItems = document.querySelectorAll(".js-menu-item"),
+        homePage = document.getElementById("homePage"),
+        workPage = document.getElementById("workPage"),
+        contactPage = document.getElementById("contactPage"),
+        projectOne = document.getElementById("projectOne"),
+        projectTwo = document.getElementById("projectTwo"),
+        projectThree = document.getElementById("projectThree"),
+        projectFour = document.getElementById("projectFour"),
+        projectFive = document.getElementById("projectFive"),
+        projectSix = document.getElementById("projectSix"),
         currentScrollPosition,
         iteration,
         start = false;
@@ -25,12 +36,15 @@ window.onload = function() {
     // Turns navbar bg black while scrolling
     // =====================================
 
+    var heroColour = heroBg.dataset.colour;
     window.addEventListener('scroll', function() {
         if( window.scrollY != 0 ) {
             nav.classList.add( 'navbar-bg' );
+            nav.style.borderBottom = '3px solid '+ heroColour;
             navBrand.classList.add( 'flipInX' );
         } else {
             nav.classList.remove( 'navbar-bg' );
+            nav.style.borderBottom = 0;
             navBrand.classList.remove( 'flipInX' );
         }
     });
@@ -49,6 +63,31 @@ window.onload = function() {
         pushBody.classList.toggle( 'cbp-spmenu-push-toleft' );
         menuRight.classList.toggle( 'cbp-spmenu-open' );
     };
+
+
+    // Menu Link JS
+    // Underline link when on page
+    // ============================
+
+    if ( homePage != null ) {
+        menuItems[0].classList.toggle( 'js-item-active' );
+    } else if ( workPage != null ) {
+        menuItems[1].classList.toggle( 'js-item-active' );
+    } else if ( projectOne != null ) {
+        menuItems[2].classList.toggle( 'js-item-active' );
+    } else if ( projectTwo != null ) {
+        menuItems[3].classList.toggle( 'js-item-active' );
+    } else if ( projectThree != null ) {
+        menuItems[4].classList.toggle( 'js-item-active' );
+    } else if ( projectFour != null ) {
+        menuItems[5].classList.toggle( 'js-item-active' );
+    } else if ( projectFive != null ) {
+        menuItems[6].classList.toggle( 'js-item-active' );
+    } else if ( projectSix != null ) {
+        menuItems[7].classList.toggle( 'js-item-active' );
+    } else if ( contactPage != null ) {
+        menuItems[8].classList.toggle( 'js-item-active' );
+    }
 
 
     // Back to top
@@ -133,4 +172,15 @@ window.onload = function() {
         $('.knob').knob();
     });
 
+
+    // Lightbox init
+    // ==============
+
+    // Customise options
+    lightbox.option({
+      'resizeDuration': 300,
+      'fadeDuration': 300,
+      'wrapAround': true,
+      'alwaysShowNavOnTouchDevices': true
+    });
 };

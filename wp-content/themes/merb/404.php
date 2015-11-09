@@ -12,7 +12,7 @@ get_header(); ?>
     <div id="primary" class="content-area">
         <main id="main" class="site-main" role="main">
 
-            <section class="section-hero">
+            <section id="heroBg" data-colour="#8BBC81" class="section-hero">
                 <div class="hero">
                     <img src="<?php bloginfo('template_directory'); ?>/img/hero4.png" class="hero-image" alt="Hero image" />
                 </div>

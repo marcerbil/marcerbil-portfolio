@@ -25,23 +25,70 @@ html, body {
     overflow-x: hidden;
 }
 
-.content-container {
+.page-id {
+    z-index: -999999;
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+}
+
+.content-container-home {
     padding-left: 10%;
     padding-right: 10%;
     margin-top: 20%;
 }
 
-@media (min-width: 500px) {
-    .content-container {
+@media (max-width: 480px) {
+    .content-container-home {
+        padding-left: 20px;
+        padding-right: 20px;
+        margin-top: 0;
+    }
+}
+
+@media (min-width: 480px) {
+    .content-container-home {
         padding-left: 20px;
         padding-right: 20px;
         margin-top: 50px;
     }
 }
 
+.content-container {
+    padding-left: 10%;
+    padding-right: 10%;
+    margin-top: 20%;
+}
+
+@media (max-width: 500px) {
+    .content-container {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+}
+
+.content-container-project {
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
+@media (max-width: 500px) {
+    .content-container-project {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+}
+
 .content-container-width {
     padding-left: 5%;
     padding-right: 5%;
+}
+
+@media (max-width: 500px) {
+    .content-container-width {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
 }
 
 .content-container-width-work {
@@ -68,10 +115,17 @@ html, body {
 /*========*/
 
 .navbar-default {
+    padding-top: 1.5rem;
     background-color: transparent;
     border: none;
     -webkit-transition: all 200ms cubic-bezier(0.47, 0, 0.745, 0.715);
     transition: all 200ms cubic-bezier(0.47, 0, 0.745, 0.715);
+}
+
+@media (max-width: 768px) {
+    .navbar-default {
+        padding-top: 0;
+    }
 }
 
 .navbar-toggle {
@@ -90,7 +144,8 @@ html, body {
 
 @media (max-width: 480px) {
     .navbar-toggle {
-        margin-top: 1.3rem;
+        margin-top: 0.6rem;
+        margin-right: 0;
         padding-bottom: 0;
     }
 }
@@ -208,8 +263,8 @@ html, body {
 
 @media (max-width: 480px) {
     .navbar-brand-image {
-        width: 48px;
-        margin-top: 1.5rem;
+        width: 40px;
+        margin-top: 1rem;
 
     }
 }
@@ -229,12 +284,11 @@ html, body {
 }
 
 .navbar-default .navbar-toggle:hover {
-    background-color: #222222;
+    background-color: transparent;
 }
 
 .navbar-default .navbar-toggle:focus, .navbar-default .navbar-toggle:hover {
-    background-color: #222222;
-    background-color: #222222;
+    background-color: transparent;
 }
 
 .menu-active {
@@ -246,9 +300,16 @@ html, body {
 }
 
 .navbar-bg {
+    padding-top: 0;
     background-color: #222222;
     -webkit-transition: all 300ms cubic-bezier(0.47, 0, 0.745, 0.715);
     transition: all 300ms cubic-bezier(0.47, 0, 0.745, 0.715);
+}
+
+@media (max-width: 480px) {
+    .navbar-bg {
+        height: 48px;
+    }
 }
 
 .menu-close {
@@ -335,6 +396,7 @@ html, body {
 
 .cbp-spmenu-right.cbp-spmenu-open {
     right: 0px;
+    overflow-y: scroll;
 }
 
 /* Push classes applied to the body */
@@ -363,7 +425,7 @@ html, body {
 }
 
 .cbp-link-top {
-    margin: 0.5rem 0;
+    margin-top: 3.5rem;
 }
 
 .cbp-dropdown {
@@ -411,14 +473,53 @@ html, body {
     }
 }
 
-.hero-content {
+.hero-content-home {
+    margin-top: 5rem;
     position: relative;
     color: #ffffff;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 480px) {
+    .hero-content-home {
+        margin-top: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-content-home {
+        text-align: center;
+    }
+}
+
+@media (min-width: 480px) and (max-width: 768px) {
+    .hero-content-home {
+        margin-top: 10%;
+        text-align: center;
+    }
+}
+
+.hero-content {
+    margin-top: 5rem;
+    position: relative;
+    color: #ffffff;
+}
+
+@media (max-width: 480px) {
     .hero-content {
-        margin-top: 5%;
+        margin-top: 3rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-content {
+        text-align: center;
+    }
+}
+
+@media (min-width: 480px) and (max-width: 768px) {
+    .hero-content {
+        margin-top: 10%;
+        text-align: center;
     }
 }
 
@@ -428,13 +529,19 @@ html, body {
     font-weight: 300;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 600px) {
+    .hero-title {
+        font-size: 2rem;
+    }
+}
+
+@media (min-width: 600px) and (max-width: 768px) {
     .hero-title {
         font-size: 2.5rem;
     }
 }
 
-@media (min-width: 769px) and (max-width: 1024px) {
+@media (min-width: 768px) and (max-width: 1024px) {
     .hero-title {
         font-size: 3rem;
     }
@@ -460,8 +567,13 @@ html, body {
     margin: 1.5rem 0;
 }
 
+@media (min-width: 500px) {
+    .section-skills {
+        margin: 0;
+    }
+}
 
-@media (max-width: 500px) {
+@media (min-width: 500px) {
     .section-skills {
         margin: 0;
     }
@@ -485,24 +597,17 @@ html, body {
     }
 }
 
-@media (min-width: 500px) {
-    .skills {
-        padding-top: 30%;
-    }
-}
-
-@media (min-width: 1280px) {
-    .skills {
-        padding-top: 25%;
-    }
-}
-
-
 /*  about
 /*========*/
 
 .section-about {
     margin: 1.5rem 0;
+}
+
+@media (min-width: 1600px) {
+    .section-about {
+        margin: 1.5rem 5%;
+    }
 }
 
 .image-me {
@@ -536,6 +641,24 @@ html, body {
     .about {
         margin: 0;
         padding: 0;
+    }
+}
+
+@media (min-width: 500px) and (max-width: 1280px) {
+    .about {
+        padding: 30% 0 0;
+    }
+}
+
+@media (min-width: 1280px) and (max-width: 1414px) {
+    .about {
+        padding: 25% 0 0;
+    }
+}
+
+@media (min-width: 1414px) {
+    .about {
+        padding: 30% 0 0;
     }
 }
 
@@ -607,7 +730,7 @@ html, body {
 @media (min-width: 501px) {
     .about-title {
         margin: 3rem 0;
-        font-size: 3rem;
+        font-size: 2.5rem;
         text-align: center;
     }
 }
@@ -638,8 +761,9 @@ html, body {
 
 .separator-hr {
     margin: 4rem auto;
-    width: 7rem;
-    border-color: #979797;
+    width: 3rem;
+    border-width: 1px;
+    border-color: #F5F5F5;
     text-align: center;
 }
 
@@ -665,6 +789,10 @@ html, body {
 
 /*  recent
 /*========*/
+
+.section-recent {
+    margin-bottom: 3rem;
+}
 
 @media (max-width: 400px) {
     .section-projects {
@@ -697,7 +825,7 @@ html, body {
 }
 
 .recent-projects-title {
-    margin: 2rem 0;
+    margin: 2rem 0 3rem;
     text-align: center;
 }
 
@@ -709,7 +837,7 @@ html, body {
 
 @media (max-width: 500px) {
     .recent-projects-title-text {
-        font-weight: 300;
+        font-weight: 400;
         font-size: 1.75rem;
     }
 }
@@ -816,18 +944,31 @@ html, body {
 }
 
 .project-hero-hr {
-    border-width: 4px;
+    border-width: 2px;
     border-color: #ffffff;
-    width: 5rem;
-    margin: 3rem 0;
+    width: 3rem;
+    float: left;
 }
 
-@media (max-width: 500px) {
+@media (max-width: 768px) {
     .project-hero-hr {
+        display: block;
         border-width: 2px;
         border-color: #ffffff;
         width: 2rem;
+        float: none;
+    }
+}
+
+@media (min-width: 768px) {
+    .project-hero-hr {
         margin: 3rem 0;
+    }
+}
+
+@media (max-width: 350px) {
+    .home-hero-hr {
+        display: none;
     }
 }
 
@@ -835,23 +976,15 @@ html, body {
     margin: 4rem 0;
 }
 
-@media (max-width: 400px) {
-    .section-project-intro {
-        margin-top: -25%;
-        margin-bottom: -10%;
-    }
-}
-
-@media (min-width: 400px) and (max-width: 500px) {
-    .section-project-intro {
-        margin-top: -15%;
-        margin-bottom: -10%;
-    }
-}
-
 @media (min-width: 500px) and (max-width: 1025px) {
     .section-project-intro {
-        margin-top: 25%;
+        margin-top: 35%;
+    }
+}
+
+@media (min-width: 960px) and (max-width: 1025px) {
+    .section-project-intro {
+        margin-top: 40%;
     }
 }
 
@@ -861,11 +994,18 @@ html, body {
     }
 }
 
-@media (min-width: 1400px) and (max-width: 1920px) {
+@media (min-width: 1400px) {
     .section-project-intro {
-        margin-top: 25%;
+        margin-top: 35%;
     }
 }
+
+@media (min-width: 1025px) and (max-width: 1399px) {
+    .section-project-intro-small {
+        margin-top: 30%;
+    }
+}
+
 
 .project-intro {
     padding: 1rem;
@@ -892,9 +1032,23 @@ html, body {
     border: none;
 }
 
+.panel-body {
+    padding: 3rem 10rem;
+}
+
+@media (min-width: 1280px) {
+    .panel-body {
+        padding: 3rem 10rem;
+        margin-left: auto;
+        margin-right: auto;
+        width: 75%;
+    }
+}
+
 .project-panel-image {
     width: 100%;
     margin: 0.5rem 0;
+    max-width: 300px;
 }
 
 @media (max-width: 1000px) {
@@ -909,7 +1063,7 @@ html, body {
 
 @media (min-width: 768px) and (max-width: 1024px) {
     .section-project-writeup {
-        padding: 1rem 8rem;
+        padding: 1rem;
     }
 }
 
@@ -922,6 +1076,12 @@ html, body {
 .project-writeup {
     margin: 1rem 0;
     padding: 1rem 0;
+}
+
+@media (max-width: 768px) {
+    .project-writeup {
+        padding: 0;
+    }
 }
 
 .project-writeup-title {
@@ -972,9 +1132,7 @@ html, body {
 @media (min-width: 500px) and (max-width: 768px) {
     .project-writeup-content-text {
         text-align: center;
-        font-size: 2rem;
         font-weight: 100;
-        line-height: 2.5;
     }
 }
 
@@ -985,10 +1143,10 @@ html, body {
     line-height: 2.7;
 }
 
-@media (min-width: 500px) and (max-width: 768px) {
+@media (max-width: 500px) {
     .project-writeup-content-list {
+        font-size: 1.5rem;
         line-height: 2.7;
-        font-size: 2rem;
     }
 }
 
@@ -1002,28 +1160,20 @@ html, body {
 
 @media (max-width: 500px) {
     .project-writeup-link {
-        font-size: 1.5rem;
+        font-size: 1.75rem;
         text-align: center;
     }
 }
 
 @media (min-width: 500px) and (max-width: 768px) {
     .project-writeup-link {
-        font-size: 2rem;
         text-align: center;
     }
 }
 
 @media (min-width: 768px) and (max-width: 1024px) {
     .project-writeup-link {
-        font-size: 2rem;
-        padding: 1rem 8rem;
-    }
-}
-
-@media (min-width: 1025px) and (max-width: 1920px) {
-    .project-writeup-link {
-        font-size: 2rem;
+        padding: 1rem;
     }
 }
 
@@ -1385,4 +1535,10 @@ html, body {
     -moz-transition: all 0.3s ease;
     transition: all 0.3s ease;
     margin-right: 1.5rem;
+}
+
+.js-item-active {
+    text-decoration: underline;
+    border-width: 2px;
+    border-color: #ffffff;
 }

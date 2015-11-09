@@ -9,28 +9,30 @@
 
 get_header(); ?>
 
+<div class="page-id" id="projectThree"></div>
+
         <main id="main" class="" role="main">
 
-            <section class="section-hero">
+            <section id="heroBg" data-colour="#2DC32D" class="section-hero">
 
                 <div class="project-hero">
-                    <img src="<?php bloginfo('template_directory'); ?>/img/project-pages/olam-overlay.png" class="project-hero-image" alt="Hero image" />
+                    <img src="<?php bloginfo('template_directory'); ?>/img/project-pages/olam-bg.png" class="project-hero-image" alt="Hero image" />
                 </div>
                 <div class="hero-container">
                     <div class="hero-content animated fadeIn">
                         <h1 class="hero-title">Olam International</h1>
-                        <p class="hero-text">Olam Farmer Information System (OFIS)</p>
+                        <p class="hero-text">Data organisation/server integration &amp; project launch</p>
                         <hr class="project-hero-hr" />
                     </div>
                 </div>
             </section>
 
-            <div class="content-container animated-slower fadeIn">
+            <div class="content-container-project animated-slower fadeIn">
 
-                <section class="section-project-intro">
+                <section class="section-project-intro section-project-intro-small">
                     <div class="project-intro">
                         <p class="project-intro-text">
-                            An online system for Olam partners and stakeholders to view statistics, glean information and create reports &amp; analyses on farmers registered with Olam.
+                            A system for Olam partners, stakeholders and executives to view statistics and create reports &amp; analyses on farmers registered with Olam
                         </p>
                     </div>
                 </section>

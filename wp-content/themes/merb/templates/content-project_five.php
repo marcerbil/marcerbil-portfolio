@@ -9,12 +9,14 @@
 
 get_header(); ?>
 
+<div class="page-id" id="projectFive"></div>
+
         <main id="main" class="" role="main">
 
-            <section class="section-hero">
+            <section id="heroBg" data-colour="#6EB8EA" class="section-hero">
 
                 <div class="project-hero">
-                    <img src="<?php bloginfo('template_directory'); ?>/img/project-pages/bigidea-overlay.png" class="project-hero-image" alt="Hero image" />
+                    <img src="<?php bloginfo('template_directory'); ?>/img/project-pages/bigidea-bg.png" class="project-hero-image" alt="Hero image" />
                 </div>
                 <div class="hero-container">
                     <div class="hero-content animated fadeIn">
@@ -25,12 +27,12 @@ get_header(); ?>
                 </div>
             </section>
 
-            <div class="content-container animated fadeIn">
+            <div class="content-container-project animated fadeIn">
 
-                <section class="section-project-intro">
+                <section class="section-project-intro section-project-intro-small">
                     <div class="project-intro">
                         <p class="project-intro-text">
-                            A mobile-first, responsive website for a marketing agency. Clean, bright &amp; minimalistic with simple micro-interactions.
+                            A responsive website for a marketing consultancy - clean, bright &amp; minimalistic with simple micro-interactions
                         </p>
                     </div>
                 </section>
@@ -54,7 +56,7 @@ get_header(); ?>
                 </div>
             </section>
 
-            <div class="content-container animated-slower fadeIn">
+            <div class="content-container-project animated-slower fadeIn">
                 <section class="section-project-writeup">
                     <div class="project-writeup">
                         <div class="project-writeup-content">
@@ -99,7 +101,7 @@ get_header(); ?>
                 </div>
             </section>
 
-            <div class="content-container animated-slower fadeIn">
+            <div class="content-container-project animated-slower fadeIn">
                 <section class="section-project-writeup">
                     <div class="project-writeup-link">
                         <a href="http://www.bigideamarketing.co.uk/" alt="Big Idea Marketing">bigideamarketing.co.uk</a>

@@ -30,8 +30,8 @@
     <!-- Google Font -->
     <link href='https://fonts.googleapis.com/css?family=Raleway:400,100,300|Merriweather:400,300,300italic,400italic' rel='stylesheet' type='text/css'>
 
-    <!-- Classie -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/classie/1.0.1/classie.min.js"></script>
+    <!-- lightbox -->
+    <link href='<?php bloginfo('template_directory'); ?>/js/lightbox/css/lightbox.css' rel='stylesheet' type='text/css'>
 
     <!--[if lt IE 9]>
     <script src="<?php echo esc_url( get_template_directory_uri() ); ?>/js/html5.js"></script>
@@ -63,19 +63,18 @@
 
     <div class="cbp-spmenu cbp-spmenu-vertical cbp-spmenu-right" id="cbp-spmenu-s2">
         <h3>&nbsp;</h3>
-        <a class="cbp-link-top" href="<?php bloginfo( 'url' ); ?>/">home</a>
-        <a class="cbp-link" href="<?php bloginfo( 'url' ); ?>/work/">projects</a>
+        <a class="cbp-link-top js-menu-item" href="<?php bloginfo( 'url' ); ?>/">home</a>
+        <a class="cbp-link js-menu-item" href="<?php bloginfo( 'url' ); ?>/work/">projects</a>
         <ul class="cbp-dropdown">
-            <li class="cbp-dropdown-item"><a class="sub-dropdown-item" href="<?php bloginfo( 'url' ); ?>/work/project_one">Loft Digital</a></li>
-            <li class="cbp-dropdown-item"><a class="sub-dropdown-item" href="<?php bloginfo( 'url' ); ?>/work/project_two">Business Traveller</a></li>
-            <li class="cbp-dropdown-item"><a class="sub-dropdown-item" href="<?php bloginfo( 'url' ); ?>/work/project_three">Olam</a></li>
-            <li class="cbp-dropdown-item"><a class="sub-dropdown-item" href="<?php bloginfo( 'url' ); ?>/work/project_four">MD Marketing</a></li>
-            <li class="cbp-dropdown-item"><a class="sub-dropdown-item" href="<?php bloginfo( 'url' ); ?>/work/project_five">Big Idea</a></li>
-            <li class="cbp-dropdown-item"><a class="sub-dropdown-item" href="<?php bloginfo( 'url' ); ?>/work/project_six">BPSI</a></li>
+            <li class="cbp-dropdown-item js-menu-item"><a class="sub-dropdown-item" href="<?php bloginfo( 'url' ); ?>/work/project_one">Loft Digital</a></li>
+            <li class="cbp-dropdown-item js-menu-item"><a class="sub-dropdown-item" href="<?php bloginfo( 'url' ); ?>/work/project_two">Business Traveller</a></li>
+            <li class="cbp-dropdown-item js-menu-item"><a class="sub-dropdown-item" href="<?php bloginfo( 'url' ); ?>/work/project_three">Olam</a></li>
+            <li class="cbp-dropdown-item js-menu-item"><a class="sub-dropdown-item" href="<?php bloginfo( 'url' ); ?>/work/project_four">MD Marketing</a></li>
+            <li class="cbp-dropdown-item js-menu-item"><a class="sub-dropdown-item" href="<?php bloginfo( 'url' ); ?>/work/project_five">Big Idea</a></li>
+            <li class="cbp-dropdown-item js-menu-item"><a class="sub-dropdown-item" href="<?php bloginfo( 'url' ); ?>/work/project_six">BPSI</a></li>
         </ul>
 
-        <a class="cbp-link" href="<?php bloginfo( 'url' ); ?>/contact/">contact</a>
-        <a class="cbp-link" href="#">blog - coming soon</a>
+        <a class="cbp-link js-menu-item" href="<?php bloginfo( 'url' ); ?>/contact/">contact</a>
     </div>
 </header>
 

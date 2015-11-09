@@ -9,28 +9,30 @@
 
 get_header(); ?>
 
+<div class="page-id" id="projectTwo"></div>
+
         <main id="main" class="" role="main">
 
-            <section class="section-hero">
+            <section id="heroBg" data-colour="#4A4A4A" class="section-hero">
 
                 <div class="project-hero">
-                    <img src="<?php bloginfo('template_directory'); ?>/img/project-pages/bt-overlay.png" class="project-hero-image" alt="Hero image" />
+                    <img src="<?php bloginfo('template_directory'); ?>/img/project-pages/bt-bg.png" class="project-hero-image" alt="Hero image" />
                 </div>
                 <div class="hero-container">
                     <div class="hero-content">
                         <h1 class="hero-title">Business Traveller</h1>
-                        <p class="hero-text">Rethink of the online experience</p>
+                        <p class="hero-text">Design/development of the online experience</p>
                         <hr class="project-hero-hr" />
                     </div>
                 </div>
             </section>
 
-            <div class="content-container animated-slower fadeIn">
+            <div class="content-container-project animated-slower fadeIn">
 
-                <section class="section-project-intro">
+                <section class="section-project-intro section-project-intro-small">
                     <div class="project-intro">
                         <p class="project-intro-text">
-                            A major overhaul of Panacea Publishing's popular online magazine <em>Business Traveller</em> - wireframing, design, creation &amp; integration into WordPress.
+                            A major overhaul of Panacea Publishing's popular online magazine <em>Business Traveller</em> - wireframing, design, creation &amp; integration into WordPress
                         </p>
                     </div>
                 </section>

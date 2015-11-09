@@ -8,21 +8,48 @@
  */
 ?>
 
-<section class="section-hero">
+<div class="page-id" id="homePage"></div>
+
+<section id="heroBg" data-colour="#7788BA" class="section-hero">
     <div class="hero">
         <img src="<?php bloginfo('template_directory'); ?>/img/hero1.png" class="hero-image" alt="Hero image" />
     </div>
     <div class="hero-container">
-        <div class="hero-content animated fadeIn">
+        <div class="hero-content-home animated fadeIn">
             <h1 class="hero-title">UI/UX Designer</h1>
             <h1 class="hero-title">Front end developer</h1>
             <p class="hero-text">I'm Marc, a London-based developer and coffee lover.</p>
+            <hr class="project-hero-hr home-hero-hr" />
         </div>
     </div>
 </section>
 
-<div class="content-container">
+<div class="content-container-home">
     <div class="content-container-width">
+
+        <section class="section-about animated-slower fadeIn">
+            <div class="about">
+                <div class="row">
+                    <div class="col-lg-5 col-md-5 col-sm-12 col-xs-12">
+                        <div class="circular-image">
+                            <img src="<?php bloginfo('template_directory'); ?>/img/me.jpg" class="image-me" alt="Marc Erbil" />
+                        </div>
+                    </div>
+                    <div class="col-lg-7 col-md-7 col-sm-12 col-xs-12">
+                        <div class="about-text-container">
+                            <h2 class="about-title">A bit of $this, a bit of &lt;that&gt;</h2>
+                            <p class="about-text">
+                                I'm Marc, a 21-year old designer and developer. I love creating, whatever the medium. In my spare time I like to draw and design, play guitar and read (a lot). I also love
+                                to try new things, whether that be learning a language or picking up an interesting hobby.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <hr class="separator-hr" />
+
         <section class="section-skills animated-slower fadeIn">
             <div class="skills">
                 <div class="row">
@@ -56,29 +83,6 @@
                         </div>
                         <div class="knob-text">
                             UI/UX &amp; Design
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <hr class="separator-hr" />
-
-        <section class="section-about animated-slower fadeIn">
-            <div class="about">
-                <div class="row">
-                    <div class="col-lg-5 col-md-5 col-sm-12 col-xs-12">
-                        <div class="circular-image">
-                            <img src="<?php bloginfo('template_directory'); ?>/img/me.jpg" class="image-me" alt="Marc Erbil" />
-                        </div>
-                    </div>
-                    <div class="col-lg-7 col-md-7 col-sm-12 col-xs-12">
-                        <div class="about-text-container">
-                            <h2 class="about-title">A bit of $this, a bit of &lt;that&gt;</h2>
-                            <p class="about-text">
-                                I'm Marc, a 21-year old designer and developer. I love creating, whatever the medium. In my spare time I like to draw and design, play guitar and read (a lot). I also love
-                                to try new things, whether that be learning a language or picking up an interesting hobby.
-                            </p>
                         </div>
                     </div>
                 </div>
