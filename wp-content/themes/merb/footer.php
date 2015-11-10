@@ -39,5 +39,9 @@
 
 
 </div> <!-- /.cbp-spmenu-push-->
+
+    <script src="<?php bloginfo( 'template_directory' ); ?>/js/lightbox/js/lightbox.min.js" type="text/javascript"></script>
+    <link rel="stylesheet" href="<?php bloginfo( 'template_directory' ); ?>/js/lightbox/css/lightbox.css">
+
 </body>
 </html>

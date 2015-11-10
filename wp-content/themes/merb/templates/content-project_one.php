@@ -43,20 +43,26 @@ get_header(); ?>
                     <div class="project-pics-panel panel panel-default">
                         <div class="panel-body">
                             <div class="row">
-                                <div class="col-md-4 col-sm-4 col-xs-4">
-                                    <a href="<?php bloginfo('template_directory'); ?>/img/project-pages/loft1.png" data-lightbox="loftDesktop">
-                                        <img src="<?php bloginfo('template_directory'); ?>/img/project-pages/loft1.png" data-lightbox="loftDesktop" class="project-panel-image" alt="Loft Home" />
+                                <div class="col-md-4 col-sm-12 col-xs-12">
+                                    <a class="lightbox-link" href="<?php bloginfo('template_directory'); ?>/img/project-pages/large/loft1-lg.jpg" data-lightbox="loftDesktop" data-title="Loft home page" rel="lightbox[loftDesktop]">
+                                        <img src="<?php bloginfo('template_directory'); ?>/img/project-pages/loft1.png" class="project-panel-image" alt="Loft Home" />
                                     </a>
                                 </div>
-                                <div class="col-md-4 col-sm-4 col-xs-4">
-                                    <a href="<?php bloginfo('template_directory'); ?>/img/project-pages/loft2.png" data-lightbox="loftDesktop">
-                                        <img src="<?php bloginfo('template_directory'); ?>/img/project-pages/loft2.png" data-lightbox="loftDesktop" class="project-panel-image" alt="Loft About" />
+                                <div class="col-md-4 col-sm-12 col-xs-12 hidden-sm hidden-xs">
+                                    <a class="lightbox-link" href="<?php bloginfo('template_directory'); ?>/img/project-pages/large/loft2-lg.jpg" data-lightbox="loftDesktop" data-title="Loft about page" rel="lightbox[loftDesktop]">
+                                        <img src="<?php bloginfo('template_directory'); ?>/img/project-pages/loft2.png" class="project-panel-image" alt="Loft About" />
                                     </a>
                                 </div>
-                                <div class="col-md-4 col-sm-4 col-xs-4">
-                                    <a href="<?php bloginfo('template_directory'); ?>/img/project-pages/loft3.png" data-lightbox="loftDesktop">
-                                        <img src="<?php bloginfo('template_directory'); ?>/img/project-pages/loft3.png" data-lightbox="loftDesktop" class="project-panel-image" alt="Loft Blog" />
+                                <div class="col-md-4 col-sm-12 col-xs-12 hidden-sm hidden-xs">
+                                    <a class="lightbox-link" href="<?php bloginfo('template_directory'); ?>/img/project-pages/large/loft3-lg.jpg" data-lightbox="loftDesktop" data-title="Loft blog page" rel="lightbox[loftDesktop]">
+                                        <img src="<?php bloginfo('template_directory'); ?>/img/project-pages/loft3.png" class="project-panel-image" alt="Loft Blog" />
                                     </a>
+                                </div>
+                                <div class="hidden-images">
+                                    <a href="<?php bloginfo('template_directory'); ?>/img/project-pages/large/loft5-lg.jpg" data-lightbox="loftDesktop" data-title="Loft work page" rel="lightbox[loftDesktop]"></a>
+                                    <a href="<?php bloginfo('template_directory'); ?>/img/project-pages/large/loft6-lg.jpg" data-lightbox="loftDesktop" data-title="Loft blog post" rel="lightbox[loftDesktop]"></a>
+                                    <a href="<?php bloginfo('template_directory'); ?>/img/project-pages/large/loft7-lg.jpg" data-lightbox="loftDesktop" data-title="Loft people page" rel="lightbox[loftDesktop]"></a>
+                                    <a href="<?php bloginfo('template_directory'); ?>/img/project-pages/large/loft8-lg.jpg" data-lightbox="loftDesktop" data-title="Loft contact page" rel="lightbox[loftDesktop]"></a>
                                 </div>
                             </div>
                         </div>
@@ -91,17 +97,30 @@ get_header(); ?>
                     <div class="project-pics-panel panel panel-default">
                         <div class="panel-body">
                             <div class="row">
-                                <div class="col-md-3 col-sm-3 col-xs-3">
-                                    <img src="<?php bloginfo('template_directory'); ?>/img/project-pages/loft1-mob.png" data-lightbox="loftMobile" class="project-panel-image" alt="Loft Home" />
+                                <div class="col-md-3 col-sm-12 col-xs-12">
+                                    <a class="lightbox-link" href="<?php bloginfo('template_directory'); ?>/img/project-pages/large/loft1-mob-lg.jpg" data-lightbox="loftMobile" data-title="Loft home page" rel="lightbox[loftMobile]">
+                                        <img src="<?php bloginfo('template_directory'); ?>/img/project-pages/loft1-mob.png" class="project-panel-image" alt="Loft Home" />
+                                    </a>
                                 </div>
-                                <div class="col-md-3 col-sm-3 col-xs-3">
-                                    <img src="<?php bloginfo('template_directory'); ?>/img/project-pages/loft2-mob.png" data-lightbox="loftMobile" class="project-panel-image" alt="Loft About" />
+                                <div class="col-md-3 col-sm-12 col-xs-12 hidden-sm hidden-xs">
+                                    <a class="lightbox-link" href="<?php bloginfo('template_directory'); ?>/img/project-pages/large/loft2-mob-lg.jpg" data-lightbox="loftMobile" data-title="Loft about page" rel="lightbox[loftMobile]">
+                                        <img src="<?php bloginfo('template_directory'); ?>/img/project-pages/loft2-mob.png" class="project-panel-image" alt="Loft About" />
+                                    </a>
                                 </div>
-                                <div class="col-md-3 col-sm-3 col-xs-3">
-                                    <img src="<?php bloginfo('template_directory'); ?>/img/project-pages/loft3-mob.png" data-lightbox="loftMobile" class="project-panel-image" alt="Loft Blog" />
+                                <div class="col-md-3 col-sm-12 col-xs-12 hidden-sm hidden-xs">
+                                    <a class="lightbox-link" href="<?php bloginfo('template_directory'); ?>/img/project-pages/large/loft3-mob-lg.jpg" data-lightbox="loftMobile" data-title="Loft blog page" rel="lightbox[loftMobile]">
+                                        <img src="<?php bloginfo('template_directory'); ?>/img/project-pages/loft3-mob.jpg" class="project-panel-image" alt="Loft Blog" />
+                                    </a>
                                 </div>
-                                <div class="col-md-3 col-sm-3 col-xs-3">
-                                    <img src="<?php bloginfo('template_directory'); ?>/img/project-pages/loft4-mob.png" data-lightbox="loftMobile" class="project-panel-image" alt="Loft Menu" />
+                                <div class="col-md-3 col-sm-12 col-xs-12 hidden-sm hidden-xs">
+                                    <a class="lightbox-link" href="<?php bloginfo('template_directory'); ?>/img/project-pages/large/loft5-mob-lg.jpg" data-lightbox="loftMobile" data-title="Loft portfolio page" rel="lightbox[loftMobile]">
+                                        <img src="<?php bloginfo('template_directory'); ?>/img/project-pages/loft5-mob.jpg" class="project-panel-image" alt="Loft Work" />
+                                    </a>
+                                </div>
+                                <div class="hidden-images">
+                                    <a href="<?php bloginfo('template_directory'); ?>/img/project-pages/large/loft6-mob-lg.jpg" data-lightbox="loftMobile" data-title="Loft blog post" rel="lightbox[loftMobile]"></a>
+                                    <a href="<?php bloginfo('template_directory'); ?>/img/project-pages/large/loft7-mob-lg.jpg" data-lightbox="loftMobile" data-title="Loft people page" rel="lightbox[loftMobile]"></a>
+                                    <a href="<?php bloginfo('template_directory'); ?>/img/project-pages/large/loft8-mob-lg.jpg" data-lightbox="loftMobile" data-title="Loft contact page" rel="lightbox[loftMobile]"></a>
                                 </div>
                             </div>
                         </div>

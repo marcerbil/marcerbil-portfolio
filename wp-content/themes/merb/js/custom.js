@@ -28,6 +28,7 @@ window.onload = function() {
         projectFour = document.getElementById("projectFour"),
         projectFive = document.getElementById("projectFive"),
         projectSix = document.getElementById("projectSix"),
+        lightboxLink = document.querySelectorAll(".lightbox-link"),
         currentScrollPosition,
         iteration,
         start = false;
@@ -179,8 +180,7 @@ window.onload = function() {
     // Customise options
     lightbox.option({
       'resizeDuration': 300,
-      'fadeDuration': 300,
-      'wrapAround': true,
-      'alwaysShowNavOnTouchDevices': true
+      'fadeDuration': 300
     });
+
 };

@@ -19,6 +19,7 @@
             <h1 class="hero-title">The place where design</h1>
             <h1 class="hero-title">meets development</h1>
             <p class="hero-text">User-oriented design &amp; development. It's all about you.</p>
+            <hr class="project-hero-hr" />
         </div>
     </div>
 </section>

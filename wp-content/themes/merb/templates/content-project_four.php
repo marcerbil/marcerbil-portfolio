@@ -40,14 +40,20 @@ get_header(); ?>
                 <div class="project-pics-panel panel panel-default">
                     <div class="panel-body">
                         <div class="row">
-                            <div class="col-md-4 col-sm-4 col-xs-4">
-                                <img src="<?php bloginfo('template_directory'); ?>/img/project-pages/md1.png" class="project-panel-image" alt="Loft Home" />
+                            <div class="col-md-4 col-sm-12 col-xs-12">
+                                <a href="<?php bloginfo('template_directory'); ?>/img/project-pages/large/md1-lg.png" data-lightbox="mdDesktop" data-title="MD home page" rel="lightbox[mdDesktop]">
+                                    <img src="<?php bloginfo('template_directory'); ?>/img/project-pages/md1.png" class="project-panel-image" alt="MD Home" />
+                                </a>
                             </div>
-                            <div class="col-md-4 col-sm-4 col-xs-4">
-                                <img src="<?php bloginfo('template_directory'); ?>/img/project-pages/md2.png" class="project-panel-image" alt="Loft About" />
+                            <div class="col-md-4 col-sm-12 col-xs-12 hidden-sm hidden-xs">
+                                <a href="<?php bloginfo('template_directory'); ?>/img/project-pages/large/md2-lg.png" data-lightbox="mdDesktop" data-title="MD focus page" rel="lightbox[mdDesktop]">
+                                    <img src="<?php bloginfo('template_directory'); ?>/img/project-pages/md2.png" class="project-panel-image" alt="MD About" />
+                                </a>
                             </div>
-                            <div class="col-md-4 col-sm-4 col-xs-4">
-                                <img src="<?php bloginfo('template_directory'); ?>/img/project-pages/md3.png" class="project-panel-image" alt="Loft Blog" />
+                            <div class="col-md-4 col-sm-12 col-xs-12 hidden-sm hidden-xs">
+                                <a href="<?php bloginfo('template_directory'); ?>/img/project-pages/large/md3-lg.png" data-lightbox="mdDesktop" data-title="MD about page" rel="lightbox[mdDesktop]">
+                                    <img src="<?php bloginfo('template_directory'); ?>/img/project-pages/md3.png" class="project-panel-image" alt="MD " />
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -71,17 +77,25 @@ get_header(); ?>
                 <div class="project-pics-panel panel panel-default">
                     <div class="panel-body">
                         <div class="row">
-                            <div class="col-md-3 col-sm-3 col-xs-3">
-                                <img src="<?php bloginfo('template_directory'); ?>/img/project-pages/md1-mob.png" class="project-panel-image" alt="MD Home" />
+                            <div class="col-md-3 col-sm-12 col-xs-12">
+                                <a href="<?php bloginfo('template_directory'); ?>/img/project-pages/large/md1-mob-lg.png" data-lightbox="mdMobile" data-title="MD home page" rel="lightbox[mdMobile]">
+                                    <img src="<?php bloginfo('template_directory'); ?>/img/project-pages/md1-mob.png" class="project-panel-image" alt="MD home page" />
+                                </a>
                             </div>
-                            <div class="col-md-3 col-sm-3 col-xs-3">
-                                <img src="<?php bloginfo('template_directory'); ?>/img/project-pages/md2-mob.png" class="project-panel-image" alt="MD About" />
+                            <div class="col-md-3 col-sm-12 col-xs-12 hidden-sm hidden-xs">
+                                <a href="<?php bloginfo('template_directory'); ?>/img/project-pages/large/md2-mob-lg.png" data-lightbox="mdMobile" data-title="MD focus page" rel="lightbox[mdMobile]">
+                                    <img src="<?php bloginfo('template_directory'); ?>/img/project-pages/md2-mob.png" class="project-panel-image" alt="MD focus page" />
+                                </a>
                             </div>
-                            <div class="col-md-3 col-sm-3 col-xs-3">
-                                <img src="<?php bloginfo('template_directory'); ?>/img/project-pages/md3-mob.png" class="project-panel-image" alt="MD Projects" />
+                            <div class="col-md-3 col-sm-12 col-xs-12 hidden-sm hidden-xs">
+                                <a href="<?php bloginfo('template_directory'); ?>/img/project-pages/large/md3-mob-lg.png" data-lightbox="mdMobile" data-title="MD about page" rel="lightbox[mdMobile]">
+                                    <img src="<?php bloginfo('template_directory'); ?>/img/project-pages/md3-mob.png" class="project-panel-image" alt="MD about page" />
+                                </a>
                             </div>
-                            <div class="col-md-3 col-sm-3 col-xs-3">
-                                <img src="<?php bloginfo('template_directory'); ?>/img/project-pages/md4-mob.png" class="project-panel-image" alt="MD Contact" />
+                            <div class="col-md-3 col-sm-12 col-xs-12 hidden-sm hidden-xs">
+                                <a href="<?php bloginfo('template_directory'); ?>/img/project-pages/large/md4-mob-lg.png" data-lightbox="mdMobile" data-title="MD contact page" rel="lightbox[mdMobile]">
+                                    <img src="<?php bloginfo('template_directory'); ?>/img/project-pages/md4-mob.png" class="project-panel-image" alt="MD contact page" />
+                                </a>
                             </div>
                         </div>
                     </div>

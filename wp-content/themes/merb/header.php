@@ -30,9 +30,6 @@
     <!-- Google Font -->
     <link href='https://fonts.googleapis.com/css?family=Raleway:400,100,300|Merriweather:400,300,300italic,400italic' rel='stylesheet' type='text/css'>
 
-    <!-- lightbox -->
-    <link href='<?php bloginfo('template_directory'); ?>/js/lightbox/css/lightbox.css' rel='stylesheet' type='text/css'>
-
     <!--[if lt IE 9]>
     <script src="<?php echo esc_url( get_template_directory_uri() ); ?>/js/html5.js"></script>
     <![endif]-->

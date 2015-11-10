@@ -42,14 +42,20 @@ get_header(); ?>
                 <div class="project-pics-panel panel panel-default">
                     <div class="panel-body">
                         <div class="row">
-                            <div class="col-md-4 col-sm-4 col-xs-4">
-                                <img src="<?php bloginfo('template_directory'); ?>/img/project-pages/big1.png" class="project-panel-image" alt="Big Idea Home" />
+                            <div class="col-md-4 col-sm-12 col-xs-12">
+                                <a href="<?php bloginfo('template_directory'); ?>/img/project-pages/large/big1-lg.png" data-lightbox="bigDesktop" data-title="Big Idea Home" rel="lightbox[bigDesktop]">
+                                    <img src="<?php bloginfo('template_directory'); ?>/img/project-pages/big1.png" class="project-panel-image" alt="Big Idea Home" />
+                                </a>
                             </div>
-                            <div class="col-md-4 col-sm-4 col-xs-4">
-                                <img src="<?php bloginfo('template_directory'); ?>/img/project-pages/big2.png" class="project-panel-image" alt="Big Idea Studies" />
+                            <div class="col-md-4 col-sm-12 col-xs-12 hidden-sm hidden-xs">
+                                <a href="<?php bloginfo('template_directory'); ?>/img/project-pages/large/big2-lg.png" data-lightbox="bigDesktop" data-title="Big Idea Studies" rel="lightbox[bigDesktop]">
+                                    <img src="<?php bloginfo('template_directory'); ?>/img/project-pages/big2.png" class="project-panel-image" alt="Big Idea Studies" />
+                                </a>
                             </div>
-                            <div class="col-md-4 col-sm-4 col-xs-4">
-                                <img src="<?php bloginfo('template_directory'); ?>/img/project-pages/big3.png" class="project-panel-image" alt="Big Idea Services" />
+                            <div class="col-md-4 col-sm-12 col-xs-12 hidden-sm hidden-xs">
+                                <a href="<?php bloginfo('template_directory'); ?>/img/project-pages/large/big3-lg.png" data-lightbox="bigDesktop" data-title="Big Idea Services" rel="lightbox[bigDesktop]">
+                                    <img src="<?php bloginfo('template_directory'); ?>/img/project-pages/big3.png" class="project-panel-image" alt="Big Idea Services" />
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -84,17 +90,25 @@ get_header(); ?>
                 <div class="project-pics-panel panel panel-default">
                     <div class="panel-body">
                         <div class="row">
-                            <div class="col-md-3 col-sm-3 col-xs-3">
-                                <img src="<?php bloginfo('template_directory'); ?>/img/project-pages/big1-mob.png" class="project-panel-image" alt="Big Idea About" />
+                            <div class="col-md-3 col-sm-12 col-xs-12">
+                                <a href="<?php bloginfo('template_directory'); ?>/img/project-pages/large/big1-mob-lg.png" data-lightbox="bigMobile" data-title="Big Idea About" rel="lightbox[bigMobile]">
+                                    <img src="<?php bloginfo('template_directory'); ?>/img/project-pages/big1-mob.png" class="project-panel-image" alt="Big Idea About" />
+                                </a>
                             </div>
-                            <div class="col-md-3 col-sm-3 col-xs-3">
-                                <img src="<?php bloginfo('template_directory'); ?>/img/project-pages/big2-mob.png" class="project-panel-image" alt="Big Idea Home" />
+                            <div class="col-md-3 col-sm-12 col-xs-12 hidden-sm hidden-xs">
+                                <a href="<?php bloginfo('template_directory'); ?>/img/project-pages/large/big2-mob-lg.png" data-lightbox="bigMobile" data-title="Big Idea Home" rel="lightbox[bigMobile]">
+                                    <img src="<?php bloginfo('template_directory'); ?>/img/project-pages/big2-mob.png" class="project-panel-image" alt="Big Idea Home" />
+                                </a>
                             </div>
-                            <div class="col-md-3 col-sm-3 col-xs-3">
-                                <img src="<?php bloginfo('template_directory'); ?>/img/project-pages/big3-mob.png" class="project-panel-image" alt="Big Idea Study" />
+                            <div class="col-md-3 col-sm-12 col-xs-12 hidden-sm hidden-xs">
+                                <a href="<?php bloginfo('template_directory'); ?>/img/project-pages/large/big3-mob-lg.png" data-lightbox="bigMobile" data-title="Big Idea Study" rel="lightbox[bigMobile]">
+                                    <img src="<?php bloginfo('template_directory'); ?>/img/project-pages/big3-mob.png" class="project-panel-image" alt="Big Idea Study" />
+                                </a>
                             </div>
-                            <div class="col-md-3 col-sm-3 col-xs-3">
-                                <img src="<?php bloginfo('template_directory'); ?>/img/project-pages/big4-mob.png" class="project-panel-image" alt="Big Idea Footer" />
+                            <div class="col-md-3 col-sm-12 col-xs-12 hidden-sm hidden-xs">
+                                <a href="<?php bloginfo('template_directory'); ?>/img/project-pages/large/big4-mob-lg.png" data-lightbox="bigMobile" data-title="Big Idea Footer" rel="lightbox[bigMobile]">
+                                    <img src="<?php bloginfo('template_directory'); ?>/img/project-pages/big4-mob.png" class="project-panel-image" alt="Big Idea Footer" />
+                                </a>
                             </div>
                         </div>
                     </div>
