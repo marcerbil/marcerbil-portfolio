@@ -106,8 +106,13 @@ html, body {
 @media (min-width: 1400px) {
     .content-container-width-work {
         padding-left: 15%;
-        padding-right: 15%;
-        padding-top: 5%;
+        padding-right: 15%
+    }
+}
+
+@media (min-width: 1500px) {
+    .content-container-width-work {
+        padding-top: 3rem;
     }
 }
 
@@ -616,12 +621,19 @@ html, body {
 .skills {
     margin: 2rem;
     padding: 4rem;
+    max-width: 1024px;
 }
 
 @media (max-width: 500px) {
     .skills {
         margin: 0;
         padding: 0;
+    }
+}
+
+@media (min-width: 1024px) {
+    .skills {
+        margin: 2rem auto;
     }
 }
 
@@ -802,17 +814,94 @@ html, body {
     }
 }
 
-/*  jQuery knobs
-/*==============*/
+/*  jQuery skillbars
+/*=================*/
 
-.knob-container {
-    text-align: center;
-    margin: 2rem 0;
+.skillbar {
+    margin-bottom: 3rem;
+    position: relative;
+    display: block;
+    width: 100%;
+    background: #eee;
+    height: 35px;
+    border-radius: 3px;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -webkit-transition: 0.4s linear;
+    -moz-transition: 0.4s linear;
+    -ms-transition: 0.4s linear;
+    -o-transition: 0.4s linear;
+    transition: 0.4s linear;
+    -webkit-transition-property: width, background-color;
+    -moz-transition-property: width, background-color;
+    -ms-transition-property: width, background-color;
+    -o-transition-property: width, background-color;
+    transition-property: width, background-color;
 }
 
-.knob-text {
-    text-align: center;
-    font-weight: 200;
+.skillbar-title {
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-weight: bold;
+    font-size: 13px;
+    color: #ffffff;
+    -webkit-border-top-left-radius: 3px;
+    -webkit-border-bottom-left-radius: 4px;
+    -moz-border-radius-topleft: 3px;
+    -moz-border-radius-bottomleft: 3px;
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+}
+
+.skillbar-title span {
+    display: block;
+    background: rgba(0, 0, 0, 0.1);
+    padding: 0 20px;
+    height: 35px;
+    line-height: 35px;
+    -webkit-border-top-left-radius: 3px;
+    -webkit-border-bottom-left-radius: 3px;
+    -moz-border-radius-topleft: 3px;
+    -moz-border-radius-bottomleft: 3px;
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+}
+
+.skillbar-bar {
+    height: 35px;
+    width: 0px;
+    background: #6adcfa;
+    border-radius: 3px;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+}
+
+.skillbar-bar-one {
+    background:  #C2954C;
+}
+
+.skillbar-bar-two {
+    background:  #72C8E0;
+}
+
+.skillbar-bar-three {
+    background:  #22B98C;
+}
+
+.skillbar-bar-four {
+    background:  #43518B;
+}
+
+.skill-bar-percent {
+    position: absolute;
+    right: 10px;
+    top: 0;
+    font-size: 11px;
+    height: 35px;
+    line-height: 35px;
+    color: #ffffff;
+    color: rgba(0, 0, 0, 0.4);
 }
 
 /*  recent
@@ -828,40 +917,10 @@ html, body {
     }
 }
 
-@media (min-width: 401px) and (max-width: 768px) {
-    .section-projects {
-        padding-top: 20%;
-    }
-}
-
 @media (min-width: 401px) and (max-width: 768px) and (orientation: landscape) {
     .section-projects {
         padding-top: 0;
         margin-top: -5rem;
-    }
-}
-
-@media (min-width: 768px) and (max-width: 840px) {
-    .section-projects {
-        padding-top: 10rem;
-    }
-}
-
-@media (min-width: 841px) and (max-width: 1600px) {
-    .section-projects {
-        padding-top: 20%;
-    }
-}
-
-@media (min-width: 841px) and (max-width: 1600px) and (orientation: landscape) {
-    .section-projects {
-        padding-top: 10%;
-    }
-}
-
-@media (min-width: 1600px) and (max-width: 1920px) {
-    .section-projects {
-        padding-top: 30%;
     }
 }
 
