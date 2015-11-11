@@ -29,6 +29,10 @@ window.onload = function() {
         projectFive = document.getElementById("projectFive"),
         projectSix = document.getElementById("projectSix"),
         lightboxLink = document.querySelectorAll(".lightbox-link"),
+        knobOne = document.getElementById("knobOne"),
+        knobTwo = document.getElementById("knobTwo"),
+        knobThree = document.getElementById("knobThree"),
+        knobFour = document.getElementById("knobFour"),
         currentScrollPosition,
         iteration,
         start = false;
@@ -144,18 +148,15 @@ window.onload = function() {
         return changeInValue / 2 * (Math.pow(currentIteration - 2, 3) + 2) + startValue;
     }
 
-    //
     // kicks into high gear only when the start variable is true
-    //
     function animationLoop() {
         // start is true when you click on the up arrow
         if (start) {
             // where the magic happens
             window.scrollTo(0, easeOutCubic(iteration,
-                                            currentScrollPosition,
-                                            -currentScrollPosition,
-                                            50));
-
+                                currentScrollPosition,
+                                -currentScrollPosition,
+                                50));
             iteration++;
 
             // once you reach the top of the document, stop the scrolling
@@ -166,13 +167,14 @@ window.onload = function() {
         requestAnimationFrame(animationLoop);
     }
 
-    // jQuery Knobs Init
-    // =================
+    // jQuery bars
+    // ============
 
-    $(function() {
-        $('.knob').knob();
+    $( '.skillbar' ).each( function() {
+        $( this ).find('.skillbar-bar').animate({
+            width: $( this ).attr( 'data-percent' )
+        }, 10000 );
     });
-
 
     // Lightbox init
     // ==============

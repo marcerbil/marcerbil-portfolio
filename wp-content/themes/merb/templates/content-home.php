@@ -53,45 +53,42 @@
         <section class="section-skills animated-slower fadeIn">
             <div class="skills">
                 <div class="row">
-                    <div class="col-md-3 col-sm-3 col-xs-6">
-                        <div class="knob-container">
-                            <input class="knob" data-width="70%" data-readOnly=true data-rotation=anticlockwise data-fgColor="#C2954C" data-bgColor="#ffffff" data-min="0" data-max="100" data-thickness="0.2" data-displayPrevious=true value="88">
-                        </div>
-                        <div class="knob-text">
-                            HTML5
-                        </div>
-                    </div>
-                    <div class="col-md-3 col-sm-3 col-xs-6">
-                        <div class="knob-container">
-                            <input class="knob" data-width="70%" data-readOnly=true data-rotation=anticlockwise data-fgColor="#72C8E0" data-bgColor="#ffffff" data-min="0" data-max="100" data-thickness="0.2" data-displayPrevious=true value="76">
-                        </div>
-                        <div class="knob-text">
-                            CSS &amp; SCSS
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                        <div class="skillbar clearfix" data-percent="88%">
+                            <div class="skillbar-title"><span>HTML5</span></div>
+                            <div class="skillbar-bar skillbar-bar-one"></div>
+                            <div class="skill-bar-percent">88%</div>
                         </div>
                     </div>
-                    <div class="col-md-3 col-sm-3 col-xs-6">
-                        <div class="knob-container">
-                            <input class="knob" data-width="70%" data-readOnly=true data-rotation=anticlockwise data-fgColor="#22B98C" data-bgColor="#ffffff" data-min="0" data-max="100" data-thickness="0.2" data-displayPrevious=true value="82">
-                        </div>
-                        <div class="knob-text">
-                            JavaScript
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                        <div class="skillbar clearfix " data-percent="82%">
+                            <div class="skillbar-title"><span>CSS &amp; SCSS</span></div>
+                            <div class="skillbar-bar skillbar-bar-two"></div>
+                            <div class="skill-bar-percent">82%</div>
                         </div>
                     </div>
-                    <div class="col-md-3 col-sm-3 col-xs-6">
-                        <div class="knob-container">
-                            <input class="knob" data-width="70%" data-readOnly=true data-rotation=anticlockwise data-fgColor="#43518B" data-bgColor="#ffffff" data-min="0" data-max="100" data-thickness="0.2" data-displayPrevious=true value="80">
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                        <div class="skillbar clearfix " data-percent="76%">
+                            <div class="skillbar-title"><span>Javascript</span></div>
+                            <div class="skillbar-bar skillbar-bar-three"></div>
+                            <div class="skill-bar-percent">76%</div>
                         </div>
-                        <div class="knob-text">
-                            UI/UX &amp; Design
+                    </div>
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                        <div class="skillbar clearfix " data-percent="80%">
+                            <div class="skillbar-title"><span>UI/UX &amp; Design</span></div>
+                            <div class="skillbar-bar skillbar-bar-four"></div>
+                            <div class="skill-bar-percent">80%</div>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
-
         <hr class="separator-hr" />
+    </div>
 
-        <section class="section-recent animated-slower fadeIn">
+    <div class="content-container-width-work">
+        <section class="section-projects animated-slower fadeIn">
 
             <div class="recent-projects-title">
                 <h3 class="recent-projects-title-text">Some of my recent work</h3>
@@ -117,5 +114,5 @@
 
             </div>
         </section>
-    </div> <!-- ./content-container-width -->
+    </div>
 </div> <!-- ./content-container -->

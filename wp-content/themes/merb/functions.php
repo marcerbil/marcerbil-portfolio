@@ -370,19 +370,3 @@ require get_template_directory() . '/inc/customizer.php';
 
 // Remove admin bar
 add_filter('show_admin_bar', '__return_false');
-
-
-// Register portfolio post type
-add_action( 'init', 'create_post_type' );
-
-function create_post_type() {
-    register_post_type( 'portfolio_post', array(
-        'labels' => array(
-            'name' => __( 'Project' ),
-            'singular_name' => __( 'Project' )
-        ),
-        'public' => true,
-        'has_archive' => true,
-        )
-    );
-}
