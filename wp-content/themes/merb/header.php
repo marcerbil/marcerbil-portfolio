@@ -18,7 +18,7 @@
     <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
 
     <!-- jQuery -->
-    <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <!-- <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script> -->
 
     <!-- Bootstrap -->
     <!-- Latest compiled and minified CSS -->
@@ -70,8 +70,6 @@
             <li class="cbp-dropdown-item js-menu-item"><a class="sub-dropdown-item" href="<?php bloginfo( 'url' ); ?>/work/project_five">Big Idea</a></li>
             <li class="cbp-dropdown-item js-menu-item"><a class="sub-dropdown-item" href="<?php bloginfo( 'url' ); ?>/work/project_six">BPSI</a></li>
         </ul>
-
-        <a class="cbp-link js-menu-item" href="<?php bloginfo( 'url' ); ?>/contact/">contact</a>
     </div>
 </header>
 

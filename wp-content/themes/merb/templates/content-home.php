@@ -16,7 +16,7 @@
     </div>
     <div class="hero-container">
         <div class="hero-content-home animated fadeIn">
-            <h1 class="hero-title">UI/UX Designer</h1>
+            <h1 class="hero-title">UI/Web Designer</h1>
             <h1 class="hero-title">Front end developer</h1>
             <p class="hero-text">London-based developer, designer and coffee connoisseur</p>
             <hr class="project-hero-hr home-hero-hr" />
@@ -39,7 +39,7 @@
                         <div class="about-text-container">
                             <h2 class="about-title">A bit of $this, a bit of &lt;that&gt;</h2>
                             <p class="about-text">
-                                I'm Marc, a 21-year old designer and developer. I love being creative through a number of different mediums - graphic art, music and writing to name a few - so in my spare time I like to draw, play guitar and read (a lot). I also love
+                                I'm Marc, a 22-year old designer and developer. I love being creative through a number of different mediums - graphic art, music and writing to name a few - so in my spare time I like to draw, play guitar and read (a lot). I also love
                                 to try new things, whether that be learning a language or picking up an interesting hobby.
                             </p>
                         </div>
