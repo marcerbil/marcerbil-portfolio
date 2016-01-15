@@ -250,6 +250,13 @@ function merb_scripts() {
         wp_enqueue_script( 'merb-keyboard-image-navigation', get_template_directory_uri() . '/js/keyboard-image-navigation.js', array( 'jquery' ), '20141010' );
     }
 
+    // Stop WP loading jQuery so BS can load it
+    if( !is_admin() ) {
+        wp_deregister_script('jquery');
+        wp_register_script('jquery', ("https://code.jquery.com/jquery-1.11.3.min.js"), false, '1.11.3');
+        wp_enqueue_script('jquery');
+    }
+
     wp_enqueue_script( 'merb-script', get_template_directory_uri() . '/js/functions.js', array( 'jquery' ), '20150330', true );
     wp_localize_script( 'merb-script', 'screenReaderText', array(
         'expand'   => '<span class="screen-reader-text">' . __( 'expand child menu', 'merb' ) . '</span>',
@@ -260,7 +267,7 @@ function merb_scripts() {
 
     wp_enqueue_script( 'customjs', get_template_directory_uri() . '/js/custom.js', array( 'jquery' )  );
 
-    wp_enqueue_script( 'contactjs', get_template_directory_uri() . '/js/contact.js', array( 'jquery' )  );
+    // wp_enqueue_script( 'contactjs', get_template_directory_uri() . '/js/contact.js', array( 'jquery' )  );
 }
 
 add_action( 'wp_enqueue_scripts', 'merb_scripts' );
