@@ -70,6 +70,7 @@
             <li class="cbp-dropdown-item js-menu-item"><a class="sub-dropdown-item" href="<?php bloginfo( 'url' ); ?>/work/project_five">Big Idea</a></li>
             <li class="cbp-dropdown-item js-menu-item"><a class="sub-dropdown-item" href="<?php bloginfo( 'url' ); ?>/work/project_six">BPSI</a></li>
         </ul>
+        <a class="cbp-link js-menu-item" href="<?php bloginfo( 'url' ); ?>/blog/">siht</a>
     </div>
 </header>
 

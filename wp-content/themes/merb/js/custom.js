@@ -21,7 +21,7 @@ window.onload = function() {
         menuItems = document.querySelectorAll(".js-menu-item"),
         homePage = document.getElementById("homePage"),
         workPage = document.getElementById("workPage"),
-        contactPage = document.getElementById("contactPage"),
+        blogPage = document.getElementById("blogPage"),
         projectOne = document.getElementById("projectOne"),
         projectTwo = document.getElementById("projectTwo"),
         projectThree = document.getElementById("projectThree"),
@@ -90,7 +90,7 @@ window.onload = function() {
         menuItems[6].classList.toggle( 'js-item-active' );
     } else if ( projectSix != null ) {
         menuItems[7].classList.toggle( 'js-item-active' );
-    } else if ( contactPage != null ) {
+    } else if ( blogPage != null ) {
         menuItems[8].classList.toggle( 'js-item-active' );
     }
 
@@ -98,20 +98,17 @@ window.onload = function() {
     // Back to top
     // ============
     function setup() {
-        // do something when the up arrow is clicked
         backtotop.addEventListener("click", animateToTopOfPage, false);
 
         // deal with the mouse wheel
         bodyElement.addEventListener("mousewheel", stopEverything, false);
         bodyElement.addEventListener("DOMMouseScroll", stopEverything, false);
 
-        // wheeeeeeee!
         animationLoop();
     }
 
     setup();
 
-    // kick of the animation to scroll your window back to the top
     function animateToTopOfPage(e) {
         currentScrollPosition = getScrollPosition();
 
@@ -184,5 +181,15 @@ window.onload = function() {
       'resizeDuration': 300,
       'fadeDuration': 300
     });
+
+    // Masonry
+    // vanilla JS
+//     var msnry = new Masonry( '.grid', {
+//     // use outer width of grid-sizer for columnWidth
+//     columnWidth: '.grid-sizer',
+//     // do not use .grid-sizer in layout
+//     itemSelector: '.grid-item',
+//     percentPosition: true
+// });
 
 };
