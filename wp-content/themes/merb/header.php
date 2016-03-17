@@ -6,7 +6,6 @@
  *
  * @package WordPress
  * @subpackage merb
- * @since Twenty Fifteen 1.0
  */
 ?><!DOCTYPE html>
 <html <?php language_attributes(); ?> class="no-js">
@@ -17,15 +16,9 @@
     <link rel="profile" href="http://gmpg.org/xfn/11">
     <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
 
-    <!-- jQuery -->
-    <!-- <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script> -->
-
     <!-- Bootstrap -->
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" integrity="sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ==" crossorigin="anonymous">
-
-    <!-- Latest compiled and minified JavaScript -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js" integrity="sha512-K1qjQ+NcF2TYO/eI3M6v8EiNYZfA95pQumfvcVrTHtwQVDG+aHRqLi/ETn2uB+1JqwYqVG3LIvdm9lj6imS/pQ==" crossorigin="anonymous"></script>
 
     <!-- Google Font -->
     <link href='https://fonts.googleapis.com/css?family=Raleway:400,100,300|Merriweather:400,300,300italic,400italic' rel='stylesheet' type='text/css'>
@@ -70,7 +63,7 @@
             <li class="cbp-dropdown-item js-menu-item"><a class="sub-dropdown-item" href="<?php bloginfo( 'url' ); ?>/work/project_five">Big Idea</a></li>
             <li class="cbp-dropdown-item js-menu-item"><a class="sub-dropdown-item" href="<?php bloginfo( 'url' ); ?>/work/project_six">BPSI</a></li>
         </ul>
-        <a class="cbp-link js-menu-item" href="<?php bloginfo( 'url' ); ?>/blog/">siht</a>
+        <a class="cbp-link js-menu-item" href="<?php bloginfo( 'url' ); ?>/blog/">other stuff</a>
     </div>
 </header>
 

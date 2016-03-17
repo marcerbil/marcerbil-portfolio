@@ -263,9 +263,9 @@ function merb_scripts() {
         'collapse' => '<span class="screen-reader-text">' . __( 'collapse child menu', 'merb' ) . '</span>',
     ) );
 
-    wp_enqueue_script( 'knobs', get_template_directory_uri() . '/js/jquery.knob.min.js', array( 'jquery' ) );
+    wp_enqueue_script( 'bootstrapjs', 'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js', array( 'jquery' ) );
 
-    wp_enqueue_script( 'masonry', get_template_directory_uri() . '/js/vendor/masonry.pkgd.min.js', array( 'jquery' ) );
+    wp_enqueue_script( 'knobs', get_template_directory_uri() . '/js/jquery.knob.min.js', array( 'jquery' ) );
 
     wp_enqueue_script( 'customjs', get_template_directory_uri() . '/js/custom.js', array( 'jquery', 'knobs', 'masonry' )  );
 

@@ -1301,10 +1301,19 @@ html, body {
     margin-top: 5%;
 }
 
+@media (min-width: 500px) and (max-width: 768px) {
+    .content-container-blog {
+        margin-top: 15%;
+        padding-left: 1.4rem;
+        padding-right: 1.4rem;
+    }
+}
+
 @media (max-width: 500px) {
     .content-container-blog {
-        padding-left: 20px;
-        padding-right: 20px;
+        margin-top: 5rem;
+        padding-left: 1.4rem;
+        padding-right: 1.4rem;
     }
 }
 
@@ -1312,6 +1321,12 @@ html, body {
     color: #bfbfbf;
     font-size: 3.5rem;
     content: open-quote;
+}
+
+@media (max-width: 667px) {
+    .blog-hero-text::before {
+        font-size: 2rem;
+    }
 }
 
 .blog-hero-text {
@@ -1335,11 +1350,42 @@ html, body {
     content: close-quote;
 }
 
-@media (min-width: 900px) {
+@media (max-width: 667px) {
+    .blog-hero-text::after {
+        margin-left: 0px;
+        font-size: 2rem;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1200px) {
     .blog-hero-text {
         margin-top: 20%;
         line-height: 2.5;
         font-size: 1.75rem;
+    }
+}
+
+@media (min-width: 650px) and (max-width: 768px) {
+    .blog-hero-text {
+        margin-top: 10%;
+        line-height: 2.5;
+        font-size: 1.75rem;
+    }
+}
+
+@media (min-width: 500px) and (max-width: 650px) {
+    .blog-hero-text {
+        margin-top: 5%;
+        line-height: 1.7;
+        font-size: 1.3rem;
+    }
+}
+
+@media (max-width: 500px) {
+    .blog-hero-text {
+        margin-top: 10px;
+        line-height: 1.2;
+        font-size: 1.1rem;
     }
 }
 
@@ -1348,6 +1394,15 @@ html, body {
     font-style: italic;
     font-size: 1.3rem;
     color: #B5B5B5;
+}
+
+@media (max-width: 650px) {
+    .blog-hero-text-small {
+        font-family: 'Raleway', sans-serif;
+        font-style: italic;
+        font-size: 1rem;
+        color: #B5B5B5;
+    }
 }
 
 
