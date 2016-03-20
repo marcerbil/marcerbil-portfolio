@@ -1106,7 +1106,6 @@ html, body {
     }
 }
 
-
 .project-intro {
     padding: 1rem;
 }
@@ -1296,16 +1295,12 @@ html, body {
 }
 
 .content-container-blog {
-    padding-left: 10%;
-    padding-right: 10%;
     margin-top: 5%;
 }
 
 @media (min-width: 500px) and (max-width: 768px) {
     .content-container-blog {
         margin-top: 15%;
-        padding-left: 1.4rem;
-        padding-right: 1.4rem;
     }
 }
 
@@ -1405,6 +1400,165 @@ html, body {
     }
 }
 
+/** Feed blocks ========= **/
+/** ==================== **/
+
+.feed-block-inner {
+    padding: 10px;
+}
+
+.feed-block {
+    margin: 30px;
+    width: 100%;
+    border: 1px solid rgba(0, 94, 86, 0.1);
+    box-shadow: 0px 0px 10px 0px #D2D2D2;
+}
+
+.feed-block-one {
+    height: 250px;
+}
+
+.feed-block-two {
+    height: 125px;
+}
+
+.feed-block-three {
+    height: 125px;
+}
+
+.feed-block-four {
+    height: 600px;
+}
+
+.feed-block-five {
+    height: 300px;
+}
+
+.feed-block-six {
+    height: 550px;
+}
+
+.feed-block-seven {
+    height: 250px;
+}
+
+.feed-block-eight {
+    height: 250px;
+}
+
+.feed-block-nine {
+    height: 300px;
+}
+
+.feed-block-title {
+    font-family: 'Raleway';
+    font-weight: 300;
+    font-size: 2rem;
+    line-height: 1.5;
+    white-space: normal;
+    color: #222222;
+}
+
+.feed-block-excerpt {
+    margin-top: 5px;
+}
+
+.feed-block-excerpt-text {
+    color: #d1d1d1;
+    font-size: 1.3rem;
+    line-height: 2;
+}
+
+.feed-block-categories {
+    margin: 8px 0px;
+}
+
+.feed-block-category-list {
+    list-style-type: none;
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+}
+
+.feed-block-category-item {
+    white-space: nowrap;
+    font-family: 'Raleway', sans-serif;
+    letter-spacing: 1.4px;
+    font-weight: bold;
+    font-size: 8px;
+    text-transform: uppercase;
+    min-width: 100px;
+    margin: 0px 3px 0px 0px;
+    display: inline;
+    border: 1px solid;
+    border-radius: 22px;
+    padding: 0.2rem 1rem;
+}
+
+.feed-block-category-item-other {
+    border-color: #d1d1d1;
+    color: #d1d1d1;
+}
+
+.feed-block-category-item-art {
+    border-color: #50BADE;
+    color: #50BADE;
+}
+
+.feed-block-category-item-article {
+    border-color: #C570E0;
+    color: #C570E0;
+}
+
+.feed-block-category-item-daily-ui {
+    border-color: #74BA5D;
+    color: #74BA5D;
+}
+
+.feed-block-category-item-design {
+    border-color: #09E4E8;
+    color: #09E4E8;
+}
+
+.feed-block-category-item-drawing {
+    border-color: #E6D81C;
+    color: #E6D81C;
+}
+
+.feed-block-category-item-guitar {
+    border-color: #E38710;
+    color: #E38710;
+}
+
+.feed-block-category-item-japanese {
+    border-color: #266E0C;
+    color: #266E0C;
+}
+
+.feed-block-category-item-manga {
+    border-color: #86449E;
+    color: #86449E;
+}
+
+.feed-block-category-item-photography {
+    border-color: #2056BA;
+    color: #2056BA;
+}
+
+.feed-block-datetime {
+    margin: 2.5rem 0;
+    text-decoration: none;
+    color: #e2e2e2;
+    font-size: 10px;
+}
+
+.feed-block-date-text {
+    float: left;
+}
+
+.feed-block-time-text {
+    float: right;
+}
 
 /*  404
 /*==============*/
