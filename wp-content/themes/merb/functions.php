@@ -379,9 +379,3 @@ require get_template_directory() . '/inc/customizer.php';
 
 // Remove admin bar
 add_filter('show_admin_bar', '__return_false');
-
-/**
- * Feed Controller
- *
- */
-require get_template_directory() . '/templates/Controllers/Merb_Feed.php';

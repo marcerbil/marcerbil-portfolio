@@ -1407,11 +1407,67 @@ html, body {
     padding: 10px;
 }
 
+.feed-block-inner-two {
+    padding: 10px 20px;
+}
+
+.feed-block-inner-three {
+    padding: 10px 20px;
+}
+
+.feed-block-inner-four {
+    padding: 10px 20px;
+}
+
+.feed-block-inner-five {
+    padding: 10px 20px;
+    z-index: 9999;
+}
+
+.feed-block-inner-six {
+    padding: 10px 20px;
+}
+
+.feed-block-inner-seven {
+    padding: 10px 10px 0 0;
+}
+
+.feed-block-inner-eight {
+    padding: 10px 10px 0 0;
+}
+
+.feed-block-inner-nine {
+    padding: 10px 20px;
+    z-index: 9999;
+}
+
+.feed-block-seven-inner-container {
+    overflow-wrap: break-word;
+    padding: 2px;
+}
+
+.feed-block-eight-inner-container {
+    overflow-wrap: break-word;
+    padding: 2px;
+}
+
 .feed-block {
     margin: 30px;
     width: 100%;
     border: 1px solid rgba(0, 94, 86, 0.1);
     box-shadow: 0px 0px 10px 0px #D2D2D2;
+}
+
+.feed-block-link {
+    text-decoration: none;
+    color: #d1d1d1;
+    font-size: 1.3rem;
+    line-height: 2;
+}
+
+.feed-block-link:hover {
+    text-decoration: none;
+    color: #d1d1d1;
 }
 
 .feed-block-one {
@@ -1427,27 +1483,37 @@ html, body {
 }
 
 .feed-block-four {
-    height: 600px;
+    height: 625px;
+    max-height: 625px;
 }
 
 .feed-block-five {
     height: 300px;
+    max-height: 300px;
 }
 
 .feed-block-six {
-    height: 550px;
+    height: 625px;
+    max-height: 625px;
 }
 
 .feed-block-seven {
-    height: 250px;
+    height: 296px;
+    max-height: 296px;
+    overflow-y: hidden;
+    overflow-x: auto;
 }
 
 .feed-block-eight {
-    height: 250px;
+    height: 296px;
+    max-height: 296px;
+    overflow-y: hidden;
+    overflow-x: auto;
 }
 
 .feed-block-nine {
     height: 300px;
+    max-height: 300px;
 }
 
 .feed-block-title {
@@ -1457,6 +1523,54 @@ html, body {
     line-height: 1.5;
     white-space: normal;
     color: #222222;
+}
+
+.feed-block-five-overlay {
+    background-color: rgba(51, 51, 51, 0.4);
+    z-index: 10000;
+    height: 300px;
+}
+
+.feed-block-five-image-container {
+    max-height: 300px;
+    overflow: hidden;
+}
+
+.feed-block-nine-overlay {
+    background-color: rgba(51, 51, 51, 0.4);
+    z-index: 10000;
+    height: 300px;
+}
+
+.feed-block-nine-image-container {
+    max-height: 300px;
+    overflow: hidden;
+}
+
+.feed-block-four-image {
+    width: 100%;
+}
+
+.feed-block-five-image {
+    width: 100%;
+    z-index: 0;
+}
+
+.feed-block-six-image {
+    width: 100%;
+}
+
+.feed-block-seven-image {
+    width: 100%;
+}
+
+.feed-block-eight-image {
+    width: 100%;
+}
+
+.feed-block-nine-image {
+    width: 100%;
+    z-index: 0;
 }
 
 .feed-block-excerpt {
@@ -1469,8 +1583,42 @@ html, body {
     line-height: 2;
 }
 
+.feed-block-read-more {
+    text-decoration: none;
+    color: #53A8DE;
+    font-size: 1;
+    vertical-align: middle;
+    margin: 0;
+    padding: 0;
+    line-height: 2;
+}
+
 .feed-block-categories {
     margin: 8px 0px;
+}
+
+.feed-block-four-categories {
+    margin: 3rem 0;
+}
+
+.feed-block-five-categories {
+    margin: 3rem 0;
+}
+
+.feed-block-six-categories {
+    margin: 3rem 0;
+}
+
+.feed-block-seven-categories {
+    margin: 2rem 0;
+}
+
+.feed-block-eight-categories {
+    margin: 4rem 0;
+}
+
+.feed-block-nine-categories {
+    margin: 3rem 0;
 }
 
 .feed-block-category-list {
@@ -1510,7 +1658,7 @@ html, body {
     color: #C570E0;
 }
 
-.feed-block-category-item-daily-ui {
+.feed-block-category-item-dailyui {
     border-color: #74BA5D;
     color: #74BA5D;
 }
@@ -1545,11 +1693,96 @@ html, body {
     color: #2056BA;
 }
 
+.feed-block-category-item-art-inverse {
+    background-color: #50BADE;
+    border-color: #50BADE;
+    color: #FFFFFF;
+}
+
+.feed-block-category-item-article-inverse {
+    background-color: #C570E0;
+    border-color: #C570E0;
+    color: #FFFFFF;
+}
+
+.feed-block-category-item-dailyui-inverse {
+    background-color: #74BA5D;
+    border-color: #74BA5D;
+    color: #FFFFFF;
+}
+
+.feed-block-category-item-design-inverse {
+    background-color: #09E4E8;
+    border-color: #09E4E8;
+    color: #FFFFFF;
+}
+
+.feed-block-category-item-drawing-inverse {
+    background-color: #E6D81C;
+    border-color: #E6D81C;
+    color: #FFFFFF;
+}
+
+.feed-block-category-item-guitar-inverse {
+    background-color: #E38710;
+    border-color: #E38710;
+    color: #FFFFFF;
+}
+
+.feed-block-category-item-japanese-inverse {
+    background-color: #266E0C;
+    border-color: #266E0C;
+    color: #FFFFFF;
+}
+
+.feed-block-category-item-manga-inverse {
+    background-color: #86449E;
+    border-color: #86449E;
+    color: #FFFFFF;
+}
+
+.feed-block-category-item-photography-inverse {
+    background-color: #2056BA;
+    border-color: #2056BA;
+    color: #FFFFFF;
+}
+
 .feed-block-datetime {
     margin: 2.5rem 0;
     text-decoration: none;
     color: #e2e2e2;
     font-size: 10px;
+}
+
+.feed-block-datetime-two {
+    margin: 1.8rem 0;
+}
+
+.feed-block-datetime-four {
+    margin: 5rem 0 0 0;
+}
+
+.feed-block-datetime-five {
+    margin: 10.5rem 0 0 0;
+}
+
+.feed-block-datetime-six {
+    margin: 5rem 0 0 0;
+}
+
+.feed-block-datetime-nine {
+    margin: 10.5rem 0 0 0;
+}
+
+.feed-block-datetime-icon-time {
+    font-size: 10px;
+    margin-right: 5px;
+}
+
+.feed-block-datetime-icon-calendar {
+    font-size: 8px;
+    margin-bottom: 1px;
+    margin-right: 5px;
 }
 
 .feed-block-date-text {
