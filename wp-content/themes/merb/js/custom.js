@@ -21,7 +21,7 @@ window.onload = function() {
         menuItems = document.querySelectorAll(".js-menu-item"),
         homePage = document.getElementById("homePage"),
         workPage = document.getElementById("workPage"),
-        blogPage = document.getElementById("blogPage"),
+        feedPage = document.getElementById("feedPage"),
         projectOne = document.getElementById("projectOne"),
         projectTwo = document.getElementById("projectTwo"),
         projectThree = document.getElementById("projectThree"),
@@ -33,6 +33,7 @@ window.onload = function() {
         knobTwo = document.getElementById("knobTwo"),
         knobThree = document.getElementById("knobThree"),
         knobFour = document.getElementById("knobFour"),
+        feedLoadMore = document.getElementById("feedLoadMore"),
         currentScrollPosition,
         iteration,
         start = false;
@@ -90,7 +91,7 @@ window.onload = function() {
         menuItems[6].classList.toggle( 'js-item-active' );
     } else if ( projectSix != null ) {
         menuItems[7].classList.toggle( 'js-item-active' );
-    } else if ( blogPage != null ) {
+    } else if ( feedPage != null ) {
         menuItems[8].classList.toggle( 'js-item-active' );
     }
 
@@ -181,5 +182,13 @@ window.onload = function() {
       'resizeDuration': 300,
       'fadeDuration': 300
     });
+
+    // Get recent posts with
+    // Ajax
+
+    $( feedLoadMore ).on('click', function() {
+        console.log('hi');
+    });
+
 
 };

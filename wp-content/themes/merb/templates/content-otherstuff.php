@@ -1,6 +1,6 @@
 <?php
 /**
- * The blog landing content template
+ * The feed landing content template
  *
  * @package WordPress
  * @subpackage merb
@@ -74,7 +74,7 @@
  */
  function Categorical( $post_id, $categoriy_limit ) {
 
-     //TODO Implement a  " +(n) more" for posts
+     // TODO: Implement a  " +(n) more" for posts
      // with more than 3 categories. On hover of text
      // popup other categories associated with post
      // in a nice way
@@ -98,7 +98,7 @@
  }
 ?>
 
-<div class="page-id" id="blogPage"></div>
+<div class="page-id" id="feedPage"></div>
 
 <section id="heroBg" data-colour="#176612" class="section-hero">
     <div class="hero-wrapper">
@@ -109,17 +109,17 @@
             <div class="hero-content">
                 <h1 class="hero-title animated fadeIn">Welcome.</h1>
                 <div class="animated fadeInRightBig">
-                    <p class="blog-hero-text">I love deadlines. I love the whooshing noise they make as they go by.</p>
-                    <p class="blog-hero-text-small">Douglas Adams, The Salmon of Doubt</p>
+                    <p class="feed-hero-text">I love deadlines. I love the whooshing noise they make as they go by.</p>
+                    <p class="feed-hero-text-small">Douglas Adams, The Salmon of Doubt</p>
                 </div>
             </div>
         </div>
     </div>
 </section>
 
-<div class="content-container-blog">
+<div class="content-container-feed">
     <div class="content-container-width">
-        <section class="section-blog-posts animated fadeIn">
+        <section class="section-feed-posts animated fadeIn">
                 <!-- Blocks for each post -->
                 <div class="container">
                     <div class="row">
@@ -155,7 +155,7 @@
                                                             $post_categories = Categorical( $post_one["ID"], 3 );
                                                             foreach ( $post_categories as $category ) {
                                                                 $category = str_replace( ' ', '', $category->name );
-                                                                echo "<li class='feed-block-category-item feed-block-category-item-" . strtolower( $category ) . "'>" . $category . "</li>";
+                                                                echo "<li class='feed-block-category-item feed-block-category-item-" . strtolower( $category ) . "-inverse'>" . $category . "</li>";
                                                             }
                                                         ?>
                                                     </ul>
@@ -200,7 +200,7 @@
                                                     $post_categories = Categorical( $post_two["ID"], 3 );
                                                     foreach ( $post_categories as $category ) {
                                                         $category = str_replace( ' ', '', $category->name );
-                                                        echo "<li class='feed-block-category-item feed-block-category-item-" . strtolower( $category ) . "'>" . $category . "</li>";
+                                                        echo "<li class='feed-block-category-item feed-block-category-item-" . strtolower( $category ) . "-inverse'>" . $category . "</li>";
                                                     }
                                                 ?>
                                             </ul>
@@ -244,7 +244,7 @@
                                                     $post_categories = Categorical( $post_three["ID"], 3 );
                                                     foreach ( $post_categories as $category ) {
                                                         $category = str_replace( ' ', '', $category->name );
-                                                        echo "<li class='feed-block-category-item feed-block-category-item-" . strtolower( $category ) . "'>" . $category . "</li>";
+                                                        echo "<li class='feed-block-category-item feed-block-category-item-" . strtolower( $category ) . "-inverse'>" . $category . "</li>";
                                                     }
                                                 ?>
                                             </ul>
@@ -294,7 +294,7 @@
                                                     $post_categories = Categorical( $post_four["ID"], 6 );
                                                     foreach ( $post_categories as $category ) {
                                                         $category = str_replace( ' ', '', $category->name );
-                                                        echo "<li class='feed-block-category-item feed-block-category-item-" . strtolower( $category ) . "'>" . $category . "</li>";
+                                                        echo "<li class='feed-block-category-item feed-block-category-item-" . strtolower( $category ) . "-inverse'>" . $category . "</li>";
                                                     }
                                                 ?>
                                             </ul>
@@ -413,7 +413,7 @@
                                                     $post_categories = Categorical( $post_six["ID"], 6 );
                                                     foreach ( $post_categories as $category ) {
                                                         $category = str_replace( ' ', '', $category->name );
-                                                        echo "<li class='feed-block-category-item feed-block-category-item-" . strtolower( $category ) . "'>" . $category . "</li>";
+                                                        echo "<li class='feed-block-category-item feed-block-category-item-" . strtolower( $category ) . "-inverse'>" . $category . "</li>";
                                                     }
                                                 ?>
                                             </ul>
@@ -442,7 +442,7 @@
                                         <div class="feed-block-seven-inner-container">
 
                                             <div class="col-lg-6">
-                                                <img src="https://placehold.it/230x1000" class="feed-block-seven-image" alt="" />
+                                                <img src="https://placehold.it/230x320" class="feed-block-seven-image" alt="" />
                                             </div>
 
                                             <div class="col-lg-6">
@@ -468,7 +468,7 @@
                                                                 $post_categories = Categorical( $post_seven["ID"], 3 );
                                                                 foreach ( $post_categories as $category ) {
                                                                     $category = str_replace( ' ', '', $category->name );
-                                                                    echo "<li class='feed-block-category-item feed-block-category-item-" . strtolower( $category ) . "'>" . $category . "</li>";
+                                                                    echo "<li class='feed-block-category-item feed-block-category-item-" . strtolower( $category ) . "-inverse'>" . $category . "</li>";
                                                                 }
                                                             ?>
                                                         </ul>
@@ -497,7 +497,7 @@
                                         <div class="feed-block-eight-inner-container">
 
                                             <div class="col-lg-6">
-                                                <img src="https://placehold.it/230x1000" class="feed-block-eight-image" alt="" />
+                                                <img src="https://placehold.it/230x320" class="feed-block-eight-image" alt="" />
                                             </div>
 
                                             <div class="col-lg-6">
@@ -523,7 +523,7 @@
                                                                 $post_categories = Categorical( $post_eight["ID"], 3 );
                                                                 foreach ( $post_categories as $category ) {
                                                                     $category = str_replace( ' ', '', $category->name );
-                                                                    echo "<li class='feed-block-category-item feed-block-category-item-" . strtolower( $category ) . "'>" . $category . "</li>";
+                                                                    echo "<li class='feed-block-category-item feed-block-category-item-" . strtolower( $category ) . "-inverse'>" . $category . "</li>";
                                                                 }
                                                             ?>
                                                         </ul>
@@ -612,5 +612,18 @@
                 </div> <!-- /.container -->
 
         </section>
+
+        <section class="feed-load-more">
+            <div class="feed-load-more-container">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <button class="btn btn-large feed-load-more-button" type="button" id="feedLoadMore">Load more posts</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
     </div> <!-- ./content-container-width -->
 </div> <!-- ./content-container -->
