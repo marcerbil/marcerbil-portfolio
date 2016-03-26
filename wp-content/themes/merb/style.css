@@ -1327,7 +1327,7 @@ html, body {
 .feed-hero-text {
     quotes: "“" "”";
     margin-top: 30%;
-    font-family: 'Raleway', sans-serif;
+    font-family: sans-serif;
     font-weight: 100;
     line-height: 2.5;
     font-size: 1.6rem;
@@ -1407,6 +1407,11 @@ html, body {
     padding: 10px;
 }
 
+.feed-block-inner-full-width {
+    padding: 2rem 4rem;
+    position: absolute;
+}
+
 .feed-block-inner-two {
     padding: 10px 20px;
 }
@@ -1420,7 +1425,6 @@ html, body {
 }
 
 .feed-block-inner-five {
-    padding: 10px 20px;
     z-index: 9999;
 }
 
@@ -1437,7 +1441,6 @@ html, body {
 }
 
 .feed-block-inner-nine {
-    padding: 10px 20px;
     z-index: 9999;
 }
 
@@ -1646,12 +1649,12 @@ html, body {
     color: #d1d1d1;
 }
 
-.feed-block-category-item-art {
+.feed-block-category-item-graphics {
     border-color: #50BADE;
     color: #50BADE;
 }
 
-.feed-block-category-item-article {
+.feed-block-category-item-dev {
     border-color: #C570E0;
     color: #C570E0;
 }
@@ -1691,7 +1694,12 @@ html, body {
     color: #2056BA;
 }
 
-.feed-block-category-item-art-inverse {
+.feed-block-category-item-web {
+    border-color: #99ccff;
+    color: #99ccff;
+}
+
+.feed-block-category-item-graphics-inverse {
     background-color: #50BADE;
     border-color: #50BADE;
     color: #FFFFFF;
@@ -1745,6 +1753,18 @@ html, body {
     color: #FFFFFF;
 }
 
+.feed-block-category-item-web-inverse {
+    background-color: #99ccff;
+    border-color: #99ccff;
+    color: #FFFFFF;
+}
+
+.feed-block-category-item-dev-inverse {
+    background-color: #C570E0;
+    border-color: #C570E0;
+    color: #FFFFFF;
+}
+
 .feed-block-datetime {
     margin: 2.5rem 0;
     text-decoration: none;
@@ -1794,7 +1814,7 @@ html, body {
 /* Load more section
 /*==================*/
 
-.feed-load-more {
+/*.feed-load-more {
     margin: 4rem 0;
 }
 
@@ -1805,18 +1825,115 @@ html, body {
 .feed-load-more-button {
     font-family: 'Raleway', sans-serif;
     font-weight: bold;
-    font-size: 1.5rem;
+    font-size: 1.75rem;
     width: 100%;
     padding: 1.3rem;
     color: #FFFFFF;
     background-color: rgb(23, 102, 18);
     border-radius: 1px;
-  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
 }
 
 .feed-load-more-button:hover {
     text-decoration: none;
     color: #FFFFFF;
+    outline: 0;
+}
+
+.feed-load-more-button:focus {
+    text-decoration: none;
+    color: #FFFFFF;
+    outline: 0;
+}*/
+
+
+
+/* Post
+/*==================*/
+
+.section-post {
+    margin: 1.5rem 0;
+}
+
+.post-hero {
+    position: absolute;
+}
+
+.post-hero-image img {
+    width: 100%;
+    height: auto;
+}
+
+.post-subheading {
+
+}
+
+.post-full-width-text-container {
+
+}
+
+.post-full-width-text {
+
+}
+
+.post-full-width-image-container {
+
+}
+
+.post-full-width-image {
+
+}
+
+.post-full-width-image-caption-container {
+
+}
+
+.post-full-width-image-caption {
+
+}
+
+.post-blockquote-container {
+
+}
+
+.post-blockquote {
+
+}
+
+.post-blockquote-author {
+
+}
+
+.post-video-container {
+
+}
+
+.post-video {
+
+}
+
+.post-video-caption-container {
+
+}
+
+.post-video-caption {
+
+}
+
+.post-gallery-container {
+
+}
+
+.post-gallery {
+
+}
+
+.post-gallery-caption-container {
+
+}
+
+.post-gallery-caption {
+
 }
 
 

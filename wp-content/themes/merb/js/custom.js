@@ -22,6 +22,7 @@ window.onload = function() {
         homePage = document.getElementById("homePage"),
         workPage = document.getElementById("workPage"),
         feedPage = document.getElementById("feedPage"),
+        postPage = document.getElementById("postPage"),
         projectOne = document.getElementById("projectOne"),
         projectTwo = document.getElementById("projectTwo"),
         projectThree = document.getElementById("projectThree"),
@@ -34,6 +35,7 @@ window.onload = function() {
         knobThree = document.getElementById("knobThree"),
         knobFour = document.getElementById("knobFour"),
         feedLoadMore = document.getElementById("feedLoadMore"),
+        feedLoadMorePosts = document.getElementById("feedLoadMorePosts"),
         currentScrollPosition,
         iteration,
         start = false;
@@ -43,6 +45,7 @@ window.onload = function() {
     // =====================================
 
     var heroColour = heroBg.dataset.colour;
+
     window.addEventListener('scroll', function() {
         if( window.scrollY != 0 ) {
             nav.classList.add( 'navbar-bg' );
@@ -183,12 +186,36 @@ window.onload = function() {
       'fadeDuration': 300
     });
 
-    // Get recent posts with
-    // Ajax
 
-    $( feedLoadMore ).on('click', function() {
-        console.log('hi');
-    });
-
+    // // Load more posts with ajax
+    // // =========================
+    // function loadPosts() {
+    //     event.preventDefault();
+    //
+    //     $.ajax({
+    //         url: ajax_pagination.ajaxurl,
+    //         type: 'GET',
+    //         data: {
+    //             action: 'ajax_pagination',
+    //             json_array: ajax_pagination.json_array
+    //         },
+    //         success: function( json_array ) {
+    //             console.log('Success');
+    //             console.log(json_array);
+    //
+    //         },
+    //         error: function( json_array ) {
+    //             console.log('Failure');
+    //             console.log(json_array);
+    //         }
+    //     });
+    //
+    //
+    // }
+    //
+    // $( feedLoadMore ).on( 'click', function() {
+    //     $( feedLoadMore ).attr( "disabled", false );
+    //     loadPosts();
+    // });
 
 };

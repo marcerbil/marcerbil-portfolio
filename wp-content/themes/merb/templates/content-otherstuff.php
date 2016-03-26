@@ -72,17 +72,17 @@
  *  @param Int $categoriy_limit
  *  @return Array $tags_array
  */
- function Categorical( $post_id, $categoriy_limit ) {
+ function Tagliatelle( $post_id, $tag_limit ) {
 
      // TODO: Implement a  " +(n) more" for posts
-     // with more than 3 categories. On hover of text
-     // popup other categories associated with post
+     // with more than 3 tags. On hover of text
+     // popup other tags associated with post
      // in a nice way
 
-     $categories_array = get_the_category( $post_id );
+     $post_tags = get_the_tags( $post_id );
 
-     $post_categories = array_slice( $categories_array, 0, $categoriy_limit, TRUE);
-     return $post_categories;
+     $post_tags = array_slice( $post_tags, 0, $tag_limit, TRUE);
+     return $post_tags;
  }
 
  function Dately( $post_id ) {
@@ -129,13 +129,13 @@
                                 <div class="feed-block-one">
                                     <div class="row">
                                         <div class="col-lg-6">
-                                            <img src="https://placehold.it/230x252" alt="" />
+                                            <img src="http://placehold.it/230x252" alt="" />
                                         </div>
 
                                         <div class="col-lg-6">
                                             <div class="feed-block-inner">
                                                 <a class="feed-block-link" href="<?php the_permalink( $post_one["ID"] ); ?>">
-                                                    <h4 class="feed-block-title">
+                                                    <h4 class="feed-block-title tk-adelle">
                                                         <?php echo Titleify( $post_one["post_title"], 40); ?>
                                                     </h4>
                                                 </a>
@@ -152,10 +152,10 @@
                                                 <div class="feed-block-categories">
                                                     <ul class="feed-block-category-list">
                                                         <?php
-                                                            $post_categories = Categorical( $post_one["ID"], 3 );
-                                                            foreach ( $post_categories as $category ) {
-                                                                $category = str_replace( ' ', '', $category->name );
-                                                                echo "<li class='feed-block-category-item feed-block-category-item-" . strtolower( $category ) . "-inverse'>" . $category . "</li>";
+                                                            $post_tags = Tagliatelle( $post_one["ID"], 3 );
+                                                            foreach ( $post_tags as $tag ) {
+                                                                $tag = str_replace( ' ', '', $tag->name );
+                                                                echo "<li class='feed-block-category-item feed-block-category-item-" . strtolower( $tag ) . "-inverse'>" . $tag . "</li>";
                                                             }
                                                         ?>
                                                     </ul>
@@ -180,7 +180,7 @@
                                 <div class="feed-block-inner feed-block-inner-two">
                                     <div class="feed-block-two">
                                         <a class="feed-block-link" href="<?php the_permalink( $post_two["ID"] ); ?>">
-                                            <h4 class="feed-block-title">
+                                            <h4 class="feed-block-title tk-adelle">
                                                 <?php echo Titleify( $post_two["post_title"], 30 ); ?>
                                             </h4>
                                         </a>
@@ -197,10 +197,10 @@
                                         <div class="feed-block-categories">
                                             <ul class="feed-block-category-list">
                                                 <?php
-                                                    $post_categories = Categorical( $post_two["ID"], 3 );
-                                                    foreach ( $post_categories as $category ) {
-                                                        $category = str_replace( ' ', '', $category->name );
-                                                        echo "<li class='feed-block-category-item feed-block-category-item-" . strtolower( $category ) . "-inverse'>" . $category . "</li>";
+                                                    $post_tags = Tagliatelle( $post_two["ID"], 3 );
+                                                    foreach ( $post_tags as $tag ) {
+                                                        $tag = str_replace( ' ', '', $tag->name );
+                                                        echo "<li class='feed-block-category-item feed-block-category-item-" . strtolower( $tag ) . "-inverse'>" . $tag . "</li>";
                                                     }
                                                 ?>
                                             </ul>
@@ -224,7 +224,7 @@
                                     <div class="feed-block-three">
 
                                         <a class="feed-block-link" href="<?php the_permalink( $post_three["ID"] ); ?>">
-                                            <h4 class="feed-block-title">
+                                            <h4 class="feed-block-title tk-adelle">
                                                 <?php echo Titleify( $post_three["post_title"], 30 ); ?>
                                             </h4>
                                         </a>
@@ -241,10 +241,10 @@
                                         <div class="feed-block-categories">
                                             <ul class="feed-block-category-list">
                                                 <?php
-                                                    $post_categories = Categorical( $post_three["ID"], 3 );
-                                                    foreach ( $post_categories as $category ) {
-                                                        $category = str_replace( ' ', '', $category->name );
-                                                        echo "<li class='feed-block-category-item feed-block-category-item-" . strtolower( $category ) . "-inverse'>" . $category . "</li>";
+                                                    $post_tags = Tagliatelle( $post_three["ID"], 3 );
+                                                    foreach ( $post_tags as $tag ) {
+                                                        $tag = str_replace( ' ', '', $tag->name );
+                                                        echo "<li class='feed-block-category-item feed-block-category-item-" . strtolower( $tag ) . "-inverse'>" . $tag . "</li>";
                                                     }
                                                 ?>
                                             </ul>
@@ -268,13 +268,13 @@
                             <div class="feed-block">
                                 <div class="feed-block-four">
                                     <div class="feed-block-four-image-container">
-                                        <img src="https://placehold.it/1920x1080" class="feed-block-four-image" alt="" />
+                                        <img src="http://placehold.it/1920x1080" class="feed-block-four-image" alt="" />
                                     </div>
 
                                     <div class="feed-block-inner feed-block-inner-four">
 
                                         <a class="feed-block-link" href="<?php the_permalink( $post_four["ID"] ); ?>">
-                                            <h4 class="feed-block-title">
+                                            <h4 class="feed-block-title tk-adelle">
                                                 <?php echo Titleify( $post_four["post_title"], 100 ); ?>
                                             </h4>
                                         </a>
@@ -291,10 +291,10 @@
                                         <div class="feed-block-categories feed-block-four-categories">
                                             <ul class="feed-block-category-list">
                                                 <?php
-                                                    $post_categories = Categorical( $post_four["ID"], 6 );
-                                                    foreach ( $post_categories as $category ) {
-                                                        $category = str_replace( ' ', '', $category->name );
-                                                        echo "<li class='feed-block-category-item feed-block-category-item-" . strtolower( $category ) . "-inverse'>" . $category . "</li>";
+                                                    $post_tags = Tagliatelle( $post_four["ID"], 6 );
+                                                    foreach ( $post_tags as $tag ) {
+                                                        $tag = str_replace( ' ', '', $tag->name );
+                                                        echo "<li class='feed-block-category-item feed-block-category-item-" . strtolower( $tag ) . "-inverse'>" . $tag . "</li>";
                                                     }
                                                 ?>
                                             </ul>
@@ -327,10 +327,10 @@
                                     <div class="feed-block-five-overlay">
                                         <div class="feed-block-five-image-container">
                                             <div class="feed-block-inner-five">
-                                                <div class="feed-block-inner">
+                                                <div class="feed-block-inner-full-width">
 
                                                     <a class="feed-block-link" href="<?php the_permalink( $post_five["ID"] ); ?>">
-                                                        <h4 class="feed-block-title">
+                                                        <h4 class="feed-block-title tk-adelle">
                                                             <?php echo Titleify( $post_five["post_title"], 100 ); ?>
                                                         </h4>
                                                     </a>
@@ -347,10 +347,10 @@
                                                     <div class="feed-block-categories feed-block-five-categories">
                                                         <ul class="feed-block-category-list">
                                                             <?php
-                                                            $post_categories = Categorical( $post_five["ID"], 6 );
-                                                            foreach ( $post_categories as $category ) {
-                                                                $category = str_replace( ' ', '', $category->name );
-                                                                echo "<li class='feed-block-category-item feed-block-category-item-" . strtolower( $category ) . "-inverse'>" . $category . "</li>";
+                                                            $post_tags = Tagliatelle( $post_five["ID"], 6 );
+                                                            foreach ( $post_tags as $tag ) {
+                                                                $tag = str_replace( ' ', '', $tag->name );
+                                                                echo "<li class='feed-block-category-item feed-block-category-item-" . strtolower( $tag ) . "-inverse'>" . $tag . "</li>";
                                                             }
                                                             ?>
                                                         </ul>
@@ -366,10 +366,9 @@
                                                     </div>
 
                                                 </div> <!-- /.feed-block-inner -->
-
-                                                <img src="https://placehold.it/1920x1080" class="feed-block-five-image" alt="" />
-
                                             </div> <!-- /.feed-block-inner-five -->
+                                            <img src="http://placehold.it/1920x1080" class="feed-block-five-image" alt="" />
+
 
                                         </div> <!-- /.feed-block-five-image-container -->
                                     </div> <!-- /.feed-block-five-overlay -->
@@ -387,13 +386,13 @@
                             <div class="feed-block">
                                 <div class="feed-block-six">
                                     <div class="feed-block-six-image-container">
-                                        <img src="https://placehold.it/1920x1080" class="feed-block-six-image" alt="" />
+                                        <img src="http://placehold.it/1920x1080" class="feed-block-six-image" alt="" />
                                     </div>
 
                                     <div class="feed-block-inner feed-block-inner-six">
 
                                         <a class="feed-block-link" href="<?php the_permalink( $post_six["ID"] ); ?>">
-                                            <h4 class="feed-block-title">
+                                            <h4 class="feed-block-title tk-adelle">
                                                 <?php echo Titleify( $post_six["post_title"], 100 ); ?>
                                             </h4>
                                         </a>
@@ -410,10 +409,10 @@
                                         <div class="feed-block-categories feed-block-six-categories">
                                             <ul class="feed-block-category-list">
                                                 <?php
-                                                    $post_categories = Categorical( $post_six["ID"], 6 );
-                                                    foreach ( $post_categories as $category ) {
-                                                        $category = str_replace( ' ', '', $category->name );
-                                                        echo "<li class='feed-block-category-item feed-block-category-item-" . strtolower( $category ) . "-inverse'>" . $category . "</li>";
+                                                    $post_tags = Tagliatelle( $post_six["ID"], 6 );
+                                                    foreach ( $post_tags as $tag ) {
+                                                        $tag = str_replace( ' ', '', $tag->name );
+                                                        echo "<li class='feed-block-category-item feed-block-category-item-" . strtolower( $tag ) . "-inverse'>" . $tag . "</li>";
                                                     }
                                                 ?>
                                             </ul>
@@ -442,13 +441,13 @@
                                         <div class="feed-block-seven-inner-container">
 
                                             <div class="col-lg-6">
-                                                <img src="https://placehold.it/230x320" class="feed-block-seven-image" alt="" />
+                                                <img src="http://placehold.it/230x320" class="feed-block-seven-image" alt="" />
                                             </div>
 
                                             <div class="col-lg-6">
                                                 <div class="feed-block-inner feed-block-inner-seven">
                                                     <a class="feed-block-link" href="<?php the_permalink( $post_seven["ID"] ); ?>">
-                                                        <h4 class="feed-block-title">
+                                                        <h4 class="feed-block-title tk-adelle">
                                                             <?php echo Titleify( $post_seven["post_title"], 40 ); ?>
                                                         </h4>
                                                     </a>
@@ -465,10 +464,10 @@
                                                     <div class="feed-block-categories feed-block-seven-categories">
                                                         <ul class="feed-block-category-list">
                                                             <?php
-                                                                $post_categories = Categorical( $post_seven["ID"], 3 );
-                                                                foreach ( $post_categories as $category ) {
-                                                                    $category = str_replace( ' ', '', $category->name );
-                                                                    echo "<li class='feed-block-category-item feed-block-category-item-" . strtolower( $category ) . "-inverse'>" . $category . "</li>";
+                                                                $post_tags = Tagliatelle( $post_seven["ID"], 2 );
+                                                                foreach ( $post_tags as $tag ) {
+                                                                    $tag = str_replace( ' ', '', $tag->name );
+                                                                    echo "<li class='feed-block-category-item feed-block-category-item-" . strtolower( $tag ) . "-inverse'>" . $tag . "</li>";
                                                                 }
                                                             ?>
                                                         </ul>
@@ -490,20 +489,20 @@
                                 </div> <!-- /.feed-block-seven -->
                             </div> <!-- /.feed-block -->
 
-                            <div class="feed-block">
+                            <div class="feed-block tk-fira-sans-2">
                                 <div class="feed-block-eight">
                                     <div class="row">
 
                                         <div class="feed-block-eight-inner-container">
 
                                             <div class="col-lg-6">
-                                                <img src="https://placehold.it/230x320" class="feed-block-eight-image" alt="" />
+                                                <img src="http://placehold.it/230x320" class="feed-block-eight-image" alt="" />
                                             </div>
 
                                             <div class="col-lg-6">
                                                 <div class="feed-block-inner feed-block-inner-eight">
                                                     <a class="feed-block-link" href="<?php the_permalink( $post_eight["ID"] ); ?>">
-                                                        <h4 class="feed-block-title">
+                                                        <h4 class="feed-block-title tk-adelle">
                                                             <?php echo Titleify( $post_eight["post_title"], 40 ); ?>
                                                         </h4>
                                                     </a>
@@ -520,10 +519,10 @@
                                                     <div class="feed-block-categories feed-block-eight-categories">
                                                         <ul class="feed-block-category-list">
                                                             <?php
-                                                                $post_categories = Categorical( $post_eight["ID"], 3 );
-                                                                foreach ( $post_categories as $category ) {
-                                                                    $category = str_replace( ' ', '', $category->name );
-                                                                    echo "<li class='feed-block-category-item feed-block-category-item-" . strtolower( $category ) . "-inverse'>" . $category . "</li>";
+                                                                $post_tags = Tagliatelle( $post_eight["ID"], 2 );
+                                                                foreach ( $post_tags as $tag ) {
+                                                                    $tag = str_replace( ' ', '', $tag->name );
+                                                                    echo "<li class='feed-block-category-item feed-block-category-item-" . strtolower( $tag ) . "-inverse'>" . $tag . "</li>";
                                                                 }
                                                             ?>
                                                         </ul>
@@ -558,10 +557,10 @@
                                     <div class="feed-block-nine-overlay">
                                         <div class="feed-block-nine-image-container">
                                             <div class="feed-block-inner-nine">
-                                                <div class="feed-block-inner">
+                                                <div class="feed-block-inner-full-width">
 
                                                     <a class="feed-block-link" href="<?php the_permalink( $post_nine["ID"] ); ?>">
-                                                        <h4 class="feed-block-title">
+                                                        <h4 class="feed-block-title tk-adelle">
                                                             <?php echo Titleify( $post_nine["post_title"], 100 ); ?>
                                                         </h4>
                                                     </a>
@@ -578,10 +577,10 @@
                                                     <div class="feed-block-categories feed-block-nine-categories">
                                                         <ul class="feed-block-category-list">
                                                             <?php
-                                                            $post_categories = Categorical( $post_nine["ID"], 6 );
-                                                            foreach ( $post_categories as $category ) {
-                                                                $category = str_replace( ' ', '', $category->name );
-                                                                echo "<li class='feed-block-category-item feed-block-category-item-" . strtolower( $category ) . "-inverse'>" . $category . "</li>";
+                                                            $post_tags = Tagliatelle( $post_nine["ID"], 6 );
+                                                            foreach ( $post_tags as $tag ) {
+                                                                $tag = str_replace( ' ', '', $tag->name );
+                                                                echo "<li class='feed-block-category-item feed-block-category-item-" . strtolower( $tag ) . "-inverse'>" . $tag . "</li>";
                                                             }
                                                             ?>
                                                         </ul>
@@ -596,9 +595,9 @@
                                                         </p>
                                                     </div>
 
-                                                </div> <!-- /.feed-block-inner -->
+                                                </div> <!-- /.feed-block-inner-full-width-->
 
-                                                <img src="https://placehold.it/1920x1080" class="feed-block-nine-image" alt="" />
+                                                <img src="http://placehold.it/1920x1080" class="feed-block-nine-image" alt="" />
 
                                             </div> <!-- /.feed-block-inner-nine -->
 
@@ -613,7 +612,7 @@
 
         </section>
 
-        <section class="feed-load-more">
+        <!-- <section class="feed-load-more">
             <div class="feed-load-more-container">
                 <div class="container">
                     <div class="row">
@@ -623,7 +622,11 @@
                     </div>
                 </div>
             </div>
-        </section>
+
+            <div id="feedLoadMorePosts" class="feed-load-more-posts">
+
+            </div>
+        </section> -->
 
     </div> <!-- ./content-container-width -->
 </div> <!-- ./content-container -->
