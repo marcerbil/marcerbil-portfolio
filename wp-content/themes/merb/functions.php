@@ -263,11 +263,9 @@ function merb_scripts() {
 
     wp_enqueue_script( 'customjs', get_template_directory_uri() . '/js/custom.js', array( 'jquery', 'knobs' )  );
 
-    // wp_localize_script( 'customjs', 'ajax_pagination', array(
-    //     'ajaxurl' => admin_url( 'admin-ajax.php' )
-    // ));
 
 }
+
 add_action('wp_enqueue_scripts', 'merb_scripts');
 
 // function merb_typekit() {
