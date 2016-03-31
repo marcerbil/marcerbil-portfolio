@@ -143,11 +143,11 @@
                             <div class="feed-block clearfix">
                                 <div class="feed-block-one">
                                     <div class="row">
-                                        <div class="col-lg-6">
+                                        <div class="col-lg-6 col-md-6 col-sm-6">
                                             <img class="feed-block-one-image" src="<?php echo Imagely( $post_one["ID"], 'small' ); ?>"/>
                                         </div>
 
-                                        <div class="col-lg-6">
+                                        <div class="col-lg-6 col-md-6 col-sm-6">
                                             <div class="feed-block-inner">
                                                 <a class="feed-block-link" href="<?php the_permalink( $post_one["ID"] ); ?>">
                                                     <h4 class="feed-block-title tk-adelle">
@@ -338,11 +338,14 @@
 
                         <div class="col-lg-12">
                             <div class="feed-block">
-                                <div class="feed-block-five">
-                                    <div class="feed-block-five-overlay">
-                                        <div class="feed-block-five-image-container">
-                                            <div class="feed-block-inner-five">
+                                <div class="feed-block-nine">
+
+                                    <div class="feed-block-five-image-container">
+
+                                        <div class="feed-block-inner-five">
+                                            <div class="feed-block-image-overlay">
                                                 <div class="feed-block-inner-full-width">
+
 
                                                     <a class="feed-block-link" href="<?php the_permalink( $post_five["ID"] ); ?>">
                                                         <h4 class="feed-block-title feed-block-title-inverse tk-adelle">
@@ -381,12 +384,13 @@
                                                     </div>
 
                                                 </div> <!-- /.feed-block-inner -->
-                                            </div> <!-- /.feed-block-inner-five -->
-                                            <img class="feed-block-five-image" src="<?php echo Imagely( $post_five["ID"], 'main' ); ?>"/>
+                                            </div> <!-- /.feed-block-image-overlay -->
 
-                                        </div> <!-- /.feed-block-five-image-container -->
-                                    </div> <!-- /.feed-block-five-overlay -->
-                                </div> <!-- /.feed-block-five -->
+                                            <img class="feed-block-five-image" src="<?php echo Imagely( $post_five["ID"], 'main' ); ?>"/>
+                                        </div><!-- /.feed-block-inner-nine -->
+
+                                    </div> <!-- /.feed-block-nine-image-container -->
+                                </div> <!-- /.feed-block-nine -->
                             </div> <!-- /.feed-block -->
                         </div>
 
@@ -396,7 +400,7 @@
                 <div class="container">
                     <div class="row">
 
-                        <div class="col-lg-7">
+                        <div class="col-lg-7 col-md-7 col-sm-7">
                             <div class="feed-block">
                                 <div class="feed-block-six">
                                     <div class="feed-block-six-image-container">
@@ -447,18 +451,18 @@
                             </div> <!-- /.feed-block -->
                         </div>
 
-                        <div class="col-lg-5">
+                        <div class="col-lg-5 col-md-5 col-sm-6">
                             <div class="feed-block">
                                 <div class="feed-block-seven">
                                     <div class="row">
 
                                         <div class="feed-block-seven-inner-container">
 
-                                            <div class="col-lg-6">
+                                            <div class="col-lg-6 col-md-6 col-sm-6">
                                                 <img class="feed-block-seven-image" src="<?php echo Imagely( $post_seven["ID"], 'small' ); ?>"/>
                                             </div>
 
-                                            <div class="col-lg-6">
+                                            <div class="col-lg-6 col-md-6 col-sm-6">
                                                 <div class="feed-block-inner feed-block-inner-seven">
                                                     <a class="feed-block-link" href="<?php the_permalink( $post_seven["ID"] ); ?>">
                                                         <h4 class="feed-block-title tk-adelle">
@@ -469,7 +473,7 @@
                                                     <div class="feed-block-excerpt">
                                                         <p class="feed-block-excerpt-text">
                                                             <a class="feed-block-link" href="<?php the_permalink( $post_seven["ID"] ); ?>">
-                                                                <?php echo Excerptify( $post_seven["post_excerpt"], 70 ); ?>
+                                                                <?php echo Excerptify( $post_seven["post_excerpt"], 40 ); ?>
                                                                 <span class="feed-block-read-more">&longrightarrow;</span>
                                                             </a>
                                                         </p>
@@ -509,12 +513,12 @@
 
                                         <div class="feed-block-eight-inner-container">
 
-                                            <div class="col-lg-6">
+                                            <div class="col-lg-6 col-md-6 col-sm-6">
                                                 <img class="feed-block-eight-image" src="<?php echo Imagely( $post_eight["ID"], 'small' ); ?>"/>
                                                 <img src="http://placehold.it/230x320" class="feed-block-eight-image" alt="" />
                                             </div>
 
-                                            <div class="col-lg-6">
+                                            <div class="col-lg-6 col-md-6 col-sm-6">
                                                 <div class="feed-block-inner feed-block-inner-eight">
                                                     <a class="feed-block-link" href="<?php the_permalink( $post_eight["ID"] ); ?>">
                                                         <h4 class="feed-block-title tk-adelle">
@@ -525,7 +529,7 @@
                                                     <div class="feed-block-excerpt">
                                                         <p class="feed-block-excerpt-text">
                                                             <a class="feed-block-link" href="<?php the_permalink( $post_eight["ID"] ); ?>">
-                                                                <?php echo Excerptify( $post_eight["post_excerpt"], 70 ); ?>
+                                                                <?php echo Excerptify( $post_eight["post_excerpt"], 40 ); ?>
                                                                 <span class="feed-block-read-more">&longrightarrow;</span>
                                                             </a>
                                                         </p>
@@ -569,50 +573,55 @@
                         <div class="col-lg-12">
                             <div class="feed-block">
                                 <div class="feed-block-nine">
+
                                     <div class="feed-block-nine-image-container">
+
                                         <div class="feed-block-inner-nine">
-                                            <div class="feed-block-inner-full-width">
+                                            <div class="feed-block-image-overlay">
+                                                <div class="feed-block-inner-full-width">
 
-                                                <a class="feed-block-link" href="<?php the_permalink( $post_nine["ID"] ); ?>">
-                                                    <h4 class="feed-block-title feed-block-title-inverse tk-adelle">
-                                                        <?php echo Titleify( $post_nine["post_title"], 100 ); ?>
-                                                    </h4>
-                                                </a>
 
-                                                <div class="feed-block-excerpt">
-                                                    <p class="feed-block-excerpt-text">
-                                                        <a class="feed-block-link" href="<?php the_permalink( $post_nine["ID"] ); ?>">
-                                                            <?php echo Excerptify( $post_nine["post_excerpt"], 300 ); ?>
-                                                            <span class="feed-block-read-more">&longrightarrow;</span>
-                                                        </a>
-                                                    </p>
-                                                </div>
+                                                    <a class="feed-block-link" href="<?php the_permalink( $post_nine["ID"] ); ?>">
+                                                        <h4 class="feed-block-title feed-block-title-inverse tk-adelle">
+                                                            <?php echo Titleify( $post_nine["post_title"], 100 ); ?>
+                                                        </h4>
+                                                    </a>
 
-                                                <div class="feed-block-categories feed-block-nine-categories">
-                                                    <ul class="feed-block-category-list">
-                                                        <?php
-                                                        $post_tags = Tagliatelle( $post_nine["ID"], 6 );
-                                                        foreach ( $post_tags as $tag ) {
-                                                            $tag = str_replace( ' ', '', $tag->name );
-                                                            echo "<li class='feed-block-category-item feed-block-category-item-" . strtolower( $tag ) . "-inverse'>" . $tag . "</li>";
-                                                        }
-                                                        ?>
-                                                    </ul>
-                                                </div>
+                                                    <div class="feed-block-excerpt">
+                                                        <p class="feed-block-excerpt-text">
+                                                            <a class="feed-block-link" href="<?php the_permalink( $post_nine["ID"] ); ?>">
+                                                                <?php echo Excerptify( $post_nine["post_excerpt"], 300 ); ?>
+                                                                <span class="feed-block-read-more">&longrightarrow;</span>
+                                                            </a>
+                                                        </p>
+                                                    </div>
 
-                                                <div class="feed-block-datetime feed-block-datetime-nine">
-                                                    <p class="feed-block-date-text">
-                                                        <?php echo Dately( $post_nine["ID"] ); ?>
-                                                    </p>
-                                                    <p class="feed-block-time-text">
-                                                        <?php echo Timely( $post_nine["ID"] ); ?>
-                                                    </p>
-                                                </div>
+                                                    <div class="feed-block-categories feed-block-nine-categories">
+                                                        <ul class="feed-block-category-list">
+                                                            <?php
+                                                            $post_tags = Tagliatelle( $post_nine["ID"], 6 );
+                                                            foreach ( $post_tags as $tag ) {
+                                                                $tag = str_replace( ' ', '', $tag->name );
+                                                                echo "<li class='feed-block-category-item feed-block-category-item-" . strtolower( $tag ) . "-inverse'>" . $tag . "</li>";
+                                                            }
+                                                            ?>
+                                                        </ul>
+                                                    </div>
 
-                                            </div> <!-- /.feed-block-inner -->
-                                        </div> <!-- /.feed-block-inner-nine -->
+                                                    <div class="feed-block-datetime feed-block-datetime-nine">
+                                                        <p class="feed-block-date-text">
+                                                            <?php echo Dately( $post_nine["ID"] ); ?>
+                                                        </p>
+                                                        <p class="feed-block-time-text">
+                                                            <?php echo Timely( $post_nine["ID"] ); ?>
+                                                        </p>
+                                                    </div>
 
-                                        <img class="feed-block-image-overlay feed-block-nine-image" src="<?php echo Imagely( $post_nine["ID"], 'main' ); ?>"/>
+                                                </div> <!-- /.feed-block-inner -->
+                                            </div> <!-- /.feed-block-image-overlay -->
+
+                                            <img class="feed-block-nine-image" src="<?php echo Imagely( $post_nine["ID"], 'main' ); ?>"/>
+                                        </div><!-- /.feed-block-inner-nine -->
 
                                     </div> <!-- /.feed-block-nine-image-container -->
                                 </div> <!-- /.feed-block-nine -->

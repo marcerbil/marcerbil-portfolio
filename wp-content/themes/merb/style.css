@@ -1409,7 +1409,6 @@ html, body {
 
 .feed-block-inner-full-width {
     padding: 2rem 4rem;
-    position: absolute;
 }
 
 .feed-block-inner-two {
@@ -1464,6 +1463,12 @@ html, body {
     color: #d1d1d1;
     font-size: 1.3rem;
     line-height: 2;
+}
+
+@media (min-width: 900px) and (max-width: 1024px) {
+    .feed-block-link {
+        font-size: 1.2rem;
+    }
 }
 
 .feed-block-link:hover {
@@ -1583,20 +1588,10 @@ html, body {
     margin-top: 5px;
 }
 
-.feed-block-image-overlay::before {
-    background: rgba(0, 0, 0, 0.5);
-    background-size: cover;
-    content: " ";
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    position: absolute;
-    z-index: 0;
-}
-
 .feed-block-image-overlay {
-    display: block;
+    position: absolute;
+    background: rgba(0, 0, 0, 0.5);
+    max-width: 1140px;
 }
 
 .feed-block-excerpt-text {
@@ -1620,7 +1615,13 @@ html, body {
 }
 
 .feed-block-four-categories {
-    margin: 3rem 0;
+    margin: 0;
+}
+
+@media (min-width: 900px) and (max-width: 1024px) {
+    .feed-block-four-categories {
+        margin: 4rem 0;
+    }
 }
 
 .feed-block-five-categories {
@@ -1628,15 +1629,33 @@ html, body {
 }
 
 .feed-block-six-categories {
-    margin: 3rem 0;
+    margin: 0;
+}
+
+@media (min-width: 900px) and (max-width: 1024px) {
+    .feed-block-six-categories {
+        margin: 4rem 0;
+    }
 }
 
 .feed-block-seven-categories {
     margin: 4rem 0;
 }
 
+@media (min-width: 1024px) and (max-width: 1440px) {
+    .feed-block-seven-categories {
+        margin: 2rem 0;
+    }
+}
+
 .feed-block-eight-categories {
     margin: 4rem 0;
+}
+
+@media (min-width: 1024px) and (max-width: 1440px) {
+    .feed-block-eight-categories {
+        margin: 2rem 0;
+    }
 }
 
 .feed-block-nine-categories {
@@ -1663,6 +1682,12 @@ html, body {
     border: 1px solid;
     border-radius: 22px;
     padding: 0.2rem 1rem;
+}
+
+@media (min-width: 900px) and (max-width: 1024px) {
+    .feed-block-category-item {
+        font-size: 7px;
+    }
 }
 
 .feed-block-category-item-other {
@@ -1798,7 +1823,7 @@ html, body {
 }
 
 .feed-block-datetime-four {
-    margin: 5rem 0 0 0;
+    margin: 3rem 0 0 0;
 }
 
 .feed-block-datetime-five {
@@ -1806,7 +1831,7 @@ html, body {
 }
 
 .feed-block-datetime-six {
-    margin: 5rem 0 0 0;
+    margin: 3rem 0 0 0;
 }
 
 .feed-block-datetime-nine {
