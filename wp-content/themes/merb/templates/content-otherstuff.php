@@ -77,6 +77,10 @@
      // popup other tags associated with post
      // in a nice way
 
+     if ( wp_is_mobile() ) {
+         $tag_limit = 2;
+     }
+
      $post_tags = get_the_tags( $post_id );
 
      $post_tags = array_slice( $post_tags, 0, $tag_limit, TRUE);
@@ -110,6 +114,21 @@
 
      return $post_thumbnail;
  }
+
+ function Quotely() {
+     // Get array of quotes from
+     // ACF options page
+     $quotes = get_field( 'magical_quotes', 'option' );
+
+     // Pick random quote from array
+     $random_quote = array_rand( $quotes, 1 );
+
+     // Output quote
+     echo '<span class="feed-hero-text">' . $quotes[$random_quote]["quote"] . '</span>';
+     echo '<span class="feed-hero-text-small">' . $quotes[$random_quote]["author"] . '</span>';
+
+    // var_dump($quotes);
+ }
 ?>
 
 <div class="page-id" id="feedPage"></div>
@@ -123,8 +142,9 @@
             <div class="hero-content">
                 <h1 class="hero-title animated fadeIn">Welcome.</h1>
                 <div class="animated fadeInRightBig">
-                    <p class="feed-hero-text">I love deadlines. I love the whooshing noise they make as they go by.</p>
-                    <p class="feed-hero-text-small">Douglas Adams, The Salmon of Doubt</p>
+
+                    <?php echo Quotely(); ?>
+
                 </div>
             </div>
         </div>
@@ -132,25 +152,25 @@
 </section>
 
 <div class="content-container-feed">
-    <div class="content-container-width">
+    <div class="content-container-width-feed">
         <section class="section-feed-posts animated fadeIn">
 
                 <!-- Blocks for each post -->
                 <div class="container">
                     <div class="row">
 
-                        <div class="col-lg-5 col-md-5 col-sm-5 col-xs-12">
-                            <div class="feed-block clearfix">
+                        <div class="col-lg-5 col-md-5 col-sm-12 col-xs-12">
+                            <div class="feed-block feed-block-sm">
                                 <div class="feed-block-one">
                                     <div class="row">
-                                        <div class="col-lg-6 col-md-6 col-sm-6">
+                                        <div class="col-lg-6 col-md-6 col-sm-4">
                                             <img class="feed-block-one-image" src="<?php echo Imagely( $post_one["ID"], 'small' ); ?>"/>
                                         </div>
 
-                                        <div class="col-lg-6 col-md-6 col-sm-6">
+                                        <div class="col-lg-6 col-md-6 col-sm-8">
                                             <div class="feed-block-inner">
                                                 <a class="feed-block-link" href="<?php the_permalink( $post_one["ID"] ); ?>">
-                                                    <h4 class="feed-block-title tk-adelle">
+                                                    <h4 class="feed-block-title feed-block-title-sm tk-adelle">
                                                         <?php echo Titleify( $post_one["post_title"], 40); ?>
                                                     </h4>
                                                 </a>
@@ -167,7 +187,7 @@
                                                 <div class="feed-block-categories">
                                                     <ul class="feed-block-category-list">
                                                         <?php
-                                                            $post_tags = Tagliatelle( $post_one["ID"], 3 );
+                                                            $post_tags = Tagliatelle( $post_one["ID"], 2 );
                                                             foreach ( $post_tags as $tag ) {
                                                                 $tag = str_replace( ' ', '', $tag->name );
                                                                 echo "<li class='feed-block-category-item feed-block-category-item-" . strtolower( $tag ) . "-inverse'>" . $tag . "</li>";
@@ -176,7 +196,7 @@
                                                     </ul>
                                                 </div>
 
-                                                <div class="feed-block-datetime">
+                                                <div class="feed-block-datetime feed-block-datetime-one">
                                                     <p class="feed-block-date-text">
                                                         <?php echo Dately( $post_one["ID"] ); ?>
                                                     </p>
@@ -191,95 +211,102 @@
                                 </div> <!-- /.feed-block-one -->
                             </div> <!-- /.feed-block -->
 
-                            <div class="feed-block">
-                                <div class="feed-block-inner feed-block-inner-two">
-                                    <div class="feed-block-two">
-                                        <a class="feed-block-link" href="<?php the_permalink( $post_two["ID"] ); ?>">
-                                            <h4 class="feed-block-title tk-adelle">
-                                                <?php echo Titleify( $post_two["post_title"], 30 ); ?>
-                                            </h4>
-                                        </a>
-
-                                        <div class="feed-block-excerpt">
-                                            <p class="feed-block-excerpt-text">
+                            <div class="row">
+                                <div class="col-lg-12 col-md-12 col-sm-6">
+                                    <div class="feed-block feed-block-sm">
+                                        <div class="feed-block-inner feed-block-inner-two">
+                                            <div class="feed-block-two">
                                                 <a class="feed-block-link" href="<?php the_permalink( $post_two["ID"] ); ?>">
-                                                    <?php echo Excerptify( $post_two["post_excerpt"], 45 ); ?>
-                                                    <span class="feed-block-read-more">&longrightarrow;</span>
+                                                    <h4 class="feed-block-title tk-adelle">
+                                                        <?php echo Titleify( $post_two["post_title"], 30 ); ?>
+                                                    </h4>
                                                 </a>
-                                            </p>
-                                        </div>
 
-                                        <div class="feed-block-categories">
-                                            <ul class="feed-block-category-list">
-                                                <?php
-                                                    $post_tags = Tagliatelle( $post_two["ID"], 3 );
-                                                    foreach ( $post_tags as $tag ) {
-                                                        $tag = str_replace( ' ', '', $tag->name );
-                                                        echo "<li class='feed-block-category-item feed-block-category-item-" . strtolower( $tag ) . "-inverse'>" . $tag . "</li>";
-                                                    }
-                                                ?>
-                                            </ul>
-                                        </div>
+                                                <div class="feed-block-excerpt">
+                                                    <p class="feed-block-excerpt-text">
+                                                        <a class="feed-block-link" href="<?php the_permalink( $post_two["ID"] ); ?>">
+                                                            <?php echo Excerptify( $post_two["post_excerpt"], 45 ); ?>
+                                                            <span class="feed-block-read-more">&longrightarrow;</span>
+                                                        </a>
+                                                    </p>
+                                                </div>
 
-                                        <div class="feed-block-datetime feed-block-datetime-two">
-                                            <p class="feed-block-date-text">
-                                                <?php echo Dately( $post_two["ID"] ); ?>
-                                            </p>
-                                            <p class="feed-block-time-text">
-                                                <?php echo Timely( $post_two["ID"] ); ?>
-                                            </p>
-                                        </div>
+                                                <div class="feed-block-categories">
+                                                    <ul class="feed-block-category-list">
+                                                        <?php
+                                                            $post_tags = Tagliatelle( $post_two["ID"], 3 );
+                                                            foreach ( $post_tags as $tag ) {
+                                                                $tag = str_replace( ' ', '', $tag->name );
+                                                                echo "<li class='feed-block-category-item feed-block-category-item-" . strtolower( $tag ) . "-inverse'>" . $tag . "</li>";
+                                                            }
+                                                        ?>
+                                                    </ul>
+                                                </div>
 
-                                    </div>
-                                </div> <!-- /.feed-block-inner -->
-                            </div> <!-- /.feed-block -->
+                                                <div class="feed-block-datetime feed-block-datetime-two">
+                                                    <p class="feed-block-date-text">
+                                                        <?php echo Dately( $post_two["ID"] ); ?>
+                                                    </p>
+                                                    <p class="feed-block-time-text">
+                                                        <?php echo Timely( $post_two["ID"] ); ?>
+                                                    </p>
+                                                </div>
 
-                            <div class="feed-block">
-                                <div class="feed-block-inner feed-block-inner-three">
-                                    <div class="feed-block-three">
+                                            </div>
+                                        </div> <!-- /.feed-block-inner -->
+                                    </div> <!-- /.feed-block -->
+                                </div>
 
-                                        <a class="feed-block-link" href="<?php the_permalink( $post_three["ID"] ); ?>">
-                                            <h4 class="feed-block-title tk-adelle">
-                                                <?php echo Titleify( $post_three["post_title"], 30 ); ?>
-                                            </h4>
-                                        </a>
+                                <div class="col-lg-12 col-md-12 col-sm-6">
+                                    <div class="feed-block feed-block-sm">
+                                        <div class="feed-block-inner feed-block-inner-three">
+                                            <div class="feed-block-three">
 
-                                        <div class="feed-block-excerpt">
-                                            <p class="feed-block-excerpt-text">
                                                 <a class="feed-block-link" href="<?php the_permalink( $post_three["ID"] ); ?>">
-                                                    <?php echo Excerptify( $post_three["post_excerpt"], 45 ); ?>
-                                                    <span class="feed-block-read-more">&longrightarrow;</span>
+                                                    <h4 class="feed-block-title tk-adelle">
+                                                        <?php echo Titleify( $post_three["post_title"], 30 ); ?>
+                                                    </h4>
                                                 </a>
-                                            </p>
-                                        </div>
 
-                                        <div class="feed-block-categories">
-                                            <ul class="feed-block-category-list">
-                                                <?php
-                                                    $post_tags = Tagliatelle( $post_three["ID"], 3 );
-                                                    foreach ( $post_tags as $tag ) {
-                                                        $tag = str_replace( ' ', '', $tag->name );
-                                                        echo "<li class='feed-block-category-item feed-block-category-item-" . strtolower( $tag ) . "-inverse'>" . $tag . "</li>";
-                                                    }
-                                                ?>
-                                            </ul>
-                                        </div>
+                                                <div class="feed-block-excerpt">
+                                                    <p class="feed-block-excerpt-text">
+                                                        <a class="feed-block-link" href="<?php the_permalink( $post_three["ID"] ); ?>">
+                                                            <?php echo Excerptify( $post_three["post_excerpt"], 45 ); ?>
+                                                            <span class="feed-block-read-more">&longrightarrow;</span>
+                                                        </a>
+                                                    </p>
+                                                </div>
 
-                                        <div class="feed-block-datetime feed-block-datetime-two">
-                                            <p class="feed-block-date-text">
-                                                <?php echo Dately( $post_three["ID"] ); ?>
-                                            </p>
-                                            <p class="feed-block-time-text">
-                                                <?php echo Timely( $post_three["ID"] ); ?>
-                                            </p>
-                                        </div>
+                                                <div class="feed-block-categories">
+                                                    <ul class="feed-block-category-list">
+                                                        <?php
+                                                            $post_tags = Tagliatelle( $post_three["ID"], 3 );
+                                                            foreach ( $post_tags as $tag ) {
+                                                                $tag = str_replace( ' ', '', $tag->name );
+                                                                echo "<li class='feed-block-category-item feed-block-category-item-" . strtolower( $tag ) . "-inverse'>" . $tag . "</li>";
+                                                            }
+                                                        ?>
+                                                    </ul>
+                                                </div>
 
-                                    </div>
-                                </div> <!-- /.feed-block-inner -->
-                            </div> <!-- /.feed-block -->
+                                                <div class="feed-block-datetime feed-block-datetime-two">
+                                                    <p class="feed-block-date-text">
+                                                        <?php echo Dately( $post_three["ID"] ); ?>
+                                                    </p>
+                                                    <p class="feed-block-time-text">
+                                                        <?php echo Timely( $post_three["ID"] ); ?>
+                                                    </p>
+                                                </div>
+
+                                            </div>
+                                        </div> <!-- /.feed-block-inner -->
+                                    </div> <!-- /.feed-block -->
+                                </div>
+
+                            </div> <!-- /.row -->
                         </div>
 
-                        <div class="col-lg-7 col-md-7 col-sm-7 col-xs-12">
+                        <div class="col-lg-7 col-md-7 col-sm-12 col-xs-12">
                             <div class="feed-block">
                                 <div class="feed-block-four">
                                     <div class="feed-block-four-image-container">
@@ -289,13 +316,13 @@
                                     <div class="feed-block-inner feed-block-inner-four">
 
                                         <a class="feed-block-link" href="<?php the_permalink( $post_four["ID"] ); ?>">
-                                            <h4 class="feed-block-title tk-adelle">
+                                            <h4 class="feed-block-title feed-block-title-lg tk-adelle">
                                                 <?php echo Titleify( $post_four["post_title"], 100 ); ?>
                                             </h4>
                                         </a>
 
                                         <div class="feed-block-excerpt">
-                                            <p class="feed-block-excerpt-text">
+                                            <p class="feed-block-excerpt-text feed-block-excerpt-text-lg">
                                                 <a class="feed-block-link" href="<?php the_permalink( $post_four["ID"] ); ?>">
                                                     <?php echo Excerptify( $post_four["post_excerpt"], 300 ); ?>
                                                     <span class="feed-block-read-more">&longrightarrow;</span>
@@ -348,13 +375,13 @@
 
 
                                                     <a class="feed-block-link" href="<?php the_permalink( $post_five["ID"] ); ?>">
-                                                        <h4 class="feed-block-title feed-block-title-inverse tk-adelle">
+                                                        <h4 class="feed-block-title feed-block-title-lg feed-block-title-inverse tk-adelle">
                                                             <?php echo Titleify( $post_five["post_title"], 100 ); ?>
                                                         </h4>
                                                     </a>
 
                                                     <div class="feed-block-excerpt">
-                                                        <p class="feed-block-excerpt-text">
+                                                        <p class="feed-block-excerpt-text feed-block-excerpt-text-lg">
                                                             <a class="feed-block-link" href="<?php the_permalink( $post_five["ID"] ); ?>">
                                                                 <?php echo Excerptify( $post_five["post_excerpt"], 300 ); ?>
                                                                 <span class="feed-block-read-more">&longrightarrow;</span>
@@ -400,7 +427,7 @@
                 <div class="container">
                     <div class="row">
 
-                        <div class="col-lg-7 col-md-7 col-sm-7">
+                        <div class="col-lg-7 col-md-7 col-sm-12">
                             <div class="feed-block">
                                 <div class="feed-block-six">
                                     <div class="feed-block-six-image-container">
@@ -410,13 +437,13 @@
                                     <div class="feed-block-inner feed-block-inner-six">
 
                                         <a class="feed-block-link" href="<?php the_permalink( $post_six["ID"] ); ?>">
-                                            <h4 class="feed-block-title tk-adelle">
+                                            <h4 class="feed-block-title feed-block-title-lg tk-adelle">
                                                 <?php echo Titleify( $post_six["post_title"], 100 ); ?>
                                             </h4>
                                         </a>
 
                                         <div class="feed-block-excerpt">
-                                            <p class="feed-block-excerpt-text">
+                                            <p class="feed-block-excerpt-text feed-block-excerpt-text-lg">
                                                 <a class="feed-block-link" href="<?php the_permalink( $post_six["ID"] ); ?>">
                                                     <?php echo Excerptify( $post_six["post_excerpt"], 300 ); ?>
                                                     <span class="feed-block-read-more">&longrightarrow;</span>
@@ -451,116 +478,120 @@
                             </div> <!-- /.feed-block -->
                         </div>
 
-                        <div class="col-lg-5 col-md-5 col-sm-6">
+                        <div class="col-lg-5 col-md-5 col-sm-12">
                             <div class="feed-block">
-                                <div class="feed-block-seven">
-                                    <div class="row">
+                                <div class="feed-block-inner-seven">
+                                    <div class="feed-block-seven">
+                                        <div class="row">
 
-                                        <div class="feed-block-seven-inner-container">
+                                            <div class="feed-block-seven-inner-container">
 
-                                            <div class="col-lg-6 col-md-6 col-sm-6">
-                                                <img class="feed-block-seven-image" src="<?php echo Imagely( $post_seven["ID"], 'small' ); ?>"/>
-                                            </div>
+                                                <div class="col-lg-6 col-md-6 col-sm-6">
+                                                    <img class="feed-block-seven-image" src="<?php echo Imagely( $post_seven["ID"], 'small' ); ?>"/>
+                                                </div>
 
-                                            <div class="col-lg-6 col-md-6 col-sm-6">
-                                                <div class="feed-block-inner feed-block-inner-seven">
-                                                    <a class="feed-block-link" href="<?php the_permalink( $post_seven["ID"] ); ?>">
-                                                        <h4 class="feed-block-title tk-adelle">
-                                                            <?php echo Titleify( $post_seven["post_title"], 40 ); ?>
-                                                        </h4>
-                                                    </a>
+                                                <div class="col-lg-6 col-md-6 col-sm-6">
+                                                    <div class="feed-block-inner feed-block-inner-seven">
+                                                        <a class="feed-block-link" href="<?php the_permalink( $post_seven["ID"] ); ?>">
+                                                            <h4 class="feed-block-title tk-adelle">
+                                                                <?php echo Titleify( $post_seven["post_title"], 40 ); ?>
+                                                            </h4>
+                                                        </a>
 
-                                                    <div class="feed-block-excerpt">
-                                                        <p class="feed-block-excerpt-text">
-                                                            <a class="feed-block-link" href="<?php the_permalink( $post_seven["ID"] ); ?>">
-                                                                <?php echo Excerptify( $post_seven["post_excerpt"], 40 ); ?>
-                                                                <span class="feed-block-read-more">&longrightarrow;</span>
-                                                            </a>
-                                                        </p>
-                                                    </div>
+                                                        <div class="feed-block-excerpt">
+                                                            <p class="feed-block-excerpt-text">
+                                                                <a class="feed-block-link" href="<?php the_permalink( $post_seven["ID"] ); ?>">
+                                                                    <?php echo Excerptify( $post_seven["post_excerpt"], 40 ); ?>
+                                                                    <span class="feed-block-read-more">&longrightarrow;</span>
+                                                                </a>
+                                                            </p>
+                                                        </div>
 
-                                                    <div class="feed-block-categories feed-block-seven-categories">
-                                                        <ul class="feed-block-category-list">
-                                                            <?php
-                                                                $post_tags = Tagliatelle( $post_seven["ID"], 2 );
-                                                                foreach ( $post_tags as $tag ) {
-                                                                    $tag = str_replace( ' ', '', $tag->name );
-                                                                    echo "<li class='feed-block-category-item feed-block-category-item-" . strtolower( $tag ) . "-inverse'>" . $tag . "</li>";
-                                                                }
-                                                            ?>
-                                                        </ul>
-                                                    </div>
+                                                        <div class="feed-block-categories feed-block-seven-categories">
+                                                            <ul class="feed-block-category-list">
+                                                                <?php
+                                                                    $post_tags = Tagliatelle( $post_seven["ID"], 2 );
+                                                                    foreach ( $post_tags as $tag ) {
+                                                                        $tag = str_replace( ' ', '', $tag->name );
+                                                                        echo "<li class='feed-block-category-item feed-block-category-item-" . strtolower( $tag ) . "-inverse'>" . $tag . "</li>";
+                                                                    }
+                                                                ?>
+                                                            </ul>
+                                                        </div>
 
-                                                    <div class="feed-block-datetime">
-                                                        <p class="feed-block-date-text">
-                                                            <?php echo Dately( $post_seven["ID"] ); ?>
-                                                        </p>
-                                                        <p class="feed-block-time-text">
-                                                            <?php echo Timely( $post_seven["ID"] ); ?>
-                                                        </p>
-                                                    </div>
+                                                        <div class="feed-block-datetime feed-block-datetime-seven">
+                                                            <p class="feed-block-date-text">
+                                                                <?php echo Dately( $post_seven["ID"] ); ?>
+                                                            </p>
+                                                            <p class="feed-block-time-text">
+                                                                <?php echo Timely( $post_seven["ID"] ); ?>
+                                                            </p>
+                                                        </div>
 
-                                                </div> <!-- /.feed-block-inner -->
+                                                    </div> <!-- /.feed-block-inner -->
+                                                </div>
                                             </div>
                                         </div>
-                                    </div>
-                                </div> <!-- /.feed-block-seven -->
+                                    </div> <!-- /.feed-block-seven -->
+                                </div> <!-- /.feed-block-inner-seven -->
                             </div> <!-- /.feed-block -->
 
                             <div class="feed-block tk-fira-sans-2">
-                                <div class="feed-block-eight">
-                                    <div class="row">
+                                <div class="feed-block-inner-eight">
+                                    <div class="feed-block-eight">
+                                        <div class="row">
 
-                                        <div class="feed-block-eight-inner-container">
+                                            <div class="feed-block-eight-inner-container">
 
-                                            <div class="col-lg-6 col-md-6 col-sm-6">
-                                                <img class="feed-block-eight-image" src="<?php echo Imagely( $post_eight["ID"], 'small' ); ?>"/>
-                                                <img src="http://placehold.it/230x320" class="feed-block-eight-image" alt="" />
-                                            </div>
+                                                <div class="col-lg-6 col-md-6 col-sm-6">
+                                                    <img class="feed-block-eight-image" src="<?php echo Imagely( $post_eight["ID"], 'small' ); ?>"/>
+                                                    <img src="http://placehold.it/230x320" class="feed-block-eight-image" alt="" />
+                                                </div>
 
-                                            <div class="col-lg-6 col-md-6 col-sm-6">
-                                                <div class="feed-block-inner feed-block-inner-eight">
-                                                    <a class="feed-block-link" href="<?php the_permalink( $post_eight["ID"] ); ?>">
-                                                        <h4 class="feed-block-title tk-adelle">
-                                                            <?php echo Titleify( $post_eight["post_title"], 40 ); ?>
-                                                        </h4>
-                                                    </a>
+                                                <div class="col-lg-6 col-md-6 col-sm-6">
+                                                    <div class="feed-block-inner feed-block-inner-eight">
+                                                        <a class="feed-block-link" href="<?php the_permalink( $post_eight["ID"] ); ?>">
+                                                            <h4 class="feed-block-title tk-adelle">
+                                                                <?php echo Titleify( $post_eight["post_title"], 40 ); ?>
+                                                            </h4>
+                                                        </a>
 
-                                                    <div class="feed-block-excerpt">
-                                                        <p class="feed-block-excerpt-text">
-                                                            <a class="feed-block-link" href="<?php the_permalink( $post_eight["ID"] ); ?>">
-                                                                <?php echo Excerptify( $post_eight["post_excerpt"], 40 ); ?>
-                                                                <span class="feed-block-read-more">&longrightarrow;</span>
-                                                            </a>
-                                                        </p>
-                                                    </div>
+                                                        <div class="feed-block-excerpt">
+                                                            <p class="feed-block-excerpt-text">
+                                                                <a class="feed-block-link" href="<?php the_permalink( $post_eight["ID"] ); ?>">
+                                                                    <?php echo Excerptify( $post_eight["post_excerpt"], 40 ); ?>
+                                                                    <span class="feed-block-read-more">&longrightarrow;</span>
+                                                                </a>
+                                                            </p>
+                                                        </div>
 
-                                                    <div class="feed-block-categories feed-block-eight-categories">
-                                                        <ul class="feed-block-category-list">
-                                                            <?php
-                                                                $post_tags = Tagliatelle( $post_eight["ID"], 2 );
-                                                                foreach ( $post_tags as $tag ) {
-                                                                    $tag = str_replace( ' ', '', $tag->name );
-                                                                    echo "<li class='feed-block-category-item feed-block-category-item-" . strtolower( $tag ) . "-inverse'>" . $tag . "</li>";
-                                                                }
-                                                            ?>
-                                                        </ul>
-                                                    </div>
+                                                        <div class="feed-block-categories feed-block-eight-categories">
+                                                            <ul class="feed-block-category-list">
+                                                                <?php
+                                                                    $post_tags = Tagliatelle( $post_eight["ID"], 2 );
+                                                                    foreach ( $post_tags as $tag ) {
+                                                                        $tag = str_replace( ' ', '', $tag->name );
+                                                                        echo "<li class='feed-block-category-item feed-block-category-item-" . strtolower( $tag ) . "-inverse'>" . $tag . "</li>";
+                                                                    }
+                                                                ?>
+                                                            </ul>
+                                                        </div>
 
-                                                    <div class="feed-block-datetime">
-                                                        <p class="feed-block-date-text">
-                                                            <?php echo Dately( $post_eight["ID"] ); ?>
-                                                        </p>
-                                                        <p class="feed-block-time-text">
-                                                            <?php echo Timely( $post_eight["ID"] ); ?>
-                                                        </p>
-                                                    </div>
+                                                        <div class="feed-block-datetime feed-block-datetime-eight">
+                                                            <p class="feed-block-date-text">
+                                                                <?php echo Dately( $post_eight["ID"] ); ?>
+                                                            </p>
+                                                            <p class="feed-block-time-text">
+                                                                <?php echo Timely( $post_eight["ID"] ); ?>
+                                                            </p>
+                                                        </div>
 
-                                                </div> <!-- /.feed-block-inner -->
+                                                    </div> <!-- /.feed-block-inner -->
+                                                </div>
                                             </div>
                                         </div>
-                                    </div>
-                                </div> <!-- /.feed-block-eight -->
+                                    </div> <!-- /.feed-block-eight -->
+                                </div> <!-- /.feed-block-inner-eight -->
                             </div> <!-- /.feed-block -->
                         </div>
 
@@ -582,13 +613,13 @@
 
 
                                                     <a class="feed-block-link" href="<?php the_permalink( $post_nine["ID"] ); ?>">
-                                                        <h4 class="feed-block-title feed-block-title-inverse tk-adelle">
+                                                        <h4 class="feed-block-title feed-block-title-inverse feed-block-title-lg tk-adelle">
                                                             <?php echo Titleify( $post_nine["post_title"], 100 ); ?>
                                                         </h4>
                                                     </a>
 
                                                     <div class="feed-block-excerpt">
-                                                        <p class="feed-block-excerpt-text">
+                                                        <p class="feed-block-excerpt-text feed-block-excerpt-text-lg">
                                                             <a class="feed-block-link" href="<?php the_permalink( $post_nine["ID"] ); ?>">
                                                                 <?php echo Excerptify( $post_nine["post_excerpt"], 300 ); ?>
                                                                 <span class="feed-block-read-more">&longrightarrow;</span>
@@ -649,5 +680,5 @@
             </div>
         </section> -->
 
-    </div> <!-- ./content-container-width -->
+    </div> <!-- ./content-container-width-feed -->
 </div> <!-- ./content-container -->

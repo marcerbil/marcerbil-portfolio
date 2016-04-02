@@ -383,6 +383,16 @@ require get_template_directory() . '/inc/customizer.php';
 *
 **/
 
+if( function_exists('acf_add_options_page') ) {
+
+    acf_add_options_page( array(
+       'page_title' => 'Random Quotes',
+       'menu_title' => 'Random Quotes',
+       'icon_url' => '\f106'
+    ));
+
+}
+
 // Remove admin bar
 add_filter('show_admin_bar', '__return_false');
 
