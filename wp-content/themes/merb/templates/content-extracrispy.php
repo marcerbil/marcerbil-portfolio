@@ -12,6 +12,13 @@
  **/
  $recent_posts = wp_get_recent_posts();
  $posts_array = [];
+ $is_mobile = false;
+ $tag_limit;
+
+if ( wp_is_mobile() ) {
+    $is_mobile = true;
+    $tag_limit = 2;
+}
 
  foreach( $recent_posts as $recent ) {
      array_push($posts_array, $recent);
@@ -77,10 +84,6 @@
      // popup other tags associated with post
      // in a nice way
 
-     if ( wp_is_mobile() ) {
-         $tag_limit = 2;
-     }
-
      $post_tags = get_the_tags( $post_id );
 
      $post_tags = array_slice( $post_tags, 0, $tag_limit, TRUE);
@@ -116,6 +119,9 @@
  }
 
  function Quotely() {
+     // TODO: add link to wikipedia page
+     // field for author
+
      // Get array of quotes from
      // ACF options page
      $quotes = get_field( 'magical_quotes', 'option' );
@@ -170,7 +176,7 @@
                                         <div class="col-lg-6 col-md-6 col-sm-8">
                                             <div class="feed-block-inner">
                                                 <a class="feed-block-link" href="<?php the_permalink( $post_one["ID"] ); ?>">
-                                                    <h4 class="feed-block-title feed-block-title-sm tk-adelle">
+                                                    <h4 class="feed-block-title feed-block-title-sm tk-fira-sans-2">
                                                         <?php echo Titleify( $post_one["post_title"], 40); ?>
                                                     </h4>
                                                 </a>
@@ -178,13 +184,19 @@
                                                 <div class="feed-block-excerpt">
                                                     <p class="feed-block-excerpt-text">
                                                         <a class="feed-block-link" href="<?php the_permalink( $post_one["ID"] ); ?>">
-                                                            <?php echo Excerptify( $post_one["post_excerpt"], 40 ); ?>
+                                                            <?php
+                                                            if ( $is_mobile ) {
+                                                                echo Excerptify( $post_one["post_excerpt"], 200 );
+                                                            } else {
+                                                                echo Excerptify( $post_one["post_excerpt"], 40 );
+                                                            }
+                                                            ?>
                                                             <span class="feed-block-read-more">&longrightarrow;</span>
                                                         </a>
                                                     </p>
                                                 </div>
 
-                                                <div class="feed-block-categories">
+                                                <div class="feed-block-categories feed-block-one-categories">
                                                     <ul class="feed-block-category-list">
                                                         <?php
                                                             $post_tags = Tagliatelle( $post_one["ID"], 2 );
@@ -217,7 +229,7 @@
                                         <div class="feed-block-inner feed-block-inner-two">
                                             <div class="feed-block-two">
                                                 <a class="feed-block-link" href="<?php the_permalink( $post_two["ID"] ); ?>">
-                                                    <h4 class="feed-block-title tk-adelle">
+                                                    <h4 class="feed-block-title tk-fira-sans-2">
                                                         <?php echo Titleify( $post_two["post_title"], 30 ); ?>
                                                     </h4>
                                                 </a>
@@ -231,10 +243,10 @@
                                                     </p>
                                                 </div>
 
-                                                <div class="feed-block-categories">
+                                                <div class="feed-block-categories feed-block-two-categories">
                                                     <ul class="feed-block-category-list">
                                                         <?php
-                                                            $post_tags = Tagliatelle( $post_two["ID"], 3 );
+                                                            $post_tags = Tagliatelle( $post_two["ID"], 2 );
                                                             foreach ( $post_tags as $tag ) {
                                                                 $tag = str_replace( ' ', '', $tag->name );
                                                                 echo "<li class='feed-block-category-item feed-block-category-item-" . strtolower( $tag ) . "-inverse'>" . $tag . "</li>";
@@ -263,7 +275,7 @@
                                             <div class="feed-block-three">
 
                                                 <a class="feed-block-link" href="<?php the_permalink( $post_three["ID"] ); ?>">
-                                                    <h4 class="feed-block-title tk-adelle">
+                                                    <h4 class="feed-block-title tk-fira-sans-2">
                                                         <?php echo Titleify( $post_three["post_title"], 30 ); ?>
                                                     </h4>
                                                 </a>
@@ -277,10 +289,10 @@
                                                     </p>
                                                 </div>
 
-                                                <div class="feed-block-categories">
+                                                <div class="feed-block-categories feed-block-three-categories">
                                                     <ul class="feed-block-category-list">
                                                         <?php
-                                                            $post_tags = Tagliatelle( $post_three["ID"], 3 );
+                                                            $post_tags = Tagliatelle( $post_three["ID"], 2 );
                                                             foreach ( $post_tags as $tag ) {
                                                                 $tag = str_replace( ' ', '', $tag->name );
                                                                 echo "<li class='feed-block-category-item feed-block-category-item-" . strtolower( $tag ) . "-inverse'>" . $tag . "</li>";
@@ -289,7 +301,7 @@
                                                     </ul>
                                                 </div>
 
-                                                <div class="feed-block-datetime feed-block-datetime-two">
+                                                <div class="feed-block-datetime feed-block-datetime-three">
                                                     <p class="feed-block-date-text">
                                                         <?php echo Dately( $post_three["ID"] ); ?>
                                                     </p>
@@ -316,7 +328,7 @@
                                     <div class="feed-block-inner feed-block-inner-four">
 
                                         <a class="feed-block-link" href="<?php the_permalink( $post_four["ID"] ); ?>">
-                                            <h4 class="feed-block-title feed-block-title-lg tk-adelle">
+                                            <h4 class="feed-block-title feed-block-title-lg tk-fira-sans-2">
                                                 <?php echo Titleify( $post_four["post_title"], 100 ); ?>
                                             </h4>
                                         </a>
@@ -375,8 +387,8 @@
 
 
                                                     <a class="feed-block-link" href="<?php the_permalink( $post_five["ID"] ); ?>">
-                                                        <h4 class="feed-block-title feed-block-title-lg feed-block-title-inverse tk-adelle">
-                                                            <?php echo Titleify( $post_five["post_title"], 100 ); ?>
+                                                        <h4 class="feed-block-title feed-block-title-lg feed-block-title-inverse tk-fira-sans-2">
+                                                            <?php echo Titleify( $post_five["post_title"], 82 ); ?>
                                                         </h4>
                                                     </a>
 
@@ -437,7 +449,7 @@
                                     <div class="feed-block-inner feed-block-inner-six">
 
                                         <a class="feed-block-link" href="<?php the_permalink( $post_six["ID"] ); ?>">
-                                            <h4 class="feed-block-title feed-block-title-lg tk-adelle">
+                                            <h4 class="feed-block-title feed-block-title-lg tk-fira-sans-2">
                                                 <?php echo Titleify( $post_six["post_title"], 100 ); ?>
                                             </h4>
                                         </a>
@@ -454,7 +466,12 @@
                                         <div class="feed-block-categories feed-block-six-categories">
                                             <ul class="feed-block-category-list">
                                                 <?php
-                                                    $post_tags = Tagliatelle( $post_six["ID"], 6 );
+                                                if ( $is_mobile ) {
+                                                    $tag_limit_six = 2;
+                                                } else {
+                                                    $tag_limit_six = 6;
+                                                }
+                                                    $post_tags = Tagliatelle( $post_six["ID"], $tag_limit_six );
                                                     foreach ( $post_tags as $tag ) {
                                                         $tag = str_replace( ' ', '', $tag->name );
                                                         echo "<li class='feed-block-category-item feed-block-category-item-" . strtolower( $tag ) . "-inverse'>" . $tag . "</li>";
@@ -486,14 +503,14 @@
 
                                             <div class="feed-block-seven-inner-container">
 
-                                                <div class="col-lg-6 col-md-6 col-sm-6">
+                                                <div class="col-lg-6 col-md-6 col-sm-4">
                                                     <img class="feed-block-seven-image" src="<?php echo Imagely( $post_seven["ID"], 'small' ); ?>"/>
                                                 </div>
 
-                                                <div class="col-lg-6 col-md-6 col-sm-6">
+                                                <div class="col-lg-6 col-md-6 col-sm-8">
                                                     <div class="feed-block-inner feed-block-inner-seven">
                                                         <a class="feed-block-link" href="<?php the_permalink( $post_seven["ID"] ); ?>">
-                                                            <h4 class="feed-block-title tk-adelle">
+                                                            <h4 class="feed-block-title tk-fira-sans-2">
                                                                 <?php echo Titleify( $post_seven["post_title"], 40 ); ?>
                                                             </h4>
                                                         </a>
@@ -501,7 +518,13 @@
                                                         <div class="feed-block-excerpt">
                                                             <p class="feed-block-excerpt-text">
                                                                 <a class="feed-block-link" href="<?php the_permalink( $post_seven["ID"] ); ?>">
-                                                                    <?php echo Excerptify( $post_seven["post_excerpt"], 40 ); ?>
+                                                                    <?php
+                                                                        if ( $is_mobile ) {
+                                                                            echo Excerptify( $post_one["post_excerpt"], 250 );
+                                                                        } else {
+                                                                            echo Excerptify( $post_one["post_excerpt"], 40 );
+                                                                        }
+                                                                    ?>
                                                                     <span class="feed-block-read-more">&longrightarrow;</span>
                                                                 </a>
                                                             </p>
@@ -543,15 +566,15 @@
 
                                             <div class="feed-block-eight-inner-container">
 
-                                                <div class="col-lg-6 col-md-6 col-sm-6">
+                                                <div class="col-lg-6 col-md-6 col-sm-4">
                                                     <img class="feed-block-eight-image" src="<?php echo Imagely( $post_eight["ID"], 'small' ); ?>"/>
                                                     <img src="http://placehold.it/230x320" class="feed-block-eight-image" alt="" />
                                                 </div>
 
-                                                <div class="col-lg-6 col-md-6 col-sm-6">
+                                                <div class="col-lg-6 col-md-6 col-sm-8">
                                                     <div class="feed-block-inner feed-block-inner-eight">
                                                         <a class="feed-block-link" href="<?php the_permalink( $post_eight["ID"] ); ?>">
-                                                            <h4 class="feed-block-title tk-adelle">
+                                                            <h4 class="feed-block-title tk-fira-sans-2">
                                                                 <?php echo Titleify( $post_eight["post_title"], 40 ); ?>
                                                             </h4>
                                                         </a>
@@ -559,7 +582,13 @@
                                                         <div class="feed-block-excerpt">
                                                             <p class="feed-block-excerpt-text">
                                                                 <a class="feed-block-link" href="<?php the_permalink( $post_eight["ID"] ); ?>">
-                                                                    <?php echo Excerptify( $post_eight["post_excerpt"], 40 ); ?>
+                                                                    <?php
+                                                                        if ( $is_mobile ) {
+                                                                            echo Excerptify( $post_eight["post_excerpt"], 250 );
+                                                                        } else {
+                                                                            echo Excerptify( $post_eight["post_excerpt"], 40 );
+                                                                        }
+                                                                    ?>
                                                                     <span class="feed-block-read-more">&longrightarrow;</span>
                                                                 </a>
                                                             </p>
@@ -613,8 +642,8 @@
 
 
                                                     <a class="feed-block-link" href="<?php the_permalink( $post_nine["ID"] ); ?>">
-                                                        <h4 class="feed-block-title feed-block-title-inverse feed-block-title-lg tk-adelle">
-                                                            <?php echo Titleify( $post_nine["post_title"], 100 ); ?>
+                                                        <h4 class="feed-block-title feed-block-title-inverse feed-block-title-lg tk-fira-sans-2">
+                                                            <?php echo Titleify( $post_nine["post_title"], 80 ); ?>
                                                         </h4>
                                                     </a>
 
@@ -630,7 +659,12 @@
                                                     <div class="feed-block-categories feed-block-nine-categories">
                                                         <ul class="feed-block-category-list">
                                                             <?php
-                                                            $post_tags = Tagliatelle( $post_nine["ID"], 6 );
+                                                            if ( $is_mobile ) {
+                                                                $tag_limit_nine = 2;
+                                                            } else {
+                                                                $tag_limit_nine = 6;
+                                                            }
+                                                            $post_tags = Tagliatelle( $post_nine["ID"], $tag_limit_nine );
                                                             foreach ( $post_tags as $tag ) {
                                                                 $tag = str_replace( ' ', '', $tag->name );
                                                                 echo "<li class='feed-block-category-item feed-block-category-item-" . strtolower( $tag ) . "-inverse'>" . $tag . "</li>";

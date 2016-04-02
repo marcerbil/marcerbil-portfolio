@@ -9,6 +9,8 @@
 
     <?php get_header(); ?>
 
+        <div class="post-wrapper">
+
             <div class="page-id" id="postPage"></div>
 
             <section id="heroBg" data-colour="#660000" class="section-hero-post">
@@ -25,6 +27,7 @@
                                 <?php the_category(); ?>
                             </div>
                         </div>
+                        <hr class="post-hero-hr" />
                     </div>
 
                     <div class="post-hero-meta">
@@ -135,5 +138,7 @@
                 </div> <!-- /.container -->
 
             </section>
+
+        </div> <!-- /.post-wrapper -->
 
 <?php get_footer(); ?>

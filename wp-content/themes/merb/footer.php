@@ -27,7 +27,7 @@
                     <ul class="footer-nav">
                         <a href="<?php bloginfo( 'url' ); ?>"><li class="footer-nav-item">home</li></a>
                         <a href="<?php bloginfo( 'url' ); ?>/work/"><li class="footer-nav-item">work</li></a>
-                        <a href="<?php bloginfo( 'url' ); ?>/blog/"><li class="footer-nav-item">otherstuff</li></a>
+                        <a href="<?php bloginfo( 'url' ); ?>/extracrispy/"><li class="footer-nav-item">extracrispy</li></a>
                     </ul>
                 </div>
             </div>
