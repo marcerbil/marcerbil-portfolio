@@ -137,8 +137,20 @@
 
                 </div> <!-- /.container -->
 
+                <hr class="post-end-hr" />
+
             </section>
 
         </div> <!-- /.post-wrapper -->
+
+        <section class="section-comments">
+            <div class="container">
+                <div class="col-lg-10 col-lg-offset-1">
+                    <?php comments_template(); ?>
+                </div>
+            </div>
+        </section>
+
+
 
 <?php get_footer(); ?>

@@ -225,7 +225,7 @@ if ( wp_is_mobile() ) {
 
                             <div class="row">
                                 <div class="col-lg-12 col-md-12 col-sm-6">
-                                    <div class="feed-block feed-block-sm">
+                                    <div class="feed-block feed-block-xs">
                                         <div class="feed-block-inner feed-block-inner-two">
                                             <div class="feed-block-two">
                                                 <a class="feed-block-link" href="<?php the_permalink( $post_two["ID"] ); ?>">
@@ -270,7 +270,7 @@ if ( wp_is_mobile() ) {
                                 </div>
 
                                 <div class="col-lg-12 col-md-12 col-sm-6">
-                                    <div class="feed-block feed-block-sm">
+                                    <div class="feed-block feed-block-xs">
                                         <div class="feed-block-inner feed-block-inner-three">
                                             <div class="feed-block-three">
 
@@ -319,7 +319,7 @@ if ( wp_is_mobile() ) {
                         </div>
 
                         <div class="col-lg-7 col-md-7 col-sm-12 col-xs-12">
-                            <div class="feed-block">
+                            <div class="feed-block feed-block-sm">
                                 <div class="feed-block-four">
                                     <div class="feed-block-four-image-container">
                                         <img class="feed-block-four-image" src="<?php echo Imagely( $post_four["ID"], 'main' ); ?>"/>

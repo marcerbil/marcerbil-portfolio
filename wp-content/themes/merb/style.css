@@ -1586,6 +1586,16 @@ html, body {
     }
 }
 
+.feed-block-xs {
+    margin: 12px 18px 18px 0;
+}
+
+@media (min-width: 320px) and (max-width: 435px) {
+    .feed-block-sm {
+        margin: 0 18px 18px 0;
+    }
+}
+
 .feed-block-link {
     text-decoration: none;
     color: #d1d1d1;
@@ -1623,8 +1633,9 @@ html, body {
 
 @media (min-width: 1280px) {
     .feed-block-two {
-        height: auto;
+        height: 125px;
         position: relative;
+        max-height: 125px;
     }
 }
 
@@ -1634,8 +1645,9 @@ html, body {
 
 @media (min-width: 1280px) {
     .feed-block-three {
-        height: auto;
+        height: 125px;
         position: relative;
+        max-height: 125px;
     }
 }
 
@@ -1657,7 +1669,8 @@ html, body {
 
 @media (min-width: 320px) and (max-width: 435px) {
     .feed-block-four {
-        height: auto;
+        height: 375px;
+        position: relative;
     }
 }
 
@@ -1669,6 +1682,7 @@ html, body {
 .feed-block-six {
     height: 625px;
     max-height: 625px;
+    position: relative;
 }
 
 @media (min-width: 435px) and (max-width: 1280px) {
@@ -1969,7 +1983,7 @@ html, body {
     margin: 0;
 }
 
-@media (min-width: 800px) and (max-width: 1280px) {
+@media (min-width: 800px) {
     .feed-block-four-categories {
         margin: 3rem 0;
     }
@@ -1977,7 +1991,7 @@ html, body {
 
 @media (min-width: 320px) and (max-width: 435px) {
     .feed-block-four-categories {
-        margin: 2rem 0 4rem;
+        margin: 1rem 0 1rem;
     }
 }
 
@@ -2200,7 +2214,7 @@ html, body {
     bottom: 0;
 }
 
-@media (min-width: 800px) and (max-width: 1280px) {
+@media (min-width: 800px) {
     .feed-block-datetime-one {
         bottom: -65px;
         width: 75%;
@@ -2216,7 +2230,8 @@ html, body {
 
 @media (min-width: 1280px) {
     .feed-block-datetime-two {
-        width: 85%;
+        width: 100%;
+        bottom: -10px;
     }
 }
 
@@ -2228,7 +2243,8 @@ html, body {
 
 @media (min-width: 1280px) {
     .feed-block-datetime-three {
-        width: 85%;
+        width: 100%;
+        bottom: -10px;
     }
 }
 
@@ -2432,9 +2448,6 @@ html, body {
     border-top-right-radius: 4px;
 }
 
-.section-hero-post {
-}
-
 .section-post {
     margin: 15% 0;
 }
@@ -2461,6 +2474,10 @@ html, body {
     .section-post {
         margin: 10%;
     }
+}
+
+.section-comments {
+    margin: 5% 0;
 }
 
 .post-hero {
@@ -2927,9 +2944,10 @@ html, body {
 }
 
 @media (min-width: 320px) and (max-width: 435px) {
-.post-blockquote {
-    margin: 1.6rem;
-    font-size: 1.4rem;
+    .post-blockquote {
+        margin: 1.6rem;
+        font-size: 1.4rem;
+    }
 }
 
 .post-blockquote-author {
@@ -2963,8 +2981,7 @@ html, body {
 .post-full-width-image-caption {
     font-family: "fira-sans-2", sans-serif;
     font-size: 1.3rem;
-    font-weight: 200;
-    font-style: italic;
+    font-weight: 400;
     color: #a2a2a2;
 }
 
@@ -2995,8 +3012,7 @@ html, body {
 .post-video-caption {
     font-family: "fira-sans-2", sans-serif;
     font-size: 1.3rem;
-    font-weight: 200;
-    font-style: italic;
+    font-weight: 400;
     color: #a2a2a2;
 }
 
@@ -3041,8 +3057,14 @@ html, body {
 .post-gallery-caption {
     font-family: "fira-sans-2", sans-serif;
     font-size: 1.4rem;
-    font-weight: 300;
+    font-weight: 400;
     color: #a2a2a2;
+}
+
+.post-end-hr {
+    border-width: 0.4rem;
+    width: 3rem;
+    margin: 1.3rem auto 0;
 }
 
 
