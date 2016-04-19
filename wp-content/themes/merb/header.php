@@ -39,38 +39,48 @@
     <nav id="navley" class="navbar navbar-default navbar-fixed-top">
       <div class="container-fluid">
         <div class="navbar-header">
-          <button id="showRight" type="button" class="navbar-toggle collapsed">
-            <div id="burger" class="js-hide">
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="burger-tooltip">MENU</span>
-            </div>
-            <div id="menuClose" class="menu-close">
-                <i class="glyphicon glyphicon-remove"></i>
-            </div>
-          </button>
-          <div class="navbar-brand-container">
-              <a id="navBrand" class="animated navbar-brand" href="/"><img src="<?php bloginfo('template_directory'); ?>/img/logo.png" class="navbar-brand-image" alt="MDE Logo"></a>
+          <div class="mobile-menu">
+            <button id="showRight" type="button" class="navbar-toggle collapsed">
+              <div id="burger" class="js-hide">
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="burger-tooltip">MENU</span>
+              </div>
+              <div id="menuClose" class="menu-close">
+                  <i class="glyphicon glyphicon-remove"></i>
+              </div>
+            </button>
           </div>
+
+          <div class="navbar-brand-container">
+              <a id="navBrand" class="animated navbar-brand" href="/"><img src="<?php bloginfo('template_directory'); ?>/img/logo.svg" class="navbar-brand-image logo-svg" alt="MDE Logo"></a>
+          </div>
+
+          <div class="desktop-menu">
+
+            <ul class="nav navbar-nav navbar-right navbar-links">
+              <li class="navbar-link"><a href="<?php bloginfo( 'url' ); ?>/work/">creative works</a></li>
+              <li class="navbar-link"><a href="<?php bloginfo( 'url' ); ?>/work/">projects</a></li>
+              <li class="navbar-link"><a href="<?php bloginfo( 'url' ); ?>/extracrispy/">blog</a></li>
+            </ul>
+
+          </div>
+
         </div>
     </div> <!-- /.container-fluid -->
     </nav>
 
-    <div class="cbp-spmenu cbp-spmenu-vertical cbp-spmenu-right" id="cbp-spmenu-s2">
-        <h3>&nbsp;</h3>
-        <a class="cbp-link-top js-menu-item" href="<?php bloginfo( 'url' ); ?>/">home</a>
-        <a class="cbp-link js-menu-item" href="<?php bloginfo( 'url' ); ?>/work/">projects</a>
-        <ul class="cbp-dropdown">
-            <li class="cbp-dropdown-item js-menu-item"><a class="sub-dropdown-item" href="<?php bloginfo( 'url' ); ?>/work/project_one">Loft Digital</a></li>
-            <li class="cbp-dropdown-item js-menu-item"><a class="sub-dropdown-item" href="<?php bloginfo( 'url' ); ?>/work/project_two">Business Traveller</a></li>
-            <li class="cbp-dropdown-item js-menu-item"><a class="sub-dropdown-item" href="<?php bloginfo( 'url' ); ?>/work/project_three">Olam</a></li>
-            <li class="cbp-dropdown-item js-menu-item"><a class="sub-dropdown-item" href="<?php bloginfo( 'url' ); ?>/work/project_four">MD Marketing</a></li>
-            <li class="cbp-dropdown-item js-menu-item"><a class="sub-dropdown-item" href="<?php bloginfo( 'url' ); ?>/work/project_five">Big Idea</a></li>
-            <li class="cbp-dropdown-item js-menu-item"><a class="sub-dropdown-item" href="<?php bloginfo( 'url' ); ?>/work/project_six">BPSI</a></li>
-        </ul>
-        <a class="cbp-link js-menu-item" href="<?php bloginfo( 'url' ); ?>/extracrispy/">extracrispy</a>
+    <div class="mobile-menu">
+      <div class="cbp-spmenu cbp-spmenu-vertical cbp-spmenu-right" id="cbp-spmenu-s2">
+          <h3>&nbsp;</h3>
+          <a class="cbp-link-top js-menu-item" href="<?php bloginfo( 'url' ); ?>/">home</a>
+          <a class="cbp-link-top js-menu-item" href="<?php bloginfo( 'url' ); ?>/">creative works</a>
+          <a class="cbp-link js-menu-item" href="<?php bloginfo( 'url' ); ?>/work/">projects</a>
+          <a class="cbp-link js-menu-item" href="<?php bloginfo( 'url' ); ?>/extracrispy/">blog</a>
+      </div>
     </div>
+
 </header>
 
 <body id="body" <?php body_class(); ?>>

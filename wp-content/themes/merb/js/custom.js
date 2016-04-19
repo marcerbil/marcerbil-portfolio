@@ -49,11 +49,9 @@ window.onload = function() {
     window.addEventListener('scroll', function() {
         if( window.scrollY != 0 ) {
             nav.classList.add( 'navbar-bg' );
-            nav.style.borderBottom = '3px solid '+ heroColour;
             navBrand.classList.add( 'flipInX' );
         } else {
             nav.classList.remove( 'navbar-bg' );
-            nav.style.borderBottom = 0;
             navBrand.classList.remove( 'flipInX' );
         }
     });

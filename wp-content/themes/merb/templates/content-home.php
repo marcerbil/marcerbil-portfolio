@@ -11,9 +11,7 @@
 <div class="page-id" id="homePage"></div>
 
 <section id="heroBg" data-colour="#7788BA" class="section-hero">
-    <div class="hero">
-        <img src="<?php bloginfo('template_directory'); ?>/img/hero1.png" class="hero-image" alt="Hero image" />
-    </div>
+    <div class="hero"></div>
     <div class="hero-container">
         <div class="hero-content-home animated fadeIn">
             <h1 class="hero-title">UI/Web Designer</h1>
