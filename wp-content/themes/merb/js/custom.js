@@ -21,21 +21,23 @@ window.onload = function() {
         menuItems = document.querySelectorAll(".js-menu-item"),
         homePage = document.getElementById("homePage"),
         workPage = document.getElementById("workPage"),
-        feedPage = document.getElementById("feedPage"),
+        blogPage = document.getElementById("blogPage"),
         postPage = document.getElementById("postPage"),
-        projectOne = document.getElementById("projectOne"),
-        projectTwo = document.getElementById("projectTwo"),
-        projectThree = document.getElementById("projectThree"),
-        projectFour = document.getElementById("projectFour"),
-        projectFive = document.getElementById("projectFive"),
-        projectSix = document.getElementById("projectSix"),
+        creativeworksPage = document.getElementById("creativeworksPage"),
+        navProjects = document.getElementById("navProjects"),
+        navCreativeworks = document.getElementById("navCreativeworks"),
+        navBlog = document.getElementById("navBlog"),
         lightboxLink = document.querySelectorAll(".lightbox-link"),
         knobOne = document.getElementById("knobOne"),
         knobTwo = document.getElementById("knobTwo"),
         knobThree = document.getElementById("knobThree"),
         knobFour = document.getElementById("knobFour"),
-        feedLoadMore = document.getElementById("feedLoadMore"),
-        feedLoadMorePosts = document.getElementById("feedLoadMorePosts"),
+        // feedLoadMore = document.getElementById("feedLoadMore"),
+        // feedLoadMorePosts = document.getElementById("feedLoadMorePosts"),
+        footerHome = document.getElementById("footerHome"),
+        footerProjects = document.getElementById("footerProjects"),
+        footerCreativeworks = document.getElementById("footerCreativeworks"),
+        footerBlog = document.getElementById("footerBlog"),
         currentScrollPosition,
         iteration,
         start = false;
@@ -78,22 +80,19 @@ window.onload = function() {
 
     if ( homePage != null ) {
         menuItems[0].classList.toggle( 'js-item-active' );
+        footerHome.classList.toggle( 'footer-item-active' );
     } else if ( workPage != null ) {
         menuItems[1].classList.toggle( 'js-item-active' );
-    } else if ( projectOne != null ) {
+        footerProjects.classList.toggle( 'footer-item-active' );
+        navProjects.classList.toggle( 'nav-item-active' );
+    } else if ( blogPage != null ) {
         menuItems[2].classList.toggle( 'js-item-active' );
-    } else if ( projectTwo != null ) {
-        menuItems[3].classList.toggle( 'js-item-active' );
-    } else if ( projectThree != null ) {
-        menuItems[4].classList.toggle( 'js-item-active' );
-    } else if ( projectFour != null ) {
-        menuItems[5].classList.toggle( 'js-item-active' );
-    } else if ( projectFive != null ) {
-        menuItems[6].classList.toggle( 'js-item-active' );
-    } else if ( projectSix != null ) {
-        menuItems[7].classList.toggle( 'js-item-active' );
-    } else if ( feedPage != null ) {
-        menuItems[8].classList.toggle( 'js-item-active' );
+        footerBlog.classList.toggle( 'footer-item-active' );
+        navBlog.classList.toggle( 'nav-item-active' );
+    } else if ( creativeworksPage != null ) {
+        menuItems[2].classList.toggle( 'js-item-active' );
+        footerCreativeworks.classList.toggle( 'footer-item-active' );
+        navCreativeworks.classList.toggle( 'nav-item-active' );
     }
 
 

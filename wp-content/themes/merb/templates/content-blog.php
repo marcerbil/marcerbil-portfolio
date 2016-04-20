@@ -137,7 +137,7 @@ if ( wp_is_mobile() ) {
  }
 ?>
 
-<div class="page-id" id="feedPage"></div>
+<div class="page-id" id="blogPage"></div>
 
 <section id="heroBg" data-colour="#176612" class="section-hero">
     <div class="hero-wrapper">

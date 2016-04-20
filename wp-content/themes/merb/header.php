@@ -18,10 +18,13 @@
 
     <!-- Bootstrap -->
     <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" integrity="sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ==" crossorigin="anonymous">
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" integrity="sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ==" crossorigin="anonymous"> -->
+    <link rel="stylesheet" href="<?php get_template_directory()?>/wp-content/themes/merb/vendor/bootstrap-3.3.6-dist/css/bootstrap.min.css">
+    <script src="<?php get_template_directory()?>/wp-content/themes/merb/vendor/bootstrap-3.3.6-dist/js/bootstrap.min.js"></script>
 
     <!-- FontAwesome -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css"> -->
+    <link rel="stylesheet" href="<?php get_template_directory()?>/wp-content/themes/merb/vendor/font-awesome-4.6.1/css/font-awesome.min.css">
 
     <!-- Google Font -->
     <link href='https://fonts.googleapis.com/css?family=Raleway:400,100,300|Merriweather:400,300,300italic,400italic' rel='stylesheet' type='text/css'>
@@ -60,9 +63,9 @@
           <div class="desktop-menu">
 
             <ul class="nav navbar-nav navbar-right navbar-links">
-              <li class="navbar-link"><a href="<?php bloginfo( 'url' ); ?>/work/">creative works</a></li>
-              <li class="navbar-link"><a href="<?php bloginfo( 'url' ); ?>/work/">projects</a></li>
-              <li class="navbar-link"><a href="<?php bloginfo( 'url' ); ?>/extracrispy/">blog</a></li>
+              <li><a id="navCreativeworks" class="navbar-link" href="<?php bloginfo( 'url' ); ?>/work/">creative works</a></li>
+              <li><a id="navProjects" class="navbar-link" href="<?php bloginfo( 'url' ); ?>/work/">projects</a></li>
+              <li><a id="navBlog" class="navbar-link" href="<?php bloginfo( 'url' ); ?>/blog/">blog</a></li>
             </ul>
 
           </div>
@@ -77,7 +80,7 @@
           <a class="cbp-link-top js-menu-item" href="<?php bloginfo( 'url' ); ?>/">home</a>
           <a class="cbp-link-top js-menu-item" href="<?php bloginfo( 'url' ); ?>/">creative works</a>
           <a class="cbp-link js-menu-item" href="<?php bloginfo( 'url' ); ?>/work/">projects</a>
-          <a class="cbp-link js-menu-item" href="<?php bloginfo( 'url' ); ?>/extracrispy/">blog</a>
+          <a class="cbp-link js-menu-item" href="<?php bloginfo( 'url' ); ?>/blog/">blog</a>
       </div>
     </div>
 
