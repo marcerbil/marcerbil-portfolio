@@ -21,18 +21,23 @@ window.onload = function() {
         menuItems = document.querySelectorAll(".js-menu-item"),
         homePage = document.getElementById("homePage"),
         workPage = document.getElementById("workPage"),
-        contactPage = document.getElementById("contactPage"),
-        projectOne = document.getElementById("projectOne"),
-        projectTwo = document.getElementById("projectTwo"),
-        projectThree = document.getElementById("projectThree"),
-        projectFour = document.getElementById("projectFour"),
-        projectFive = document.getElementById("projectFive"),
-        projectSix = document.getElementById("projectSix"),
+        blogPage = document.getElementById("blogPage"),
+        postPage = document.getElementById("postPage"),
+        creativeworksPage = document.getElementById("creativeworksPage"),
+        navProjects = document.getElementById("navProjects"),
+        navCreativeworks = document.getElementById("navCreativeworks"),
+        navBlog = document.getElementById("navBlog"),
         lightboxLink = document.querySelectorAll(".lightbox-link"),
         knobOne = document.getElementById("knobOne"),
         knobTwo = document.getElementById("knobTwo"),
         knobThree = document.getElementById("knobThree"),
         knobFour = document.getElementById("knobFour"),
+        // feedLoadMore = document.getElementById("feedLoadMore"),
+        // feedLoadMorePosts = document.getElementById("feedLoadMorePosts"),
+        footerHome = document.getElementById("footerHome"),
+        footerProjects = document.getElementById("footerProjects"),
+        footerCreativeworks = document.getElementById("footerCreativeworks"),
+        footerBlog = document.getElementById("footerBlog"),
         currentScrollPosition,
         iteration,
         start = false;
@@ -42,14 +47,13 @@ window.onload = function() {
     // =====================================
 
     var heroColour = heroBg.dataset.colour;
+
     window.addEventListener('scroll', function() {
         if( window.scrollY != 0 ) {
             nav.classList.add( 'navbar-bg' );
-            nav.style.borderBottom = '3px solid '+ heroColour;
             navBrand.classList.add( 'flipInX' );
         } else {
             nav.classList.remove( 'navbar-bg' );
-            nav.style.borderBottom = 0;
             navBrand.classList.remove( 'flipInX' );
         }
     });
@@ -76,42 +80,36 @@ window.onload = function() {
 
     if ( homePage != null ) {
         menuItems[0].classList.toggle( 'js-item-active' );
+        footerHome.classList.toggle( 'footer-item-active' );
     } else if ( workPage != null ) {
         menuItems[1].classList.toggle( 'js-item-active' );
-    } else if ( projectOne != null ) {
+        footerProjects.classList.toggle( 'footer-item-active' );
+        navProjects.classList.toggle( 'nav-item-active' );
+    } else if ( blogPage != null ) {
         menuItems[2].classList.toggle( 'js-item-active' );
-    } else if ( projectTwo != null ) {
-        menuItems[3].classList.toggle( 'js-item-active' );
-    } else if ( projectThree != null ) {
-        menuItems[4].classList.toggle( 'js-item-active' );
-    } else if ( projectFour != null ) {
-        menuItems[5].classList.toggle( 'js-item-active' );
-    } else if ( projectFive != null ) {
-        menuItems[6].classList.toggle( 'js-item-active' );
-    } else if ( projectSix != null ) {
-        menuItems[7].classList.toggle( 'js-item-active' );
-    } else if ( contactPage != null ) {
-        menuItems[8].classList.toggle( 'js-item-active' );
+        footerBlog.classList.toggle( 'footer-item-active' );
+        navBlog.classList.toggle( 'nav-item-active' );
+    } else if ( creativeworksPage != null ) {
+        menuItems[2].classList.toggle( 'js-item-active' );
+        footerCreativeworks.classList.toggle( 'footer-item-active' );
+        navCreativeworks.classList.toggle( 'nav-item-active' );
     }
 
 
     // Back to top
     // ============
     function setup() {
-        // do something when the up arrow is clicked
         backtotop.addEventListener("click", animateToTopOfPage, false);
 
         // deal with the mouse wheel
         bodyElement.addEventListener("mousewheel", stopEverything, false);
         bodyElement.addEventListener("DOMMouseScroll", stopEverything, false);
 
-        // wheeeeeeee!
         animationLoop();
     }
 
     setup();
 
-    // kick of the animation to scroll your window back to the top
     function animateToTopOfPage(e) {
         currentScrollPosition = getScrollPosition();
 
@@ -184,5 +182,37 @@ window.onload = function() {
       'resizeDuration': 300,
       'fadeDuration': 300
     });
+
+
+    // // Load more posts with ajax
+    // // =========================
+    // function loadPosts() {
+    //     event.preventDefault();
+    //
+    //     $.ajax({
+    //         url: ajax_pagination.ajaxurl,
+    //         type: 'GET',
+    //         data: {
+    //             action: 'ajax_pagination',
+    //             json_array: ajax_pagination.json_array
+    //         },
+    //         success: function( json_array ) {
+    //             console.log('Success');
+    //             console.log(json_array);
+    //
+    //         },
+    //         error: function( json_array ) {
+    //             console.log('Failure');
+    //             console.log(json_array);
+    //         }
+    //     });
+    //
+    //
+    // }
+    //
+    // $( feedLoadMore ).on( 'click', function() {
+    //     $( feedLoadMore ).attr( "disabled", false );
+    //     loadPosts();
+    // });
 
 };

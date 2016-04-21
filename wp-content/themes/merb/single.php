@@ -3,46 +3,154 @@
  * The template for displaying all single posts and attachments
  *
  * @package WordPress
- * @subpackage Twenty_Fifteen
- * @since Twenty Fifteen 1.0
+ * @subpackage Merb
  */
+?>
 
-get_header(); ?>
+    <?php get_header(); ?>
 
-	<div id="primary" class="content-area">
-		<main id="main" class="site-main" role="main">
+        <div class="post-wrapper">
 
-		<?php
-		// Start the loop.
-		while ( have_posts() ) : the_post();
+            <div class="page-id" id="postPage"></div>
 
-			/*
-			 * Include the post format-specific template for the content. If you want to
-			 * use this in a child theme, then include a file called called content-___.php
-			 * (where ___ is the post format) and that will be used instead.
-			 */
-			get_template_part( 'content', get_post_format() );
+            <section id="heroBg" data-colour="#660000" class="section-hero-post">
+                <div class="post-hero">
+                    <div class="post-hero-image">
+                        <?php the_post_thumbnail( 'full' ); ?>
+                    </div>
+                </div>
+                <div class="post-hero-container">
+                    <div class="hero-content animated fadeIn">
+                        <?php the_title( '<h3 class="hero-title-blog">', '</h3>' ); ?>
+                        <div class="hero-text-blog">
+                            <div class="post-hero-meta-category">
+                                <?php the_category(); ?>
+                            </div>
+                        </div>
+                        <hr class="post-hero-hr" />
+                    </div>
 
-			// If comments are open or we have at least one comment, load up the comment template.
-			if ( comments_open() || get_comments_number() ) :
-				comments_template();
-			endif;
+                    <div class="post-hero-meta">
 
-			// Previous/next post navigation.
-			the_post_navigation( array(
-				'next_text' => '<span class="meta-nav" aria-hidden="true">' . __( 'Next', 'twentyfifteen' ) . '</span> ' .
-					'<span class="screen-reader-text">' . __( 'Next post:', 'twentyfifteen' ) . '</span> ' .
-					'<span class="post-title">%title</span>',
-				'prev_text' => '<span class="meta-nav" aria-hidden="true">' . __( 'Previous', 'twentyfifteen' ) . '</span> ' .
-					'<span class="screen-reader-text">' . __( 'Previous post:', 'twentyfifteen' ) . '</span> ' .
-					'<span class="post-title">%title</span>',
-			) );
+                            <?php
+                                $tags = get_tags();
+                                $html = '<div class="post-hero-meta-tags">';
+                                foreach ( $tags as $tag ) {
+                                    $tag_link = get_tag_link( $tag->term_id );
 
-		// End the loop.
-		endwhile;
-		?>
+                                    $html .= "<a href='{$tag_link}' title='{$tag->name} Tag' class='post-hero-meta-tag-item post-hero-meta-tag-{$tag->slug}-inverse'>";
+                                    $html .= "{$tag->name}</a>";
+                                }
+                                $html .= '</div>';
+                                echo $html;
+                            ?>
+                    </div>
+                </div>
+            </section>
 
-		</main><!-- .site-main -->
-	</div><!-- .content-area -->
+            <section class="section-post animated-blog fadeIn">
+
+                <div class="container">
+
+                    <div class="row">
+
+                        <div class="col-lg-8 col-lg-offset-2 col-sm-12 col-xs-12">
+
+                            <div class="post-meta">
+
+                                <div class="row">
+
+                                    <div class="col-lg-1 col-md-1 col-sm-1 col-xs-6">
+                                        <div class="post-meta-avatar">
+                                            <?php
+                                            $author_bio_avatar_size = apply_filters( 'twentyfifteen_author_bio_avatar_size', 56 );
+
+                                            echo get_avatar( get_the_author_meta( 'user_email' ), $author_bio_avatar_size );
+                                            ?>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-lg-11 col-md-11 col-sm-11 col-xs-6">
+
+                                        <div class="post-meta-author clearfix">
+                                            <p>
+                                                <?php the_author(); ?>
+                                            </p>
+                                        </div>
+                                        <div class="post-meta-date clearfix">
+                                            <p>
+                                                <?php the_date( 'dS F Y' ); ?>
+                                            </p>
+                                        </div>
+
+                                    </div> <!-- /.col-lg-11 col-md-11 col-sm-11 col-xs-11 -->
+
+                                </div> <!-- /.row -->
+
+                            </div>
+
+                        <?php
+                        // check if the flexible content field has rows of data
+                        if( have_rows( 'posts_layout' ) ):
+
+                             // loop through the rows of data
+                            while ( have_rows( 'posts_layout' ) ) : the_row();
+
+                                if( get_row_layout() == 'subheading' ):
+
+                                    get_template_part( '/templates/blocks/block', 'subheading' );
+
+                                elseif( get_row_layout() == 'full_width_text' ):
+
+                                    get_template_part( '/templates/blocks/block', 'full_width_text' );
+
+                                elseif( get_row_layout() == 'full_width_image' ):
+
+                                    get_template_part( '/templates/blocks/block', 'full_width_image' );
+
+                                elseif( get_row_layout() == 'blockquote' ):
+
+                                    get_template_part( '/templates/blocks/block', 'blockquote' );
+
+                                elseif( get_row_layout() == 'video' ):
+
+                                    get_template_part( '/templates/blocks/block', 'video' );
+
+                                elseif( get_row_layout() == 'gallery' ):
+
+                                    get_template_part( '/templates/blocks/block', 'gallery' );
+
+                                endif;
+
+                            endwhile;
+
+                        else :
+
+                            // no layouts found
+
+                        endif;
+                         ?>
+
+                        </div> <!-- /.col-lg-6 col-lg-offset-6 -->
+
+                    </div> <!-- /.row -->
+
+                </div> <!-- /.container -->
+
+                <hr class="post-end-hr" />
+
+            </section>
+
+        </div> <!-- /.post-wrapper -->
+
+        <section class="section-comments">
+            <div class="container">
+                <div class="col-lg-10 col-lg-offset-1">
+                    <?php comments_template(); ?>
+                </div>
+            </div>
+        </section>
+
+
 
 <?php get_footer(); ?>
