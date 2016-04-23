@@ -28,7 +28,7 @@
 
                                     <div class="footer-item">
                                         <div class="col-lg-2">
-                                            <a href="<?php bloginfo( 'url' ); ?>/work/" nofollow><li id="footerProjects" class="footer-nav-item">projects</li></a>
+                                            <a href="<?php bloginfo( 'url' ); ?>/projects/" nofollow><li id="footerProjects" class="footer-nav-item">projects</li></a>
                                         </div>
                                     </div>
 

@@ -8,36 +8,32 @@ window.onload = function() {
 
     // Variable declarations
     var $ = jQuery || {};
-    var nav = document.getElementById( 'navley' ),
-        navBrand = document.getElementById( 'navBrand' ),
-        menuRight = document.getElementById( 'cbp-spmenu-s2' ),
-        showRight = document.getElementById( 'showRight' ),
-        pushBody = document.getElementById( 'push-body' ),
-        menuClose = document.getElementById( 'menuClose' ),
-        burger = document.getElementById( 'burger' ),
-        bodyElement = document.getElementById("body"),
-        backtotop = document.getElementById("backtotop"),
-        heroBg = document.getElementById("heroBg"),
-        menuItems = document.querySelectorAll(".js-menu-item"),
-        homePage = document.getElementById("homePage"),
-        workPage = document.getElementById("workPage"),
-        blogPage = document.getElementById("blogPage"),
-        postPage = document.getElementById("postPage"),
-        creativeworksPage = document.getElementById("creativeworksPage"),
-        navProjects = document.getElementById("navProjects"),
-        navCreativeworks = document.getElementById("navCreativeworks"),
-        navBlog = document.getElementById("navBlog"),
-        lightboxLink = document.querySelectorAll(".lightbox-link"),
-        knobOne = document.getElementById("knobOne"),
-        knobTwo = document.getElementById("knobTwo"),
-        knobThree = document.getElementById("knobThree"),
-        knobFour = document.getElementById("knobFour"),
-        // feedLoadMore = document.getElementById("feedLoadMore"),
-        // feedLoadMorePosts = document.getElementById("feedLoadMorePosts"),
-        footerHome = document.getElementById("footerHome"),
-        footerProjects = document.getElementById("footerProjects"),
-        footerCreativeworks = document.getElementById("footerCreativeworks"),
-        footerBlog = document.getElementById("footerBlog"),
+    var nav = document.getElementById( "navley" ),
+        navBrand = document.getElementById( "navBrand" ),
+        menuRight = document.getElementById( "cbp-spmenu-s2" ),
+        showRight = document.getElementById( "showRight" ),
+        pushBody = document.getElementById( "push-body" ),
+        menuClose = document.getElementById( "menuClose" ),
+        burger = document.getElementById( "burger" ),
+        bodyElement = document.getElementById( "body" ),
+        backtotop = document.getElementById( "backtotop" ),
+        menuItems = document.querySelectorAll( ".js-menu-item" ),
+        homePage = document.getElementById( "homePage" ),
+        projectPage = document.getElementById( "projectPage" ),
+        blogPage = document.getElementById( "blogPage" ),
+        postPage = document.getElementById( "postPage" ),
+        creativeworksPage = document.getElementById( "creativeworksPage" ),
+        navProjects = document.getElementById( "navProjects" ),
+        navCreativeworks = document.getElementById( "navCreativeworks" ),
+        navBlog = document.getElementById( "navBlog" ),
+        splitscreenListItems = document.querySelectorAll( ".splitscreen-list-item" ),
+        lightboxLink = document.querySelectorAll( ".lightbox-link" ),
+        // feedLoadMore = document.getElementById( "feedLoadMore" ),
+        // feedLoadMorePosts = document.getElementById( "feedLoadMorePosts" ),
+        footerHome = document.getElementById( "footerHome" ),
+        footerProjects = document.getElementById( "footerProjects" ),
+        footerCreativeworks = document.getElementById( "footerCreativeworks" ),
+        footerBlog = document.getElementById( "footerBlog" ),
         currentScrollPosition,
         iteration,
         start = false;
@@ -46,15 +42,11 @@ window.onload = function() {
     // Turns navbar bg black while scrolling
     // =====================================
 
-    var heroColour = heroBg.dataset.colour;
-
-    window.addEventListener('scroll', function() {
+    window.addEventListener( "scroll", function() {
         if( window.scrollY != 0 ) {
-            nav.classList.add( 'navbar-bg' );
-            navBrand.classList.add( 'flipInX' );
+            nav.classList.add( "navbar-bg" );
         } else {
-            nav.classList.remove( 'navbar-bg' );
-            navBrand.classList.remove( 'flipInX' );
+            nav.classList.remove( "navbar-bg" );
         }
     });
 
@@ -64,13 +56,13 @@ window.onload = function() {
     // ==============================
 
     showRight.onclick = function() {
-        nav.classList.toggle( 'cbp-spmenu-push-toleft' );
-        burger.classList.toggle( 'js-hide-icon' );
-        this.classList.toggle( 'js-push-left' );
-        this.classList.toggle( 'menu-active' );
-        menuClose.classList.toggle( 'js-show-icon' );
-        pushBody.classList.toggle( 'cbp-spmenu-push-toleft' );
-        menuRight.classList.toggle( 'cbp-spmenu-open' );
+        nav.classList.toggle( "cbp-spmenu-push-toleft" );
+        burger.classList.toggle( "js-hide-icon" );
+        this.classList.toggle( "js-push-left" );
+        this.classList.toggle( "menu-active" );
+        menuClose.classList.toggle( "js-show-icon" );
+        pushBody.classList.toggle( "cbp-spmenu-push-toleft" );
+        menuRight.classList.toggle( "cbp-spmenu-open" );
     };
 
 
@@ -78,21 +70,21 @@ window.onload = function() {
     // Underline link when on page
     // ============================
 
-    if ( homePage != null ) {
-        menuItems[0].classList.toggle( 'js-item-active' );
-        footerHome.classList.toggle( 'footer-item-active' );
-    } else if ( workPage != null ) {
-        menuItems[1].classList.toggle( 'js-item-active' );
-        footerProjects.classList.toggle( 'footer-item-active' );
-        navProjects.classList.toggle( 'nav-item-active' );
-    } else if ( blogPage != null ) {
-        menuItems[2].classList.toggle( 'js-item-active' );
-        footerBlog.classList.toggle( 'footer-item-active' );
-        navBlog.classList.toggle( 'nav-item-active' );
-    } else if ( creativeworksPage != null ) {
-        menuItems[2].classList.toggle( 'js-item-active' );
-        footerCreativeworks.classList.toggle( 'footer-item-active' );
-        navCreativeworks.classList.toggle( 'nav-item-active' );
+    if ( homePage !== null ) {
+        menuItems[0].classList.toggle( "js-item-active" );
+        footerHome.classList.toggle( "footer-item-active" );
+    } else if ( projectPage !== null ) {
+        menuItems[1].classList.toggle( "js-item-active" );
+        footerProjects.classList.toggle( "footer-item-active" );
+        navProjects.classList.toggle( "nav-item-active" );
+    } else if ( blogPage !== null ) {
+        menuItems[2].classList.toggle( "js-item-active" );
+        footerBlog.classList.toggle( "footer-item-active" );
+        navBlog.classList.toggle( "nav-item-active" );
+    } else if ( creativeworksPage !== null ) {
+        menuItems[2].classList.toggle( "js-item-active" );
+        footerCreativeworks.classList.toggle( "footer-item-active" );
+        navCreativeworks.classList.toggle( "nav-item-active" );
     }
 
 
@@ -124,26 +116,26 @@ window.onload = function() {
 
     // a cross-browser (minus Opera) way of getting the current scroll position
     function getScrollPosition() {
-        if (document.documentElement.scrollTop == 0) {
+        if ( document.documentElement.scrollTop === 0 ) {
             return document.body.scrollTop;
         } else {
             return document.documentElement.scrollTop;
         }
     }
 
-    function easeInCubic(currentIteration, startValue, changeInValue, totalIterations) {
-        return changeInValue * Math.pow(currentIteration / totalIterations, 3) + startValue;
+    function easeInCubic( currentIteration, startValue, changeInValue, totalIterations ) {
+        return changeInValue * Math.pow( currentIteration / totalIterations, 3 ) + startValue;
     }
 
-    function easeOutCubic(currentIteration, startValue, changeInValue, totalIterations) {
-        return changeInValue * (Math.pow(currentIteration / totalIterations - 1, 3) + 1) + startValue;
+    function easeOutCubic( currentIteration, startValue, changeInValue, totalIterations ) {
+        return changeInValue * ( Math.pow( currentIteration / totalIterations - 1, 3 ) + 1 ) + startValue;
     }
 
-    function easeInOutCubic(currentIteration, startValue, changeInValue, totalIterations) {
-        if ((currentIteration /= totalIterations / 2) < 1) {
-            return changeInValue / 2 * Math.pow(currentIteration, 3) + startValue;
+    function easeInOutCubic( currentIteration, startValue, changeInValue, totalIterations ) {
+        if ( ( currentIteration /= totalIterations / 2 ) < 1 ) {
+            return changeInValue / 2 * Math.pow(currentIteration, 3 ) + startValue;
         }
-        return changeInValue / 2 * (Math.pow(currentIteration - 2, 3) + 2) + startValue;
+        return changeInValue / 2 * ( Math.pow( currentIteration - 2, 3 ) + 2 ) + startValue;
     }
 
     // kicks into high gear only when the start variable is true
@@ -158,21 +150,12 @@ window.onload = function() {
             iteration++;
 
             // once you reach the top of the document, stop the scrolling
-            if (getScrollPosition() <= 0) {
+            if ( getScrollPosition() <= 0 ) {
                 stopEverything();
             }
         }
-        requestAnimationFrame(animationLoop);
+        requestAnimationFrame( animationLoop );
     }
-
-    // jQuery bars
-    // ============
-
-    $( '.skillbar' ).each( function() {
-        $( this ).find('.skillbar-bar').animate({
-            width: $( this ).attr( 'data-percent' )
-        }, 10000 );
-    });
 
     // Lightbox init
     // ==============
@@ -184,35 +167,19 @@ window.onload = function() {
     });
 
 
-    // // Load more posts with ajax
-    // // =========================
-    // function loadPosts() {
-    //     event.preventDefault();
-    //
-    //     $.ajax({
-    //         url: ajax_pagination.ajaxurl,
-    //         type: 'GET',
-    //         data: {
-    //             action: 'ajax_pagination',
-    //             json_array: ajax_pagination.json_array
-    //         },
-    //         success: function( json_array ) {
-    //             console.log('Success');
-    //             console.log(json_array);
-    //
-    //         },
-    //         error: function( json_array ) {
-    //             console.log('Failure');
-    //             console.log(json_array);
-    //         }
-    //     });
-    //
-    //
-    // }
-    //
-    // $( feedLoadMore ).on( 'click', function() {
-    //     $( feedLoadMore ).attr( "disabled", false );
-    //     loadPosts();
-    // });
+    // Splitscreen menu
+    // ================
 
+    for ( var i = 0; i < splitscreenListItems.length; i++ ) {
+        splitscreenListItems[i].addEventListener( "mouseover", function() {
+            removeLinkClass();
+            this.classList.toggle( "js-active-list-item" );
+        } );
+    }
+
+    function removeLinkClass() {
+        for ( var i = 0; i < splitscreenListItems.length; i++ ) {
+            splitscreenListItems[i].classList.remove( "js-active-list-item" );
+        }
+    }
 };

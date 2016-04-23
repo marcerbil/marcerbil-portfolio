@@ -132,3 +132,33 @@
 
     </div> <!-- /.row .recent-row -->
 </section>
+
+<section class="section-secondary-cta">
+    <div class="row">
+        <div class="col-lg-4 col-lg-offset-4">
+            <hr class="secondary-cta-hr" />
+            <div class="secondary-cta">
+                <div class="secondary-cta-text-container">
+                    <p class="secondary-cta-text">
+                        Were you expecting a 'like what you see? <span class="secondary-cta-hire-me">hire me.</span>' section?
+                    </p>
+                </div>
+                <div class="secondary-cta-text-container">
+                    <p class="secondary-cta-text">
+                        Well I don't like those, so you won't find one here.
+                    </p>
+                    <p class="secondary-cta-text">
+                        <span class="secondary-cta-asterisk">***</span>
+                    </p>
+                </div>
+                <div class="secondary-cta-text-container">
+                    <p class="secondary-cta-text">
+                        Seriously though, if you do wanna chat to me about a project of any kind, or just
+                        tell me how bad my articles are, drop me an email:
+                        <a href="mailto:heymarcerbil@gmail.com" nofollow>heymarcerbil@gmail.com</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

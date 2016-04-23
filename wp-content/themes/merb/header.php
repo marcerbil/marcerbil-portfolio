@@ -63,8 +63,8 @@
           <div class="desktop-menu">
 
             <ul class="nav navbar-nav navbar-right navbar-links">
-              <li><a id="navCreativeworks" class="navbar-link" href="<?php bloginfo( 'url' ); ?>/work/">creative works</a></li>
-              <li><a id="navProjects" class="navbar-link" href="<?php bloginfo( 'url' ); ?>/work/">projects</a></li>
+              <li><a id="navCreativeworks" class="navbar-link" href="<?php bloginfo( 'url' ); ?>/projects/">creative works</a></li>
+              <li><a id="navProjects" class="navbar-link" href="<?php bloginfo( 'url' ); ?>/projects/">projects</a></li>
               <li><a id="navBlog" class="navbar-link" href="<?php bloginfo( 'url' ); ?>/blog/">blog</a></li>
             </ul>
 
@@ -79,7 +79,7 @@
           <h3>&nbsp;</h3>
           <a class="cbp-link-top js-menu-item" href="<?php bloginfo( 'url' ); ?>/">home</a>
           <a class="cbp-link-top js-menu-item" href="<?php bloginfo( 'url' ); ?>/">creative works</a>
-          <a class="cbp-link js-menu-item" href="<?php bloginfo( 'url' ); ?>/work/">projects</a>
+          <a class="cbp-link js-menu-item" href="<?php bloginfo( 'url' ); ?>/projects/">projects</a>
           <a class="cbp-link js-menu-item" href="<?php bloginfo( 'url' ); ?>/blog/">blog</a>
       </div>
     </div>

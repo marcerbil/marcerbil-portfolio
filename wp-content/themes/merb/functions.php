@@ -396,27 +396,31 @@ if( function_exists('acf_add_options_page') ) {
 // Remove admin bar
 add_filter('show_admin_bar', '__return_false');
 
-// add_action( 'wp_ajax_nopriv_ajax_pagination', 'ajax_pagination' );
-// add_action( 'wp_ajax_ajax_pagination', 'ajax_pagination' );
-//
-// function ajax_pagination() {
-//     global $wp_query;
-//     $ajax_posts_array = [];
-//
-//     // The Query
-//     $the_query = new WP_Query();
-//
-//     // The Loop
-// 	while ( $the_query->have_posts() ) {
-//         foreach( $post as $post ) {
-//             array_push($ajax_posts_array, $post);
-//         }
-//     }
-//
-//     $json_array = json_encode( $ajax_posts_array );
-//
-//     /* Restore original Post Data */
-//     wp_reset_postdata();
-//
-//     die();
-// }
+
+// Add custom post types
+add_action( 'init', 'merb_project_post' );
+
+function merb_project_post() {
+  register_post_type( 'project',
+    array(
+      'labels' => array(
+        'name' => __( 'Project' ),
+        'singular_name' => __( 'Project' ),
+        'add_new' => __( 'Add new Project' ),
+        'edit_item' => __( 'Edit Project' ),
+        'new_item' => __( 'New Project' ),
+        'menu_name' => __( 'Projects' ),
+        'name_admin_bar' => __( 'Projects' ),
+      ),
+      'supports' => array(
+        'title' => true,
+        'thumbnail' => true,
+        'excerpt' => true
+      ),
+      'menu_icon' => __( 'dashicons-images-alt2' ),
+      'public' => true,
+      'has_archive' => true,
+      'rewrite' => array('slug' => 'products')
+    )
+  );
+}
