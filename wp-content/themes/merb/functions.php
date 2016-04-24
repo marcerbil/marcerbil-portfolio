@@ -257,28 +257,19 @@ function merb_scripts() {
         'collapse' => '<span class="screen-reader-text">' . __( 'collapse child menu', 'merb' ) . '</span>',
     ) );
 
+    wp_register_script( 'customjs', get_template_directory_uri() . '/js/custom.js' );
+
+    wp_localize_script( 'customjs', 'customjs', array(
+    	'ajaxurl' => admin_url( 'admin-ajax.php' ),
+    ));
+
     wp_enqueue_script( 'bootstrapjs', 'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js', array( 'jquery' ) );
 
-    wp_enqueue_script( 'knobs', get_template_directory_uri() . '/js/jquery.knob.min.js', array( 'jquery' ) );
-
-    wp_enqueue_script( 'customjs', get_template_directory_uri() . '/js/custom.js', array( 'jquery', 'knobs' )  );
-
+    wp_enqueue_script( 'customjs', 'customjs', array( 'jquery' )  );
 
 }
 
 add_action('wp_enqueue_scripts', 'merb_scripts');
-
-// function merb_typekit() {
-//       wp_enqueue_script( 'merb_typekit', '//use.typekit.net/lxb5xds.js', '', false);
-//   }
-//   add_action( 'wp_enqueue_scripts', 'merb_typekit' );
-//
-//   function merb_typekit_inline() {
-//     if ( wp_script_is( 'merb_typekit', 'done' ) ) {
-//       <script>try{Typekit.load();}catch(e){}</script>
-//     <?php }
-//   }
-//   add_action( 'wp_head', 'merb_typekit_inline' );
 
 /**
  * Add featured image as background image to post navigation elements.
@@ -394,18 +385,17 @@ function merb_project_type() {
   register_post_type( 'project',
     array(
       'labels' => array(
-        'name' => __( 'Project' ),
+        'name' => __( 'Projects' ),
         'singular_name' => __( 'Project' ),
         'add_new' => __( 'Add new Project' ),
         'edit_item' => __( 'Edit Project' ),
         'new_item' => __( 'New Project' ),
         'menu_name' => __( 'Projects' ),
-        'name_admin_bar' => __( 'Projects' ),
+        'name_admin_bar' => __( 'Projects' )
       ),
       'menu_icon' => 'dashicons-images-alt2',
       'menu_position' => '5',
       'public' => true,
-      'has_archive' => true,
       'description' => 'Project post type. Use to create a project for inclusion in the projects page.'
     )
   );
@@ -414,11 +404,11 @@ function merb_project_type() {
 add_action( 'init', 'merb_project_tax' );
 
 function merb_project_tax() {
-	register_taxonomy(
-		'project',
-		'project',
-		array(
-			'label' => __( 'Project' )
-		)
-	);
+    register_taxonomy(
+        'project',
+        'project',
+        array(
+            'label' => __( 'Project Taxonomy' )
+        )
+    );
 }

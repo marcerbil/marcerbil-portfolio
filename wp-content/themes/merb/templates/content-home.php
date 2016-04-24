@@ -17,7 +17,7 @@
             <h1 class="hero-title">UI/Web Designer</h1>
             <h1 class="hero-title">Front end developer</h1>
             <p class="hero-text">London-based developer, designer and coffee connoisseur</p>
-            <hr class="project-hero-hr home-hero-hr" />
+            <hr class="home-hero-hr" />
         </div>
     </div>
 </section>

@@ -21,67 +21,69 @@
 
                         <div class="col-lg-8 col-lg-offset-2 col-sm-12 col-xs-12">
 
-                        <div class="project-title-container">
-                            <h3 class="project-title">
-                                <?php the_title(); ?>
-                            </h3>
-                        </div>
+                            <div id="projectAjaxContent" class="fadeIn animated-ajax">
 
-                        <div class="project-subtitle-container">
-                            <h5 class="project-subtitle">
-                                <?php the_field( 'subtitle' ); ?>
-                            </h5>
-                        </div>
+                                <div class="project-title-container">
+                                    <h3 class="project-title">
+                                        <?php the_title(); ?>
+                                    </h3>
+                                </div>
 
-                        <hr class="project-title-hr" />
+                                <div class="project-subtitle-container">
+                                    <h5 class="project-subtitle">
+                                        <?php the_field( 'subtitle' ); ?>
+                                    </h5>
+                                </div>
 
-                        <?php
-                        // check if the flexible content field has rows of data
-                        if( have_rows( 'projects_layout' ) ):
+                                <hr class="project-title-hr" />
 
-                             // loop through the rows of data
-                            while ( have_rows( 'projects_layout' ) ) : the_row();
+                                <?php
+                                if( have_rows( 'projects_layout' ) ):
 
-                                if( get_row_layout() == 'subheading' ):
+                                    while ( have_rows( 'projects_layout' ) ) : the_row();
 
-                                    get_template_part( '/templates/blocks/project/block', 'subheading' );
+                                        if( get_row_layout() == 'subheading' ):
 
-                                elseif( get_row_layout() == 'full_width_text' ):
+                                            get_template_part( '/templates/blocks/project/block', 'subheading' );
 
-                                    get_template_part( '/templates/blocks/project/block', 'full_width_text' );
+                                        elseif( get_row_layout() == 'full_width_text' ):
 
-                                elseif( get_row_layout() == 'full_width_image' ):
+                                            get_template_part( '/templates/blocks/project/block', 'full_width_text' );
 
-                                    get_template_part( '/templates/blocks/project/block', 'full_width_image' );
+                                        elseif( get_row_layout() == 'full_width_image' ):
 
-                                elseif( get_row_layout() == 'bulleted_list' ):
+                                            get_template_part( '/templates/blocks/project/block', 'full_width_image' );
 
-                                    get_template_part( '/templates/blocks/project/block', 'bulleted_list' );
+                                        elseif( get_row_layout() == 'bulleted_list' ):
 
-                                elseif( get_row_layout() == 'video' ):
+                                            get_template_part( '/templates/blocks/project/block', 'bulleted_list' );
 
-                                    get_template_part( '/templates/blocks/project/block', 'video' );
+                                        elseif( get_row_layout() == 'video' ):
 
-                                elseif( get_row_layout() == 'gallery' ):
+                                            get_template_part( '/templates/blocks/project/block', 'video' );
 
-                                    get_template_part( '/templates/blocks/project/block', 'gallery' );
+                                        elseif( get_row_layout() == 'gallery' ):
 
-                                elseif( get_row_layout() == 'link' ):
+                                            get_template_part( '/templates/blocks/project/block', 'gallery' );
 
-                                    get_template_part( '/templates/blocks/project/block', 'link' );
+                                        elseif( get_row_layout() == 'link' ):
+
+                                            get_template_part( '/templates/blocks/project/block', 'link' );
+
+                                        endif;
+
+                                    endwhile;
+
+                                else :
+
+                                    echo 'No layouts found. Oh no!';
 
                                 endif;
+                                 ?>
 
-                            endwhile;
+                             </div>
 
-                        else :
-
-                            // no layouts found
-
-                        endif;
-                         ?>
-
-                             <div class="row">
+                            <div class="row">
 
                                 <div class="project-pagination-container">
 
@@ -97,9 +99,9 @@
                                         </div>
                                     </div>
 
-                                 </div>
+                                </div>
 
-                             </div>
+                            </div>
 
                         </div> <!-- /.col-lg-6 col-lg-offset-6 -->
 

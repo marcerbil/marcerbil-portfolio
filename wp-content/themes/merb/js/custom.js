@@ -19,6 +19,7 @@ window.onload = function() {
         backtotop = document.getElementById( "backtotop" ),
         menuItems = document.querySelectorAll( ".js-menu-item" ),
         homePage = document.getElementById( "homePage" ),
+        projectsPage = document.getElementById( "projectsPage" ),
         projectPage = document.getElementById( "projectPage" ),
         blogPage = document.getElementById( "blogPage" ),
         postPage = document.getElementById( "postPage" ),
@@ -26,17 +27,24 @@ window.onload = function() {
         navProjects = document.getElementById( "navProjects" ),
         navCreativeworks = document.getElementById( "navCreativeworks" ),
         navBlog = document.getElementById( "navBlog" ),
+        splitscreenAjaxLoad = document.querySelectorAll( ".splitscreenAjaxLoad" ),
+        designFilter = document.getElementById( "designFilter" ),
+        developmentFilter = document.getElementById( "developmentFilter" ),
+        bothFilter = document.getElementById( "bothFilter" ),
+        designItem = document.getElementById( "designItem" ),
+        developmentItem = document.getElementById( "developmentItem" ),
+        bothItem = document.getElementById( "bothItem" ),
         splitscreenListItems = document.querySelectorAll( ".splitscreen-list-item" ),
         lightboxLink = document.querySelectorAll( ".lightbox-link" ),
-        // feedLoadMore = document.getElementById( "feedLoadMore" ),
-        // feedLoadMorePosts = document.getElementById( "feedLoadMorePosts" ),
         footerHome = document.getElementById( "footerHome" ),
         footerProjects = document.getElementById( "footerProjects" ),
         footerCreativeworks = document.getElementById( "footerCreativeworks" ),
         footerBlog = document.getElementById( "footerBlog" ),
         currentScrollPosition,
         iteration,
-        start = false;
+        start = false,
+        post_type,
+        entry_point;
 
     // Navbar JS
     // Turns navbar bg black while scrolling
@@ -66,17 +74,18 @@ window.onload = function() {
     };
 
 
-    // Menu Link JS
-    // Underline link when on page
+    // Page-dependent JS
     // ============================
 
     if ( homePage !== null ) {
         menuItems[0].classList.toggle( "js-item-active" );
         footerHome.classList.toggle( "footer-item-active" );
-    } else if ( projectPage !== null ) {
+    } else if ( projectsPage !== null || projectPage !== null ) {
         menuItems[1].classList.toggle( "js-item-active" );
         footerProjects.classList.toggle( "footer-item-active" );
         navProjects.classList.toggle( "nav-item-active" );
+        post_type = "/projects/";
+        entry_point = " #splitscreenAjaxContainer";
     } else if ( blogPage !== null ) {
         menuItems[2].classList.toggle( "js-item-active" );
         footerBlog.classList.toggle( "footer-item-active" );
@@ -182,4 +191,37 @@ window.onload = function() {
             splitscreenListItems[i].classList.remove( "js-active-list-item" );
         }
     }
+
+    // Splitscreen Ajax Post loader
+    // ============================
+
+    // Loop through each link in link list created by query
+    for ( var i = 0; i < splitscreenAjaxLoad.length; i++ ) {
+        splitscreenAjaxLoad[i].addEventListener( "click", merbAjaxPostSetup );
+    }
+
+    function merbAjaxPostSetup( ) {
+        event.preventDefault();
+
+        // Load the loading animation
+        $( entry_point ).html('<div class="fadeIn animated-loading splitscreen-ajax-loading"><i class="fa fa-circle-o-notch fa-spin fa-3x fa-fw margin-bottom"></i><span class="sr-only">Loading...</span></div>');
+
+        $.ajaxSetup({ cache:false });
+
+        var post_name = $( this ).attr( "data-postname" );
+        var url = post_type + post_name + entry_point;
+        console.log(url);
+
+        setTimeout( merbAjaxPostLoad( url ), 4000 );
+    }
+
+    function merbAjaxPostLoad( url ) {
+        // Load the post into the specified entry point
+        $( entry_point ).load( url, function( responseText, textStatus ) {
+            console.log( textStatus );
+            var rsp = $( responseText ).filter( entry_point );
+            entry_point.innerHTML = rsp;
+        } );
+    }
+
 };

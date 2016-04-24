@@ -11,17 +11,7 @@
 <div class="row">
     <div class="col-lg-12">
         <div class="project-list-container">
-
-            <ul class="project-list">
-                <?php the_sub_field('video'); ?>
-            </ul>
-
-            <div class="project-video-caption-container">
-                <p class="project-video-caption">
-                    <?php the_sub_field('video_caption'); ?>
-                </p>
-            </div>
-
+            <?php the_sub_field('bulleted_list'); ?>
         </div>
     </div>
 </div>
