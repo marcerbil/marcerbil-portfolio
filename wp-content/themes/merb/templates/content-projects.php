@@ -27,42 +27,28 @@
                     <div class="splitscreen-list-container">
                         <ul class="splitscreen-list">
 
-                            <a href="#" class="splitscreen-link">
-                                <li class="splitscreen-list-item">
-                                    <img src="<?php bloginfo('template_directory'); ?>/img/design-ball.svg" class="splitscreen-key-image" />
-                                    weareloft
-                                </li>
-                            </a>
-                            <a href="#" class="splitscreen-link">
-                                <li class="splitscreen-list-item">
-                                    <img src="<?php bloginfo('template_directory'); ?>/img/both-ball.svg" class="splitscreen-key-image" />
-                                    Business Traveller
-                                </li>
-                            </a>
-                            <a href="#" class="splitscreen-link">
-                                <li class="splitscreen-list-item">
-                                    <img src="<?php bloginfo('template_directory'); ?>/img/development-ball.svg" class="splitscreen-key-image" />
-                                    Olam
-                                </li>
-                            </a>
-                            <a href="#" class="splitscreen-link">
-                                <li class="splitscreen-list-item">
-                                    <img src="<?php bloginfo('template_directory'); ?>/img/both-ball.svg" class="splitscreen-key-image" />
-                                    MD
-                                </li>
-                            </a>
-                            <a href="#" class="splitscreen-link">
-                                <li class="splitscreen-list-item">
-                                    <img src="<?php bloginfo('template_directory'); ?>/img/both-ball.svg" class="splitscreen-key-image" />
-                                    Big Idea
-                                </li>
-                            </a>
-                            <a href="#" class="splitscreen-link">
-                                <li class="splitscreen-list-item">
-                                    <img src="<?php bloginfo('template_directory'); ?>/img/both-ball.svg" class="splitscreen-key-image" />
-                                    BPSI
-                                </li>
-                            </a>
+                            <?php
+                                $projects = new WP_Query( array( 'post_type' => 'project' ) );
+                                if( $projects->have_posts() ) {
+                                  while( $projects->have_posts() ) {
+                                    $projects->the_post();
+                                    ?>
+                                    <?php $project_type = get_field( 'project_type' ); ?>
+                                    <a href="<?php the_permalink(); ?>" class="splitscreen-link">
+                                        <li class="splitscreen-list-item">
+                                            <img src="<?php bloginfo('template_directory'); ?>/img/<?php echo $project_type; ?>-ball.svg" class="splitscreen-key-image" />
+                                            <?php the_title(); ?>
+                                        </li>
+                                    </a>
+                                    <?php
+                                  }
+                                } else {
+                                  echo "Whoops, that shouldn\'t have happened! Please drop me an email at heymarcerbil@gmail.com with the subject: 'Projects page error'. Arigato yo :).";
+                                }
+
+                                wp_reset_postdata();
+                              ?>
+
                         </ul>
                     </div>
                     <div class="splitscreen-key">

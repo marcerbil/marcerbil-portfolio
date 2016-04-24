@@ -1,6 +1,6 @@
 <?php
 /**
- * The template for displaying all single posts and attachments
+ * The post template
  *
  * @package WordPress
  * @subpackage Merb
@@ -98,27 +98,27 @@
 
                                 if( get_row_layout() == 'subheading' ):
 
-                                    get_template_part( '/templates/blocks/block', 'subheading' );
+                                    get_template_part( '/templates/blocks/post/block', 'subheading' );
 
                                 elseif( get_row_layout() == 'full_width_text' ):
 
-                                    get_template_part( '/templates/blocks/block', 'full_width_text' );
+                                    get_template_part( '/templates/blocks/post/block', 'full_width_text' );
 
                                 elseif( get_row_layout() == 'full_width_image' ):
 
-                                    get_template_part( '/templates/blocks/block', 'full_width_image' );
+                                    get_template_part( '/templates/blocks/post/block', 'full_width_image' );
 
                                 elseif( get_row_layout() == 'blockquote' ):
 
-                                    get_template_part( '/templates/blocks/block', 'blockquote' );
+                                    get_template_part( '/templates/blocks/post/block', 'blockquote' );
 
                                 elseif( get_row_layout() == 'video' ):
 
-                                    get_template_part( '/templates/blocks/block', 'video' );
+                                    get_template_part( '/templates/blocks/post/block', 'video' );
 
                                 elseif( get_row_layout() == 'gallery' ):
 
-                                    get_template_part( '/templates/blocks/block', 'gallery' );
+                                    get_template_part( '/templates/blocks/post/block', 'gallery' );
 
                                 endif;
 

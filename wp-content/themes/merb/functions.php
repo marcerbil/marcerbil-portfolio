@@ -383,24 +383,14 @@ require get_template_directory() . '/inc/customizer.php';
 *
 **/
 
-if( function_exists('acf_add_options_page') ) {
-
-    acf_add_options_page( array(
-       'page_title' => 'Random Quotes',
-       'menu_title' => 'Random Quotes',
-       'icon_url' => 'dashicons-format-quote'
-    ));
-
-}
-
 // Remove admin bar
 add_filter('show_admin_bar', '__return_false');
 
 
 // Add custom post types
-add_action( 'init', 'merb_project_post' );
+add_action( 'init', 'merb_project_type' );
 
-function merb_project_post() {
+function merb_project_type() {
   register_post_type( 'project',
     array(
       'labels' => array(
@@ -412,15 +402,23 @@ function merb_project_post() {
         'menu_name' => __( 'Projects' ),
         'name_admin_bar' => __( 'Projects' ),
       ),
-      'supports' => array(
-        'title' => true,
-        'thumbnail' => true,
-        'excerpt' => true
-      ),
-      'menu_icon' => __( 'dashicons-images-alt2' ),
+      'menu_icon' => 'dashicons-images-alt2',
+      'menu_position' => '5',
       'public' => true,
       'has_archive' => true,
-      'rewrite' => array('slug' => 'products')
+      'description' => 'Project post type. Use to create a project for inclusion in the projects page.'
     )
   );
+}
+
+add_action( 'init', 'merb_project_tax' );
+
+function merb_project_tax() {
+	register_taxonomy(
+		'project',
+		'project',
+		array(
+			'label' => __( 'Project' )
+		)
+	);
 }
