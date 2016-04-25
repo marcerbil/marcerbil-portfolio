@@ -141,17 +141,11 @@ if ( wp_is_mobile() ) {
 
 <section id="heroBg" data-colour="#176612" class="section-hero">
     <div class="hero-wrapper">
-        <div class="hero">
-            <img src="<?php bloginfo('template_directory'); ?>/img/hero5.png" class="hero-image" alt="Hero image" />
-        </div>
+        <div class="hero"></div>
         <div class="hero-container">
             <div class="hero-content">
-                <h1 class="hero-title animated fadeIn">Welcome.</h1>
-                <div class="animated fadeInRightBig">
-
-                    <?php echo Quotely(); ?>
-
-                </div>
+                <h1 class="hero-title blog-hero-title animated fadeIn">Welcome.</h1>
+                <hr class="blog-hero-hr" />
             </div>
         </div>
     </div>

@@ -12,24 +12,17 @@ get_header(); ?>
     <div id="primary" class="content-area">
         <main id="main" class="site-main" role="main">
 
-            <section id="heroBg" data-colour="#8BBC81" class="section-hero">
-                <div class="hero">
-                    <img src="<?php bloginfo('template_directory'); ?>/img/hero4.png" class="hero-image" alt="Hero image" />
-                </div>
-                <div class="hero-container">
-                    <div class="hero-content animated fadeIn">
-                        <h1 class="hero-title">Whoops</h1>
-                        <p class="hero-text">You dun goofed. Nuttin ere.</p>
+            <section id="heroBg" data-colour="#176612" class="section-hero">
+                <div class="hero-wrapper">
+                    <div class="hero"></div>
+                    <div class="hero-container">
+                        <div class="hero-content">
+                            <h1 class="404-hero-title-h1 animated fadeIn">404</h1>
+                            <h5 class="404-hero-title-h3 animated fadeIn">sorry</h5>
+                        </div>
                     </div>
                 </div>
             </section>
-            <div class="content-container">
-                <div class="content-container-width">
-                    <div class="content-404 animated fadeIn">
-                        <blockquote class="text-404">Here, try <a href="<?php bloginfo( 'url' ); ?>">this</a>.</blockquote>
-                    </div>
-                </div>
-            </div>
 
         </main><!-- .site-main -->
     </div><!-- .content-area -->

@@ -3,7 +3,6 @@
 // Date created: 28/10/2015
 // ========================
 
-
 window.onload = function() {
 
     // Variable declarations
@@ -43,8 +42,10 @@ window.onload = function() {
         currentScrollPosition,
         iteration,
         start = false,
-        post_type,
-        entry_point;
+        postType,
+        ajaxEntryPoint,
+        entryPoint;
+
 
     // Navbar JS
     // Turns navbar bg black while scrolling
@@ -84,8 +85,9 @@ window.onload = function() {
         menuItems[1].classList.toggle( "js-item-active" );
         footerProjects.classList.toggle( "footer-item-active" );
         navProjects.classList.toggle( "nav-item-active" );
-        post_type = "/projects/";
-        entry_point = " #splitscreenAjaxContainer";
+        postType = "/projects/";
+        entryPoint = "#splitscreenAjaxContainer";
+        ajaxEntryPoint = " #projectAjaxContent";
     } else if ( blogPage !== null ) {
         menuItems[2].classList.toggle( "js-item-active" );
         footerBlog.classList.toggle( "footer-item-active" );
@@ -204,12 +206,12 @@ window.onload = function() {
         event.preventDefault();
 
         // Load the loading animation
-        $( entry_point ).html('<div class="fadeIn animated-loading splitscreen-ajax-loading"><i class="fa fa-circle-o-notch fa-spin fa-3x fa-fw margin-bottom"></i><span class="sr-only">Loading...</span></div>');
+        $( entryPoint ).html('<div class="fadeIn animated-loading splitscreen-ajax-loading"><i class="fa fa-circle-o-notch fa-spin fa-3x fa-fw margin-bottom"></i><span class="sr-only">Loading...</span></div>');
 
         $.ajaxSetup({ cache:false });
 
-        var post_name = $( this ).attr( "data-postname" );
-        var url = post_type + post_name + entry_point;
+        var postame = $( this ).attr( "data-postname" );
+        var url = postType + postame + ajaxEntryPoint;
         console.log(url);
 
         setTimeout( merbAjaxPostLoad( url ), 4000 );
@@ -217,11 +219,7 @@ window.onload = function() {
 
     function merbAjaxPostLoad( url ) {
         // Load the post into the specified entry point
-        $( entry_point ).load( url, function( responseText, textStatus ) {
-            console.log( textStatus );
-            var rsp = $( responseText ).filter( entry_point );
-            entry_point.innerHTML = rsp;
-        } );
+        $( entryPoint ).load( url );
     }
 
 };
