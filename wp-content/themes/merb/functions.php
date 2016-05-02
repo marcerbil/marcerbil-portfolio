@@ -265,6 +265,8 @@ function merb_scripts() {
 
     wp_enqueue_script( 'bootstrapjs', 'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js', array( 'jquery' ) );
 
+    wp_enqueue_script( 'jqueryeasing', get_template_directory_uri() . '/js/jquery.easing.1.3.js', array( 'jquery' ) );
+
     wp_enqueue_script( 'customjs', 'customjs', array( 'jquery' )  );
 
 }

@@ -11,10 +11,10 @@
 
 <div class="page-id" id="projectsPage"></div>
 
-<div class="splitscreen-page-content">
+<div class="splitscreen-page-content fadeIn animated">
     <div class="row">
 
-        <div class="col-lg-6">
+        <div class="col-lg-6 col-md-5 col-sm-5">
             <div class="splitscreen-left-side">
                 <div class="splitscreen-left-inner">
                     <div class="splitscreen-title-container">
@@ -42,7 +42,7 @@
                             ?>
                             <?php $project_type = get_field( 'project_type' ); ?>
                             <a href="#" class="splitscreenAjaxLoad splitscreen-link" data-postname="<?php echo $post->post_name; ?>" alt="<?php echo $post->post_name; ?>">
-                                <li id="<?php echo $project_type; ?>Item" class="splitscreen-list-item">
+                                <li id="splitscreenItem" class="splitscreen-list-item">
                                     <img src="<?php bloginfo('template_directory'); ?>/img/<?php echo $project_type; ?>-ball.svg" class="splitscreen-key-image" />
                                     <?php the_title(); ?>
                                 </li>
@@ -88,12 +88,14 @@
             </div> <!-- /.splitscreen-left-side -->
         </div> <!-- /.col-lg-6 -->
 
-        <div class="col-lg-6">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-12">
-                        <div id="splitscreen-ajax-project-content">
-                            <div id="splitscreenAjaxContainer" class="splitscreen-right-side fadeIn animated-ajax">
+        <div id="splitscreenMobileContentContainer" class="splitscreen-mobile-content-container">
+            <div class="col-lg-6 col-md-7 col-sm-7">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div id="splitscreen-ajax-project-content">
+                                <div id="splitscreenAjaxContainer" class="splitscreen-right-side fadeIn animated-ajax">
+                                </div>
                             </div>
                         </div>
                     </div>

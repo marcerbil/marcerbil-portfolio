@@ -18,6 +18,15 @@
             <h1 class="hero-title">Front end developer</h1>
             <p class="hero-text">London-based developer, designer and coffee connoisseur</p>
             <hr class="home-hero-hr" />
+            <a href="#about" class="to-about-link">
+                <span id="toAbout" class="js-scroll-to-about">
+                    <svg height="200" width="200">
+                        <circle cx="5" cy="8" r="5" stroke="#d0d0d0" stroke-width="1" fill="transparent" />
+                        <circle cx="5" cy="18" r="3" stroke="#d0d0d0" stroke-width="1" fill="transparent" />
+                        Sorry, your browser does not support inline SVG.
+                    </svg>
+                </span>
+            </a>
         </div>
     </div>
 </section>
@@ -25,7 +34,7 @@
 <div class="content-container-home">
     <div class="content-container-width">
 
-        <section class="section-about animated-slower fadeIn">
+        <section id="about" class="section-about animated-slower fadeIn">
             <div class="about">
                 <div class="row">
                     <div class="custom-shape-container">
@@ -40,7 +49,7 @@
                         <div class="about-text-container">
                             <h2 class="about-title">A bit of $this, a bit of &lt;that&gt;</h2>
                             <p class="about-text">
-                                I'm Marc, a 22-year old designer and developer. I love being creative through a number of different mediums - graphic art, music and writing to name a few - so in my spare time I like to draw, play guitar and read (a lot). I also love
+                                I'm Marc, a 22-year old designer and developer. I love being creative through a number of different mediums &ndash; graphic art, music and writing to name a few - so in my spare time I like to draw, play guitar and read (a lot). I also love
                                 to try new things, whether that be learning a language or picking up an interesting hobby.
                             </p>
                         </div>
@@ -61,7 +70,7 @@
 
     <div class="row recent-row">
 
-        <div class="col-lg-4">
+        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
             <div class="recent-card-container">
                 <a class="recent-card-link" href="#">
                     <div class="recent-card recent-card--project">
@@ -84,7 +93,7 @@
             </div>
         </div>
 
-        <div class="col-lg-4">
+        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
             <div class="recent-card-container">
                 <a class="recent-card-link" href="#">
                     <div class="recent-card recent-card--design">
@@ -107,7 +116,7 @@
             </div>
         </div>
 
-        <div class="col-lg-4">
+        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
             <div class="recent-card-container">
                 <a class="recent-card-link" href="#">
                     <div class="recent-card recent-card--illustration">

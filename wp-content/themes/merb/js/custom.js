@@ -10,12 +10,13 @@ window.onload = function() {
     var nav = document.getElementById( "navley" ),
         navBrand = document.getElementById( "navBrand" ),
         menuRight = document.getElementById( "cbp-spmenu-s2" ),
-        showRight = document.getElementById( "showRight" ),
-        pushBody = document.getElementById( "push-body" ),
+        showmmMenu = document.getElementById( "showmmMenu" ),
+        mmMenu = document.getElementById( "mmMenu" ),
         menuClose = document.getElementById( "menuClose" ),
         burger = document.getElementById( "burger" ),
         bodyElement = document.getElementById( "body" ),
         backtotop = document.getElementById( "backtotop" ),
+        toAbout = document.getElementById( "toAbout" ),
         menuItems = document.querySelectorAll( ".js-menu-item" ),
         homePage = document.getElementById( "homePage" ),
         projectsPage = document.getElementById( "projectsPage" ),
@@ -27,6 +28,8 @@ window.onload = function() {
         navCreativeworks = document.getElementById( "navCreativeworks" ),
         navBlog = document.getElementById( "navBlog" ),
         splitscreenAjaxLoad = document.querySelectorAll( ".splitscreenAjaxLoad" ),
+        splitscreenItem = document.getElementById( "splitscreenItem" ),
+        splitscreenMobileContentContainer = document.getElementById( "splitscreenMobileContentContainer" ),
         designFilter = document.getElementById( "designFilter" ),
         developmentFilter = document.getElementById( "developmentFilter" ),
         bothFilter = document.getElementById( "bothFilter" ),
@@ -61,17 +64,21 @@ window.onload = function() {
 
 
     // Menu JS
-    // Push menu adapted from codrops
-    // ==============================
+    // Full screen mobile menu
+    // =======================
 
-    showRight.onclick = function() {
-        nav.classList.toggle( "cbp-spmenu-push-toleft" );
+    showmmMenu.onclick = function() {
         burger.classList.toggle( "js-hide-icon" );
-        this.classList.toggle( "js-push-left" );
-        this.classList.toggle( "menu-active" );
         menuClose.classList.toggle( "js-show-icon" );
-        pushBody.classList.toggle( "cbp-spmenu-push-toleft" );
-        menuRight.classList.toggle( "cbp-spmenu-open" );
+        menuClose.classList.toggle( "menu-close-open" );
+        mmMenu.classList.toggle("js-mmmenu-active");
+    };
+
+    menuClose.onclick = function() {
+        burger.classList.remove( "js-hide-icon" );
+        menuClose.classList.remove( "js-show-icon" );
+        menuClose.classList.remove( "menu-close-open" );
+        mmMenu.classList.remove("js-mmmenu-active");
     };
 
 
@@ -80,20 +87,24 @@ window.onload = function() {
 
     if ( homePage !== null ) {
         menuItems[0].classList.toggle( "js-item-active" );
+        menuItems[0].classList.toggle( "mmmenu-active-underline-active" );
         footerHome.classList.toggle( "footer-item-active" );
     } else if ( projectsPage !== null || projectPage !== null ) {
-        menuItems[1].classList.toggle( "js-item-active" );
+        menuItems[2].classList.toggle( "js-item-active" );
+        menuItems[2].classList.toggle( "mmmenu-active-underline-active" );
         footerProjects.classList.toggle( "footer-item-active" );
         navProjects.classList.toggle( "nav-item-active" );
         postType = "/projects/";
         entryPoint = "#splitscreenAjaxContainer";
         ajaxEntryPoint = " #projectAjaxContent";
-    } else if ( blogPage !== null ) {
-        menuItems[2].classList.toggle( "js-item-active" );
+    } else if ( blogPage !== null || postPage !== null ) {
+        menuItems[3].classList.toggle( "js-item-active" );
+        menuItems[3].classList.toggle( "mmmenu-active-underline-active" );
         footerBlog.classList.toggle( "footer-item-active" );
         navBlog.classList.toggle( "nav-item-active" );
     } else if ( creativeworksPage !== null ) {
-        menuItems[2].classList.toggle( "js-item-active" );
+        menuItems[1].classList.toggle( "js-item-active" );
+        menuItems[1].classList.toggle( "mmmenu-active-underline-active" );
         footerCreativeworks.classList.toggle( "footer-item-active" );
         navCreativeworks.classList.toggle( "nav-item-active" );
     }
@@ -202,6 +213,10 @@ window.onload = function() {
         splitscreenAjaxLoad[i].addEventListener( "click", merbAjaxPostSetup );
     }
 
+    splitscreenItem.addEventListener( "click", function() {
+        splitscreenMobileContentContainer.classList.toggle( "splitscreen-mobile-content-container-active" );
+    } );
+
     function merbAjaxPostSetup( ) {
         event.preventDefault();
 
@@ -212,7 +227,6 @@ window.onload = function() {
 
         var postame = $( this ).attr( "data-postname" );
         var url = postType + postame + ajaxEntryPoint;
-        console.log(url);
 
         setTimeout( merbAjaxPostLoad( url ), 4000 );
     }
@@ -220,6 +234,16 @@ window.onload = function() {
     function merbAjaxPostLoad( url ) {
         // Load the post into the specified entry point
         $( entryPoint ).load( url );
+    }
+
+    // Scroll animations
+    // =================
+
+    if( homePage != null ) {
+        toAbout.addEventListener("click", function() {
+            event.preventDefault();
+            $( "html, body" ).animate( { scrollTop: $( "#about" ).offset().top }, 1000, "easeInOutQuad" );
+        });
     }
 
 };

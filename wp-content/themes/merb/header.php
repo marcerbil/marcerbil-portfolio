@@ -26,6 +26,8 @@
     <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css"> -->
     <link rel="stylesheet" href="<?php get_template_directory()?>/wp-content/themes/merb/vendor/font-awesome-4.6.1/css/font-awesome.min.css">
 
+    <!-- Pixelcog Parralax -->
+
     <!-- Google Font -->
     <link href='https://fonts.googleapis.com/css?family=Raleway:400,100,300|Merriweather:400,300,300italic,400italic' rel='stylesheet' type='text/css'>
 
@@ -40,51 +42,106 @@
 
 <header>
     <nav id="navley" class="navbar navbar-default navbar-fixed-top">
-      <div class="container-fluid">
-        <div class="navbar-header">
-          <div class="mobile-menu">
-            <button id="showRight" type="button" class="navbar-toggle collapsed">
-              <div id="burger" class="js-hide">
-                  <span class="icon-bar"></span>
-                  <span class="icon-bar"></span>
-                  <span class="icon-bar"></span>
-                  <span class="burger-tooltip">MENU</span>
-              </div>
-              <div id="menuClose" class="menu-close">
-                  <i class="glyphicon glyphicon-remove"></i>
-              </div>
-            </button>
-          </div>
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <div class="mobile-menu">
+                    <button id="showmmMenu" type="button" class="navbar-toggle collapsed">
+                        <div id="burger" class="js-hide">
+                            <span class="burger-tooltip">MENU</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </div>
+                    </button>
+                </div>
 
-          <div class="navbar-brand-container">
-              <a id="navBrand" class="animated navbar-brand" href="/"><img src="<?php bloginfo('template_directory'); ?>/img/logo.svg" class="navbar-brand-image logo-svg" alt="MDE Logo"></a>
-          </div>
+                <div class="navbar-brand-container">
+                    <a id="navBrand" class="animated navbar-brand" href="/"><img src="<?php bloginfo('template_directory'); ?>/img/logo.svg" class="navbar-brand-image logo-svg" alt="MDE Logo"></a>
+                </div>
 
-          <div class="desktop-menu">
+                <div class="desktop-menu">
 
-            <ul class="nav navbar-nav navbar-right navbar-links">
-              <li><a id="navCreativeworks" class="navbar-link" href="<?php bloginfo( 'url' ); ?>/projects/">creative works</a></li>
-              <li><a id="navProjects" class="navbar-link" href="<?php bloginfo( 'url' ); ?>/projects/">projects</a></li>
-              <li><a id="navBlog" class="navbar-link" href="<?php bloginfo( 'url' ); ?>/blog/">blog</a></li>
-            </ul>
+                    <ul class="nav navbar-nav navbar-right navbar-links">
+                        <li><a id="navCreativeworks" class="navbar-link" href="<?php bloginfo( 'url' ); ?>/projects/">creative works</a></li>
+                        <li><a id="navProjects" class="navbar-link" href="<?php bloginfo( 'url' ); ?>/projects/">projects</a></li>
+                        <li><a id="navBlog" class="navbar-link" href="<?php bloginfo( 'url' ); ?>/blog/">blog</a></li>
+                    </ul>
 
-          </div>
+                </div>
 
-        </div>
-    </div> <!-- /.container-fluid -->
+            </div>
+        </div> <!-- /.container-fluid -->
     </nav>
 
-    <div class="mobile-menu">
-      <div class="cbp-spmenu cbp-spmenu-vertical cbp-spmenu-right" id="cbp-spmenu-s2">
-          <h3>&nbsp;</h3>
-          <a class="cbp-link-top js-menu-item" href="<?php bloginfo( 'url' ); ?>/">home</a>
-          <a class="cbp-link-top js-menu-item" href="<?php bloginfo( 'url' ); ?>/">creative works</a>
-          <a class="cbp-link js-menu-item" href="<?php bloginfo( 'url' ); ?>/projects/">projects</a>
-          <a class="cbp-link js-menu-item" href="<?php bloginfo( 'url' ); ?>/blog/">blog</a>
-      </div>
+    <!-- mmMenu -->
+    <div id="mmMenu" class="mmmenu">
+        <div id="menuClose" class="menu-close">
+            <svg class="menu-close-cross" height="50" width="50">
+                <line x1="0" y1="0" x2="20" y2="20" stroke-linecap="round" style="stroke:rgb(255,255,255); stroke-width:2"></line>
+                <line x1="20" y1="0" x2="0" y2="20" stroke-linecap="round" style="stroke:rgb(255,255,255); stroke-width:2"></line>
+                Sorry, your browser does not support inline SVG.
+            </svg>
+        </div>
+        <div class="mmmenu-container">
+            <ul class="mmmenu-list">
+
+                <div class="row mmmenu-row">
+
+                    <div class="mmmenu-quarter mmmenu-quarter-one">
+                        <div class="col-xs-6">
+                            <li class="mmmenu-list-item">
+                                <a class="mmmenu-link" href="<?php bloginfo( 'url' ); ?>/">
+                                    home
+                                    <hr class="mmmenu-active-underline mmmenu-active-underline--home js-menu-item" />
+                                </a>
+                            </li>
+                        </div>
+                    </div>
+
+                    <div class="mmmenu-quarter mmmenu-quarter-two">
+                        <div class="col-xs-6">
+                            <li class="mmmenu-list-item">
+                                <a class="mmmenu-link" href="<?php bloginfo( 'url' ); ?>/">
+                                    creative
+                                    <hr class="mmmenu-active-underline mmmenu-active-underline--creativeworks js-menu-item" />
+                                </a>
+                            </li>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="row mmmenu-row">
+
+                    <div class="mmmenu-quarter mmmenu-quarter-three">
+                        <div class="col-xs-6">
+                            <li class="mmmenu-list-item">
+                                <a class="mmmenu-link" href="<?php bloginfo( 'url' ); ?>/projects/">
+                                    projects
+                                    <hr class="mmmenu-active-underline mmmenu-active-underline--projects js-menu-item" />
+                                </a>
+                            </li>
+                        </div>
+                    </div>
+
+                    <div class="mmmenu-quarter mmmenu-quarter-four">
+                        <div class="col-xs-6">
+                            <li class="mmmenu-list-item">
+                                <a class="mmmenu-link mmmenu-link--blog" href="<?php bloginfo( 'url' ); ?>/blog/">
+                                    blog
+                                    <hr class="mmmenu-active-underline mmmenu-active-underline--blog js-menu-item" />
+                                </a>
+                            </li>
+                        </div>
+                    </div>
+
+                </div>
+
+            </ul>
+        </div>
     </div>
+    <!-- /.mmMenu -->
 
 </header>
 
 <body id="body" <?php body_class(); ?>>
-<div id="push-body" class="cbp-spmenu-push">

@@ -144,7 +144,8 @@ if ( wp_is_mobile() ) {
         <div class="hero"></div>
         <div class="hero-container">
             <div class="hero-content">
-                <h1 class="hero-title blog-hero-title animated fadeIn">Welcome.</h1>
+                <h1 class="hero-title blog-hero-title animated fadeIn">extracr<em>i</em>spy</h1>
+                <h5 class="blog-hero-subtitle animated fadeIn">My two cents</h5>
                 <hr class="blog-hero-hr" />
             </div>
         </div>
