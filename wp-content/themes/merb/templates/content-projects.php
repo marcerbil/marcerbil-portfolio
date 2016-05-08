@@ -14,8 +14,8 @@
 <div class="splitscreen-page-content fadeIn animated">
     <div class="row">
 
-        <div class="col-lg-6 col-md-5 col-sm-5">
-            <div class="splitscreen-left-side">
+        <div class="col-lg-4 col-md-5 col-sm-5">
+            <div class="splitscreen-left-side splitscreen-left-side--project">
                 <div class="splitscreen-left-inner">
                     <div class="splitscreen-title-container">
                         <h3 class="splitscreen-title">Projects</h3>
@@ -42,7 +42,7 @@
                             ?>
                             <?php $project_type = get_field( 'project_type' ); ?>
                             <a href="#" class="splitscreenAjaxLoad splitscreen-link" data-postname="<?php echo $post->post_name; ?>" alt="<?php echo $post->post_name; ?>">
-                                <li id="splitscreenItem" class="splitscreen-list-item">
+                                <li class="splitscreen-list-item">
                                     <img src="<?php bloginfo('template_directory'); ?>/img/<?php echo $project_type; ?>-ball.svg" class="splitscreen-key-image" />
                                     <?php the_title(); ?>
                                 </li>
@@ -50,7 +50,7 @@
                             <?php
                                     }
                                 } else {
-                                  echo "Whoops, that shouldn\'t have happened! Please drop me an email at heymarcerbil@gmail.com with the subject: 'Projects page error'. Arigato yo :).";
+                                  echo "Whoops, that shouldn\'t have happened! Please drop me an email at heymarcerbil@gmail.com with the subject: 'Projects page error'. Arigato yo.";
                                 }
                                 wp_reset_postdata();
                             ?>
@@ -89,12 +89,22 @@
         </div> <!-- /.col-lg-6 -->
 
         <div id="splitscreenMobileContentContainer" class="splitscreen-mobile-content-container">
-            <div class="col-lg-6 col-md-7 col-sm-7">
+            <div id="closeSplitscreenModal" class="splitscreen-modal splitscreen-modal--project">
+                <svg height="75" width="75">
+                    <circle cx="35" cy="35" r="15" stroke="#222222" stroke-width="2" fill="#222222"></circle>
+                    <line x1="27" y1="27" x2="43" y2="43" stroke-linecap="round" style="stroke:rgb(255,255,255); stroke-width:2"></line>
+                    <line x1="43" y1="27" x2="27" y2="43" stroke-linecap="round" style="stroke:rgb(255,255,255); stroke-width:2"></line>
+                    Sorry, your browser does not support inline SVG.
+                </svg>
+            </div>
+            <div class="col-lg-8 col-md-7 col-sm-7">
                 <div class="container">
                     <div class="row">
                         <div class="col-lg-12">
-                            <div id="splitscreen-ajax-project-content">
-                                <div id="splitscreenAjaxContainer" class="splitscreen-right-side fadeIn animated-ajax">
+                            <div id="splitscreenPage">
+                                <div id="splitscreen-ajax-project-content">
+                                    <div id="splitscreenAjaxContainer" class="splitscreen-right-side fadeIn animated-ajax">
+                                    </div>
                                 </div>
                             </div>
                         </div>

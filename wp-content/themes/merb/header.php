@@ -62,7 +62,7 @@
                 <div class="desktop-menu">
 
                     <ul class="nav navbar-nav navbar-right navbar-links">
-                        <li><a id="navCreativeworks" class="navbar-link" href="<?php bloginfo( 'url' ); ?>/projects/">creative works</a></li>
+                        <li><a id="navCreativeworks" class="navbar-link" href="<?php bloginfo( 'url' ); ?>/creative-works/">creative works</a></li>
                         <li><a id="navProjects" class="navbar-link" href="<?php bloginfo( 'url' ); ?>/projects/">projects</a></li>
                         <li><a id="navBlog" class="navbar-link" href="<?php bloginfo( 'url' ); ?>/blog/">blog</a></li>
                     </ul>
@@ -74,12 +74,13 @@
     </nav>
 
     <!-- mmMenu -->
+    <!-- A tasty menu -->
     <div id="mmMenu" class="mmmenu">
         <div id="menuClose" class="menu-close">
             <svg class="menu-close-cross" height="50" width="50">
                 <line x1="0" y1="0" x2="20" y2="20" stroke-linecap="round" style="stroke:rgb(255,255,255); stroke-width:2"></line>
                 <line x1="20" y1="0" x2="0" y2="20" stroke-linecap="round" style="stroke:rgb(255,255,255); stroke-width:2"></line>
-                Sorry, your browser does not support inline SVG.
+                Your browser sucks. Go here https://www.google.com/chrome/ and then uninstall Netscape 2 or whatever it is your using.
             </svg>
         </div>
         <div class="mmmenu-container">
@@ -101,7 +102,7 @@
                     <div class="mmmenu-quarter mmmenu-quarter-two">
                         <div class="col-xs-6">
                             <li class="mmmenu-list-item">
-                                <a class="mmmenu-link" href="<?php bloginfo( 'url' ); ?>/">
+                                <a class="mmmenu-link" href="<?php bloginfo( 'url' ); ?>/creative-works/">
                                     creative
                                     <hr class="mmmenu-active-underline mmmenu-active-underline--creativeworks js-menu-item" />
                                 </a>

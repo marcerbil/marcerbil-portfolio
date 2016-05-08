@@ -256,7 +256,7 @@ a:hover {
 @media (min-width: 769px) and (max-width: 1023px) {
     .navbar-brand-container {
         padding: 0;
-        margin-left: 6.25rem;
+        margin-left: 3rem;
     }
 }
 
@@ -270,14 +270,14 @@ a:hover {
 @media (min-width: 1024px) and (max-width: 1149px) and (orientation: landscape) {
     .navbar-brand-container {
         padding: 0;
-        margin-left: 6rem;
+        margin-left: 3rem;
     }
 }
 
 @media (min-width: 1150px) and (max-width: 1365px) {
     .navbar-brand-container {
         padding: 0;
-        margin-left: 10.5rem;
+        margin-left: 3.5rem;
     }
 }
 
@@ -294,7 +294,6 @@ a:hover {
         margin-left: 15rem;
     }
 }
-
 
 .navbar-brand {
     float: left;
@@ -790,6 +789,7 @@ a:hover {
 
 .section-about {
     margin: 1.5rem 0;
+    outline: none;
 }
 
 @media (min-width: 1600px) {
@@ -898,6 +898,12 @@ a:hover {
 @media (min-width: 1200px) {
     .about-text-container {
         margin-left: 20%;
+    }
+}
+
+@media (max-width: 1024px) {
+    .about-text-container {
+        margin-left: 4rem;
     }
 }
 
@@ -1014,7 +1020,7 @@ a:hover {
     height: 375px;
     max-width: 270px;
     background-color: #FFFFFF;
-    border-radius: 2px 4px;
+    border-radius: 1px 1px 21px 2px;
     box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
     -webkit-box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
     transition: all 0.2s ease-in-out;
@@ -1032,15 +1038,15 @@ a:hover {
 }
 
 .recent-card--project {
-    border-bottom: 5px solid #374565;
+    border-bottom: 4px solid #374565;
 }
 
 .recent-card--design {
-    border-bottom: 5px solid #72B6AF;
+    border-bottom: 4px solid #72B6AF;
 }
 
 .recent-card--illustration {
-    border-bottom: 5px solid #90B26A;
+    border-bottom: 4px solid #90B26A;
 }
 .recent-card-image-container {
     max-width: 270px;
@@ -1054,11 +1060,14 @@ a:hover {
     max-width: 270px;
 }
 
-.recent-card-title {
+.recent-card-title-container {
     margin-top: 2rem;
-    font-size: 1.4rem;
-    font-weight: 800;
+}
+
+.recent-card-title {
+    font-size: 1.75rem;
     font-family: "fira-sans-2";
+    font-weight: 600;
     text-align: center;
     letter-spacing: 0.4pt;
     color: #222222;
@@ -1108,13 +1117,83 @@ a:hover {
 
 .splitscreen-left-side {
     height: 100%;
-    background-color: #2C3852;
     max-height: 695px;
     color: #ffffff;
 }
 
+@media (max-width: 960px) {
+    .splitscreen-left-side {
+        min-height: 695px;
+    }
+}
+
+.splitscreen-left-side-two-parter {
+    display: none;
+}
+
+.splitscreen-left-side-active {
+    display: block;
+}
+
+.splitscreen-left-side--project {
+    background-color: #2C3852;
+}
+
+.splitscreen-left-side--design {
+    background-color: #4EA69D;
+}
+
+.splitscreen-left-side--illustration {
+    background-color: #5F8FAE;
+}
+
 .splitscreen-left-inner {
-    padding: 8rem;
+    padding: 6rem 4rem;
+}
+
+@media (max-width: 960px) {
+    .splitscreen-left-inner {
+        padding: 5rem;
+    }
+}
+
+.splitscreen-left-inner--creativeworks {
+    padding: 12rem 5rem;
+}
+
+.splitscreen-selector-container {
+    margin: 2rem 0;
+    color: #e2e2e2;
+    position: absolute;
+    top: 5rem;
+    left: 6rem;
+    z-index: 99999;
+}
+
+.splitscreen-selector {
+    color: #e2e2e2;
+    font-size: 1rem;
+    font-weight: 300;
+    background-color: transparent;
+    outline: none;
+    border: none;
+    display: inline;
+    -webkit-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
+}
+
+.splitscreen-selector--active {
+    color: #FFFFFF!important;
+    font-weight: bold;
+    -webkit-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+    padding: 0.5rem 0.75rem;
+    border-radius: 30px;
+    outline: none;
+    border: none;
+    text-align: center;
+    background-color: rgba(0,0,0,0.2);
 }
 
 .splitscreen-title-container {
@@ -1136,6 +1215,7 @@ a:hover {
     font-size: 1.2rem;
     font-weight: 100;
     letter-spacing: 0.5pt;
+    line-height: 2;
 }
 
 .splitscreen-list-container {
@@ -1159,6 +1239,12 @@ a:hover {
     transition: all 200ms cubic-bezier(0.47, 0, 0.745, 0.715);
 }
 
+@media (max-width: 960px) {
+    .splitscreen-list-item {
+        font-size: 1.2rem;
+    }
+}
+
 .splitscreen-key {
     margin-top: 8rem;
 }
@@ -1167,6 +1253,7 @@ a:hover {
     list-style-type: none;
     padding: 0;
     margin: 0;
+    display: inline-flex;
 }
 
 .splitscreen-key-list-item {
@@ -1200,6 +1287,27 @@ a:hover {
     text-decoration: none;
 }
 
+.splitscreen-modal {
+    display: none;
+    position: fixed;
+    top: 7rem;
+    left: 2rem;
+    height: 50px;
+    width: 50px;
+    z-index: 10000;
+}
+
+@media (max-width: 768px) {
+    .splitscreen-modal {
+        display: block;
+    }
+}
+
+.splitscreen-modal--project {
+    stroke: #444444;
+}
+
+
 /* right hand side */
 
 @media (max-width: 768px) {
@@ -1207,7 +1315,6 @@ a:hover {
         position: absolute;
         display: none;
         width: 100vw;
-        height: 100vh;
         overflow-y: scroll;
         top: 50px;
         left: 0;
@@ -1227,9 +1334,15 @@ a:hover {
     max-height: 600px;
     overflow-y: scroll;
     overflow-x: hidden;
-    max-width: 495px;
-    transition: all 300ms cubic-bezier(0.47, 0, 0.745, 0.715);
-    -webkit-transition: all 300ms cubic-bezier(0.47, 0, 0.745, 0.715);
+    max-width: 67.5%;
+    transition: all 100ms cubic-bezier(0.47, 0, 0.745, 0.715);
+    -webkit-transition: all 100ms cubic-bezier(0.47, 0, 0.745, 0.715);
+}
+
+@media (min-width: 768px) and (max-width: 1200px) {
+    .splitscreen-right-side {
+        max-width: 57.5%;
+    }
 }
 
 @media (max-width: 768px) {
@@ -1255,7 +1368,7 @@ a:hover {
 }
 
 #projectAjaxContent ul {
-    text-align: left!important;
+    text-align: left!important;x
 }
 
 /*  Feed page
@@ -3388,6 +3501,7 @@ a:hover {
 @media (max-width: 500px) {
     .footer-nav-item {
         margin: 0;
+        white-space: normal;
     }
 }
 
@@ -3495,6 +3609,38 @@ a:hover {
   -webkit-animation-name: fadeIn;
   animation-name: fadeIn;
 }
+
+@-webkit-keyframes slideInRight {
+  from {
+    -webkit-transform: translate3d(100%, 0, 0);
+    transform: translate3d(100%, 0, 0);
+    visibility: visible;
+  }
+
+  to {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    -webkit-transform: translate3d(100%, 0, 0);
+    transform: translate3d(100%, 0, 0);
+    visibility: visible;
+  }
+
+  to {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.slideInRight {
+  -webkit-animation-name: slideInRight;
+  animation-name: slideInRight;
+}
+
 
 /*  helpers
 /*============*/

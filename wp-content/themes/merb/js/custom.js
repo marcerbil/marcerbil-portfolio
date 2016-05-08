@@ -1,4 +1,4 @@
-// Custom JS
+1// Custom JS
 // Theme: merb
 // Date created: 28/10/2015
 // ========================
@@ -24,12 +24,18 @@ window.onload = function() {
         blogPage = document.getElementById( "blogPage" ),
         postPage = document.getElementById( "postPage" ),
         creativeworksPage = document.getElementById( "creativeworksPage" ),
+        creativeworksDesign = document.getElementById( "creativeworksDesign" ),
+        creativeworksIllustration = document.getElementById( "creativeworksIllustration" ),
+        loadCreativeWorksDesign = document.getElementById( "loadCreativeWorksDesign" ),
+        loadCreativeWorksIllustration = document.getElementById( "loadCreativeWorksIllustration" ),
         navProjects = document.getElementById( "navProjects" ),
         navCreativeworks = document.getElementById( "navCreativeworks" ),
         navBlog = document.getElementById( "navBlog" ),
+        splitscreenPage = document.getElementById( "splitscreenPage" ),
         splitscreenAjaxLoad = document.querySelectorAll( ".splitscreenAjaxLoad" ),
-        splitscreenItem = document.getElementById( "splitscreenItem" ),
+        splitscreenItem = document.querySelectorAll( "splitscreenItem" ),
         splitscreenMobileContentContainer = document.getElementById( "splitscreenMobileContentContainer" ),
+        closeSplitscreenModal = document.getElementById( "closeSplitscreenModal" ),
         designFilter = document.getElementById( "designFilter" ),
         developmentFilter = document.getElementById( "developmentFilter" ),
         bothFilter = document.getElementById( "bothFilter" ),
@@ -213,9 +219,17 @@ window.onload = function() {
         splitscreenAjaxLoad[i].addEventListener( "click", merbAjaxPostSetup );
     }
 
-    splitscreenItem.addEventListener( "click", function() {
-        splitscreenMobileContentContainer.classList.toggle( "splitscreen-mobile-content-container-active" );
-    } );
+    for ( var i = 0; i < splitscreenAjaxLoad.length; i++ ) {
+        splitscreenAjaxLoad[i].addEventListener( "click", function() {
+            splitscreenMobileContentContainer.classList.add( "splitscreen-mobile-content-container-active" );
+        } );
+    }
+
+    if ( splitscreenPage != null ) {
+        closeSplitscreenModal.addEventListener( "click", function() {
+            splitscreenMobileContentContainer.classList.remove( "splitscreen-mobile-content-container-active" );
+        } );
+    }
 
     function merbAjaxPostSetup( ) {
         event.preventDefault();
@@ -235,6 +249,30 @@ window.onload = function() {
         // Load the post into the specified entry point
         $( entryPoint ).load( url );
     }
+
+    // Creative Works selector
+    // =======================
+
+    if( creativeworksPage != null ) {
+
+        loadCreativeWorksDesign.classList.add( "splitscreen-selector--active" );
+        creativeworksDesign.classList.add( "splitscreen-left-side-active" );
+
+        loadCreativeWorksDesign.addEventListener( "click", function() {
+            creativeworksDesign.classList.add( "splitscreen-left-side-active" );
+            loadCreativeWorksDesign.classList.add( "splitscreen-selector--active" );
+            creativeworksIllustration.classList.remove( "splitscreen-left-side-active" );
+            loadCreativeWorksIllustration.classList.remove( "splitscreen-selector--active" );
+        } );
+
+        loadCreativeWorksIllustration.addEventListener( "click", function() {
+            creativeworksIllustration.classList.add( "splitscreen-left-side-active" );
+            loadCreativeWorksIllustration.classList.add( "splitscreen-selector--active" );
+            creativeworksDesign.classList.remove( "splitscreen-left-side-active" );
+            loadCreativeWorksDesign.classList.remove( "splitscreen-selector--active" );
+        } );
+    }
+
 
     // Scroll animations
     // =================

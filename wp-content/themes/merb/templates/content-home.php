@@ -77,8 +77,8 @@
                         <div class="recent-card-image-container">
                             <img class="recent-card-image" src="http://lorempixel.com/320/200" alt="" />
                         </div>
-                        <div class="recent-card-title">
-                            <h4>weareloft</h4>
+                        <div class="recent-card-title-container">
+                            <h4 class="recent-card-title">weareloft</h4>
                         </div>
                         <hr class="recent-card-hr">
                         <div class="recent-card-text-container">
@@ -100,8 +100,8 @@
                         <div class="recent-card-image-container">
                             <img class="recent-card-image" src="http://lorempixel.com/320/200" alt="" />
                         </div>
-                        <div class="recent-card-title">
-                            <h4>Daily UI #002</h4>
+                        <div class="recent-card-title-container">
+                            <h4 class="recent-card-title">Daily UI #002</h4>
                         </div>
                         <hr class="recent-card-hr">
                         <div class="recent-card-text-container">
@@ -123,8 +123,8 @@
                         <div class="recent-card-image-container">
                             <img class="recent-card-image" src="http://lorempixel.com/320/200" alt="" />
                         </div>
-                        <div class="recent-card-title">
-                            <h4>Manga Character</h4>
+                        <div class="recent-card-title-container">
+                            <h4 class="recent-card-title">Manga Character</h4>
                         </div>
                         <hr class="recent-card-hr">
                         <div class="recent-card-text-container">

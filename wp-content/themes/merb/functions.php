@@ -382,7 +382,10 @@ add_filter('show_admin_bar', '__return_false');
 
 // Add custom post types
 add_action( 'init', 'merb_project_type' );
+add_action( 'init', 'merb_design_type' );
+add_action( 'init', 'merb_illustration_type' );
 
+// Project post type
 function merb_project_type() {
   register_post_type( 'project',
     array(
@@ -395,7 +398,7 @@ function merb_project_type() {
         'menu_name' => __( 'Projects' ),
         'name_admin_bar' => __( 'Projects' )
       ),
-      'menu_icon' => 'dashicons-images-alt2',
+      'menu_icon' => 'dashicons-welcome-learn-more',
       'menu_position' => '5',
       'public' => true,
       'description' => 'Project post type. Use to create a project for inclusion in the projects page.'
@@ -411,6 +414,72 @@ function merb_project_tax() {
         'project',
         array(
             'label' => __( 'Project Taxonomy' )
+        )
+    );
+}
+
+// Design post type
+function merb_design_type() {
+  register_post_type( 'design',
+    array(
+      'labels' => array(
+        'name' => __( 'Design' ),
+        'singular_name' => __( 'Design' ),
+        'add_new' => __( 'Add new Design' ),
+        'edit_item' => __( 'Edit Design' ),
+        'new_item' => __( 'New Design' ),
+        'menu_name' => __( 'Design' ),
+        'name_admin_bar' => __( 'Design' )
+      ),
+      'menu_icon' => 'dashicons-desktop',
+      'menu_position' => '6',
+      'public' => true,
+      'description' => 'Design post type. Use to create a design for inclusion in the designs page.'
+    )
+  );
+}
+
+add_action( 'init', 'merb_design_tax' );
+
+function merb_design_tax() {
+    register_taxonomy(
+        'design',
+        'design',
+        array(
+            'label' => __( 'Design Taxonomy' )
+        )
+    );
+}
+
+// Illustration post type
+function merb_illustration_type() {
+  register_post_type( 'illustration',
+    array(
+      'labels' => array(
+        'name' => __( 'illustration' ),
+        'singular_name' => __( 'Illustration' ),
+        'add_new' => __( 'Add new Illustration' ),
+        'edit_item' => __( 'Edit Illustration' ),
+        'new_item' => __( 'New Illustration' ),
+        'menu_name' => __( 'illustration' ),
+        'name_admin_bar' => __( 'illustration' )
+      ),
+      'menu_icon' => 'dashicons-admin-customizer',
+      'menu_position' => '7',
+      'public' => true,
+      'description' => 'Illustration post type. Use to create a illustration for inclusion in the illustrations page.'
+    )
+  );
+}
+
+add_action( 'init', 'merb_illustration_tax' );
+
+function merb_illustration_tax() {
+    register_taxonomy(
+        'illustration',
+        'illustration',
+        array(
+            'label' => __( 'Illustration Taxonomy' )
         )
     );
 }
