@@ -3,7 +3,6 @@
 // Date created: 28/10/2015
 // ========================
 
-
 window.onload = function() {
 
     // Variable declarations
@@ -11,78 +10,116 @@ window.onload = function() {
     var nav = document.getElementById( "navley" ),
         navBrand = document.getElementById( "navBrand" ),
         menuRight = document.getElementById( "cbp-spmenu-s2" ),
-        showRight = document.getElementById( "showRight" ),
-        pushBody = document.getElementById( "push-body" ),
+        showmmMenu = document.getElementById( "showmmMenu" ),
+        mmMenu = document.getElementById( "mmMenu" ),
         menuClose = document.getElementById( "menuClose" ),
         burger = document.getElementById( "burger" ),
         bodyElement = document.getElementById( "body" ),
         backtotop = document.getElementById( "backtotop" ),
+        toAbout = document.getElementById( "toAbout" ),
         menuItems = document.querySelectorAll( ".js-menu-item" ),
         homePage = document.getElementById( "homePage" ),
+        projectsPage = document.getElementById( "projectsPage" ),
         projectPage = document.getElementById( "projectPage" ),
         blogPage = document.getElementById( "blogPage" ),
         postPage = document.getElementById( "postPage" ),
         creativeworksPage = document.getElementById( "creativeworksPage" ),
+        creativeworksDesign = document.getElementById( "creativeworksDesign" ),
+        creativeworksIllustration = document.getElementById( "creativeworksIllustration" ),
+        loadCreativeWorksDesign = document.getElementById( "loadCreativeWorksDesign" ),
+        loadCreativeWorksIllustration = document.getElementById( "loadCreativeWorksIllustration" ),
         navProjects = document.getElementById( "navProjects" ),
         navCreativeworks = document.getElementById( "navCreativeworks" ),
         navBlog = document.getElementById( "navBlog" ),
+        splitscreenPage = document.getElementById( "splitscreenPage" ),
+        splitscreenAjaxLoad = document.querySelectorAll( ".splitscreenAjaxLoad" ),
+        splitscreenItem = document.querySelectorAll( "splitscreenItem" ),
+        splitscreenMobileContentContainer = document.getElementById( "splitscreenMobileContentContainer" ),
+        closeSplitscreenModal = document.getElementById( "closeSplitscreenModal" ),
+        designFilter = document.getElementById( "designFilter" ),
+        developmentFilter = document.getElementById( "developmentFilter" ),
+        bothFilter = document.getElementById( "bothFilter" ),
+        designItem = document.getElementById( "designItem" ),
+        developmentItem = document.getElementById( "developmentItem" ),
+        bothItem = document.getElementById( "bothItem" ),
         splitscreenListItems = document.querySelectorAll( ".splitscreen-list-item" ),
         lightboxLink = document.querySelectorAll( ".lightbox-link" ),
-        // feedLoadMore = document.getElementById( "feedLoadMore" ),
-        // feedLoadMorePosts = document.getElementById( "feedLoadMorePosts" ),
         footerHome = document.getElementById( "footerHome" ),
         footerProjects = document.getElementById( "footerProjects" ),
         footerCreativeworks = document.getElementById( "footerCreativeworks" ),
         footerBlog = document.getElementById( "footerBlog" ),
         currentScrollPosition,
         iteration,
-        start = false;
+        start = false,
+        postType,
+        ajaxEntryPoint,
+        entryPoint;
+
 
     // Navbar JS
-    // Turns navbar bg black while scrolling
     // =====================================
+
+    if ( projectsPage !== null || projectPage !== null || creativeworksPage !== null ) {
+        nav.classList.remove( "navbar-bg-home" );
+    }
 
     window.addEventListener( "scroll", function() {
         if( window.scrollY != 0 ) {
             nav.classList.add( "navbar-bg" );
+            if ( homePage !== null || blogPage !== null ) {
+                nav.classList.remove( "navbar-bg-home" );
+            }
         } else {
             nav.classList.remove( "navbar-bg" );
+            if ( homePage !== null || blogPage !== null ) {
+                nav.classList.add( "navbar-bg-home" );
+            }
         }
     });
 
 
     // Menu JS
-    // Push menu adapted from codrops
-    // ==============================
+    // Full screen mobile menu
+    // =======================
 
-    showRight.onclick = function() {
-        nav.classList.toggle( "cbp-spmenu-push-toleft" );
+    showmmMenu.onclick = function() {
         burger.classList.toggle( "js-hide-icon" );
-        this.classList.toggle( "js-push-left" );
-        this.classList.toggle( "menu-active" );
         menuClose.classList.toggle( "js-show-icon" );
-        pushBody.classList.toggle( "cbp-spmenu-push-toleft" );
-        menuRight.classList.toggle( "cbp-spmenu-open" );
+        menuClose.classList.toggle( "menu-close-open" );
+        mmMenu.classList.toggle("js-mmmenu-active");
+    };
+
+    menuClose.onclick = function() {
+        burger.classList.remove( "js-hide-icon" );
+        menuClose.classList.remove( "js-show-icon" );
+        menuClose.classList.remove( "menu-close-open" );
+        mmMenu.classList.remove("js-mmmenu-active");
     };
 
 
-    // Menu Link JS
-    // Underline link when on page
+    // Page-dependent JS
     // ============================
 
     if ( homePage !== null ) {
         menuItems[0].classList.toggle( "js-item-active" );
+        menuItems[0].classList.toggle( "mmmenu-active-underline-active" );
         footerHome.classList.toggle( "footer-item-active" );
-    } else if ( projectPage !== null ) {
-        menuItems[1].classList.toggle( "js-item-active" );
+    } else if ( projectsPage !== null || projectPage !== null ) {
+        menuItems[2].classList.toggle( "js-item-active" );
+        menuItems[2].classList.toggle( "mmmenu-active-underline-active" );
         footerProjects.classList.toggle( "footer-item-active" );
         navProjects.classList.toggle( "nav-item-active" );
-    } else if ( blogPage !== null ) {
-        menuItems[2].classList.toggle( "js-item-active" );
+        postType = "/projects/";
+        entryPoint = "#splitscreenAjaxContainer";
+        ajaxEntryPoint = " #projectAjaxContent";
+    } else if ( blogPage !== null || postPage !== null ) {
+        menuItems[3].classList.toggle( "js-item-active" );
+        menuItems[3].classList.toggle( "mmmenu-active-underline-active" );
         footerBlog.classList.toggle( "footer-item-active" );
         navBlog.classList.toggle( "nav-item-active" );
     } else if ( creativeworksPage !== null ) {
-        menuItems[2].classList.toggle( "js-item-active" );
+        menuItems[1].classList.toggle( "js-item-active" );
+        menuItems[1].classList.toggle( "mmmenu-active-underline-active" );
         footerCreativeworks.classList.toggle( "footer-item-active" );
         navCreativeworks.classList.toggle( "nav-item-active" );
     }
@@ -182,4 +219,78 @@ window.onload = function() {
             splitscreenListItems[i].classList.remove( "js-active-list-item" );
         }
     }
+
+    // Splitscreen Ajax Post loader
+    // ============================
+
+    // Loop through each link in link list created by query
+    for ( var i = 0; i < splitscreenAjaxLoad.length; i++ ) {
+        splitscreenAjaxLoad[i].addEventListener( "click", merbAjaxPostSetup );
+    }
+
+    for ( var i = 0; i < splitscreenAjaxLoad.length; i++ ) {
+        splitscreenAjaxLoad[i].addEventListener( "click", function() {
+            splitscreenMobileContentContainer.classList.add( "splitscreen-mobile-content-container-active" );
+        } );
+    }
+
+    if ( splitscreenPage != null ) {
+        closeSplitscreenModal.addEventListener( "click", function() {
+            splitscreenMobileContentContainer.classList.remove( "splitscreen-mobile-content-container-active" );
+        } );
+    }
+
+    function merbAjaxPostSetup( ) {
+        event.preventDefault();
+
+        // Load the loading animation
+        $( entryPoint ).html('<div class="fadeIn animated-loading splitscreen-ajax-loading"><i class="fa fa-circle-o-notch fa-spin fa-3x fa-fw margin-bottom"></i><span class="sr-only">Loading...</span></div>');
+
+        $.ajaxSetup({ cache:false });
+
+        var postame = $( this ).attr( "data-postname" );
+        var url = postType + postame + ajaxEntryPoint;
+
+        setTimeout( merbAjaxPostLoad( url ), 4000 );
+    }
+
+    function merbAjaxPostLoad( url ) {
+        // Load the post into the specified entry point
+        $( entryPoint ).load( url );
+    }
+
+    // Creative Works selector
+    // =======================
+
+    if( creativeworksPage != null ) {
+
+        loadCreativeWorksDesign.classList.add( "splitscreen-selector--active" );
+        creativeworksDesign.classList.add( "splitscreen-left-side-active" );
+
+        loadCreativeWorksDesign.addEventListener( "click", function() {
+            creativeworksDesign.classList.add( "splitscreen-left-side-active" );
+            loadCreativeWorksDesign.classList.add( "splitscreen-selector--active" );
+            creativeworksIllustration.classList.remove( "splitscreen-left-side-active" );
+            loadCreativeWorksIllustration.classList.remove( "splitscreen-selector--active" );
+        } );
+
+        loadCreativeWorksIllustration.addEventListener( "click", function() {
+            creativeworksIllustration.classList.add( "splitscreen-left-side-active" );
+            loadCreativeWorksIllustration.classList.add( "splitscreen-selector--active" );
+            creativeworksDesign.classList.remove( "splitscreen-left-side-active" );
+            loadCreativeWorksDesign.classList.remove( "splitscreen-selector--active" );
+        } );
+    }
+
+
+    // Scroll animations
+    // =================
+
+    if( homePage != null ) {
+        toAbout.addEventListener("click", function() {
+            event.preventDefault();
+            $( "html, body" ).animate( { scrollTop: $( "#about" ).offset().top }, 1000, "easeInOutQuad" );
+        });
+    }
+
 };

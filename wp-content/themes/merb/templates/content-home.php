@@ -17,7 +17,16 @@
             <h1 class="hero-title">UI/Web Designer</h1>
             <h1 class="hero-title">Front end developer</h1>
             <p class="hero-text">London-based developer, designer and coffee connoisseur</p>
-            <hr class="project-hero-hr home-hero-hr" />
+            <hr class="home-hero-hr" />
+            <a href="#about" class="to-about-link">
+                <span id="toAbout" class="js-scroll-to-about">
+                    <svg height="200" width="200">
+                        <circle cx="5" cy="8" r="5" stroke="#d0d0d0" stroke-width="1" fill="transparent" />
+                        <circle cx="5" cy="18" r="3" stroke="#d0d0d0" stroke-width="1" fill="transparent" />
+                        Sorry, your browser does not support inline SVG.
+                    </svg>
+                </span>
+            </a>
         </div>
     </div>
 </section>
@@ -25,7 +34,7 @@
 <div class="content-container-home">
     <div class="content-container-width">
 
-        <section class="section-about animated-slower fadeIn">
+        <section id="about" class="section-about animated-slower fadeIn">
             <div class="about">
                 <div class="row">
                     <div class="custom-shape-container">
@@ -40,7 +49,7 @@
                         <div class="about-text-container">
                             <h2 class="about-title">A bit of $this, a bit of &lt;that&gt;</h2>
                             <p class="about-text">
-                                I'm Marc, a 22-year old designer and developer. I love being creative through a number of different mediums - graphic art, music and writing to name a few - so in my spare time I like to draw, play guitar and read (a lot). I also love
+                                I'm Marc, a web designer and front end developer. I love being creative through a number of different mediums &ndash; graphic art, music and writing to name a few - so in my spare time I like to draw, play guitar and read (a lot). I also love
                                 to try new things, whether that be learning a language or picking up an interesting hobby.
                             </p>
                         </div>
@@ -61,15 +70,15 @@
 
     <div class="row recent-row">
 
-        <div class="col-lg-4">
+        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
             <div class="recent-card-container">
                 <a class="recent-card-link" href="#">
                     <div class="recent-card recent-card--project">
                         <div class="recent-card-image-container">
-                            <img class="recent-card-image" src="http://lorempixel.com/320/200" alt="" />
+                            <!-- <img class="recent-card-image" src="http://lorempixel.com/320/200" alt="" /> -->
                         </div>
-                        <div class="recent-card-title">
-                            <h4>weareloft</h4>
+                        <div class="recent-card-title-container">
+                            <h4 class="recent-card-title">weareloft</h4>
                         </div>
                         <hr class="recent-card-hr">
                         <div class="recent-card-text-container">
@@ -84,15 +93,15 @@
             </div>
         </div>
 
-        <div class="col-lg-4">
+        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
             <div class="recent-card-container">
                 <a class="recent-card-link" href="#">
                     <div class="recent-card recent-card--design">
                         <div class="recent-card-image-container">
-                            <img class="recent-card-image" src="http://lorempixel.com/320/200" alt="" />
+                            <!-- <img class="recent-card-image" src="http://lorempixel.com/320/200" alt="" /> -->
                         </div>
-                        <div class="recent-card-title">
-                            <h4>Daily UI #002</h4>
+                        <div class="recent-card-title-container">
+                            <h4 class="recent-card-title">Daily UI #002</h4>
                         </div>
                         <hr class="recent-card-hr">
                         <div class="recent-card-text-container">
@@ -107,15 +116,15 @@
             </div>
         </div>
 
-        <div class="col-lg-4">
+        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
             <div class="recent-card-container">
                 <a class="recent-card-link" href="#">
                     <div class="recent-card recent-card--illustration">
                         <div class="recent-card-image-container">
-                            <img class="recent-card-image" src="http://lorempixel.com/320/200" alt="" />
+                            <!-- <img class="recent-card-image" src="http://lorempixel.com/320/200" alt="" /> -->
                         </div>
-                        <div class="recent-card-title">
-                            <h4>Manga Character</h4>
+                        <div class="recent-card-title-container">
+                            <h4 class="recent-card-title">Manga Character</h4>
                         </div>
                         <hr class="recent-card-hr">
                         <div class="recent-card-text-container">

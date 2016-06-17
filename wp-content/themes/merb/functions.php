@@ -257,28 +257,21 @@ function merb_scripts() {
         'collapse' => '<span class="screen-reader-text">' . __( 'collapse child menu', 'merb' ) . '</span>',
     ) );
 
+    wp_register_script( 'customjs', get_template_directory_uri() . '/js/custom.js' );
+
+    wp_localize_script( 'customjs', 'customjs', array(
+    	'ajaxurl' => admin_url( 'admin-ajax.php' ),
+    ));
+
     wp_enqueue_script( 'bootstrapjs', 'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js', array( 'jquery' ) );
 
-    wp_enqueue_script( 'knobs', get_template_directory_uri() . '/js/jquery.knob.min.js', array( 'jquery' ) );
+    wp_enqueue_script( 'jqueryeasing', get_template_directory_uri() . '/js/jquery.easing.1.3.js', array( 'jquery' ) );
 
-    wp_enqueue_script( 'customjs', get_template_directory_uri() . '/js/custom.js', array( 'jquery', 'knobs' )  );
-
+    wp_enqueue_script( 'customjs', 'customjs', array( 'jquery' )  );
 
 }
 
 add_action('wp_enqueue_scripts', 'merb_scripts');
-
-// function merb_typekit() {
-//       wp_enqueue_script( 'merb_typekit', '//use.typekit.net/lxb5xds.js', '', false);
-//   }
-//   add_action( 'wp_enqueue_scripts', 'merb_typekit' );
-//
-//   function merb_typekit_inline() {
-//     if ( wp_script_is( 'merb_typekit', 'done' ) ) {
-//       <script>try{Typekit.load();}catch(e){}</script>
-//     <?php }
-//   }
-//   add_action( 'wp_head', 'merb_typekit_inline' );
 
 /**
  * Add featured image as background image to post navigation elements.
@@ -383,44 +376,110 @@ require get_template_directory() . '/inc/customizer.php';
 *
 **/
 
-if( function_exists('acf_add_options_page') ) {
-
-    acf_add_options_page( array(
-       'page_title' => 'Random Quotes',
-       'menu_title' => 'Random Quotes',
-       'icon_url' => 'dashicons-format-quote'
-    ));
-
-}
-
 // Remove admin bar
 add_filter('show_admin_bar', '__return_false');
 
 
 // Add custom post types
-add_action( 'init', 'merb_project_post' );
+add_action( 'init', 'merb_project_type' );
+add_action( 'init', 'merb_design_type' );
+add_action( 'init', 'merb_illustration_type' );
 
-function merb_project_post() {
+// Project post type
+function merb_project_type() {
   register_post_type( 'project',
     array(
       'labels' => array(
-        'name' => __( 'Project' ),
+        'name' => __( 'Projects' ),
         'singular_name' => __( 'Project' ),
         'add_new' => __( 'Add new Project' ),
         'edit_item' => __( 'Edit Project' ),
         'new_item' => __( 'New Project' ),
         'menu_name' => __( 'Projects' ),
-        'name_admin_bar' => __( 'Projects' ),
+        'name_admin_bar' => __( 'Projects' )
       ),
-      'supports' => array(
-        'title' => true,
-        'thumbnail' => true,
-        'excerpt' => true
-      ),
-      'menu_icon' => __( 'dashicons-images-alt2' ),
+      'menu_icon' => 'dashicons-welcome-learn-more',
+      'menu_position' => '5',
       'public' => true,
-      'has_archive' => true,
-      'rewrite' => array('slug' => 'products')
+      'description' => 'Project post type. Use to create a project for inclusion in the projects page.'
     )
   );
+}
+
+add_action( 'init', 'merb_project_tax' );
+
+function merb_project_tax() {
+    register_taxonomy(
+        'project',
+        'project',
+        array(
+            'label' => __( 'Project Taxonomy' )
+        )
+    );
+}
+
+// Design post type
+function merb_design_type() {
+  register_post_type( 'design',
+    array(
+      'labels' => array(
+        'name' => __( 'Design' ),
+        'singular_name' => __( 'Design' ),
+        'add_new' => __( 'Add new Design' ),
+        'edit_item' => __( 'Edit Design' ),
+        'new_item' => __( 'New Design' ),
+        'menu_name' => __( 'Design' ),
+        'name_admin_bar' => __( 'Design' )
+      ),
+      'menu_icon' => 'dashicons-desktop',
+      'menu_position' => '6',
+      'public' => true,
+      'description' => 'Design post type. Use to create a design for inclusion in the designs page.'
+    )
+  );
+}
+
+add_action( 'init', 'merb_design_tax' );
+
+function merb_design_tax() {
+    register_taxonomy(
+        'design',
+        'design',
+        array(
+            'label' => __( 'Design Taxonomy' )
+        )
+    );
+}
+
+// Illustration post type
+function merb_illustration_type() {
+  register_post_type( 'illustration',
+    array(
+      'labels' => array(
+        'name' => __( 'illustration' ),
+        'singular_name' => __( 'Illustration' ),
+        'add_new' => __( 'Add new Illustration' ),
+        'edit_item' => __( 'Edit Illustration' ),
+        'new_item' => __( 'New Illustration' ),
+        'menu_name' => __( 'illustration' ),
+        'name_admin_bar' => __( 'illustration' )
+      ),
+      'menu_icon' => 'dashicons-admin-customizer',
+      'menu_position' => '7',
+      'public' => true,
+      'description' => 'Illustration post type. Use to create a illustration for inclusion in the illustrations page.'
+    )
+  );
+}
+
+add_action( 'init', 'merb_illustration_tax' );
+
+function merb_illustration_tax() {
+    register_taxonomy(
+        'illustration',
+        'illustration',
+        array(
+            'label' => __( 'Illustration Taxonomy' )
+        )
+    );
 }

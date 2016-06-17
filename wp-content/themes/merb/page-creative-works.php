@@ -1,14 +1,8 @@
 <?php
 /**
- * The template for displaying pages
+ * The template for displaying the creative works
  *
- * This is the template that displays all pages by default.
- * Please note that this is the WordPress construct of pages and that
- * other "pages" on your WordPress site will use a different template.
- *
- * @package WordPress
- * @subpackage Twenty_Fifteen
- * @since Twenty Fifteen 1.0
+ * @package Merb
  */
 
 get_header(); ?>
@@ -16,7 +10,7 @@ get_header(); ?>
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
 
-		<?php get_template_part( 'templates/content', 'projects' ); ?>
+		<?php get_template_part( 'templates/content', 'creative-works' ); ?>
 
 		</main><!-- .site-main -->
 	</div><!-- .content-area -->
