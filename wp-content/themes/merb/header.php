@@ -8,7 +8,7 @@
  * @subpackage merb
  */
 ?><!DOCTYPE html>
-<html <?php language_attributes(); ?> class="no-js">
+<html <?php language_attributes(); ?> class="no-js animated-blog fadeIn">
 <head>
     <meta charset="<?php bloginfo( 'charset' ); ?>">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -41,7 +41,7 @@
 </head>
 
 <header>
-    <nav id="navley" class="navbar navbar-default navbar-fixed-top">
+    <nav id="navley" class="navbar navbar-default navbar-fixed-top navbar-bg-home">
         <div class="container-fluid">
             <div class="navbar-header">
                 <div class="mobile-menu">

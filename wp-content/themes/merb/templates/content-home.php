@@ -49,7 +49,7 @@
                         <div class="about-text-container">
                             <h2 class="about-title">A bit of $this, a bit of &lt;that&gt;</h2>
                             <p class="about-text">
-                                I'm Marc, a 22-year old designer and developer. I love being creative through a number of different mediums &ndash; graphic art, music and writing to name a few - so in my spare time I like to draw, play guitar and read (a lot). I also love
+                                I'm Marc, a web designer and front end developer. I love being creative through a number of different mediums &ndash; graphic art, music and writing to name a few - so in my spare time I like to draw, play guitar and read (a lot). I also love
                                 to try new things, whether that be learning a language or picking up an interesting hobby.
                             </p>
                         </div>
@@ -75,7 +75,7 @@
                 <a class="recent-card-link" href="#">
                     <div class="recent-card recent-card--project">
                         <div class="recent-card-image-container">
-                            <img class="recent-card-image" src="http://lorempixel.com/320/200" alt="" />
+                            <!-- <img class="recent-card-image" src="http://lorempixel.com/320/200" alt="" /> -->
                         </div>
                         <div class="recent-card-title-container">
                             <h4 class="recent-card-title">weareloft</h4>
@@ -98,7 +98,7 @@
                 <a class="recent-card-link" href="#">
                     <div class="recent-card recent-card--design">
                         <div class="recent-card-image-container">
-                            <img class="recent-card-image" src="http://lorempixel.com/320/200" alt="" />
+                            <!-- <img class="recent-card-image" src="http://lorempixel.com/320/200" alt="" /> -->
                         </div>
                         <div class="recent-card-title-container">
                             <h4 class="recent-card-title">Daily UI #002</h4>
@@ -121,7 +121,7 @@
                 <a class="recent-card-link" href="#">
                     <div class="recent-card recent-card--illustration">
                         <div class="recent-card-image-container">
-                            <img class="recent-card-image" src="http://lorempixel.com/320/200" alt="" />
+                            <!-- <img class="recent-card-image" src="http://lorempixel.com/320/200" alt="" /> -->
                         </div>
                         <div class="recent-card-title-container">
                             <h4 class="recent-card-title">Manga Character</h4>

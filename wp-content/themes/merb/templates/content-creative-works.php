@@ -20,7 +20,6 @@
                 <button id="loadCreativeWorksDesign" class="splitscreen-selector">
                     Design
                 </button>
-                <span class="splitscreen-selector-divider">/</span>
                 <button id="loadCreativeWorksIllustration" class="splitscreen-selector">
                     Illustration
                 </button>

@@ -1,4 +1,4 @@
-1// Custom JS
+// Custom JS
 // Theme: merb
 // Date created: 28/10/2015
 // ========================
@@ -57,14 +57,23 @@ window.onload = function() {
 
 
     // Navbar JS
-    // Turns navbar bg black while scrolling
     // =====================================
+
+    if ( projectsPage !== null || projectPage !== null || creativeworksPage !== null ) {
+        nav.classList.remove( "navbar-bg-home" );
+    }
 
     window.addEventListener( "scroll", function() {
         if( window.scrollY != 0 ) {
             nav.classList.add( "navbar-bg" );
+            if ( homePage !== null || blogPage !== null ) {
+                nav.classList.remove( "navbar-bg-home" );
+            }
         } else {
             nav.classList.remove( "navbar-bg" );
+            if ( homePage !== null || blogPage !== null ) {
+                nav.classList.add( "navbar-bg-home" );
+            }
         }
     });
 
